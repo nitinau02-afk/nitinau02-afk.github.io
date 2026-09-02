@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Nitin Sharma | Academic Researcher</title>
+    <title>Nitin Sharma | Human Resource Management & AI Researcher</title>
 
-    <meta name="description" content="Academic website of Nitin Sharma, an early-career researcher in Human Resource Management, Organisational Behaviour, AI-enabled HRM and Algorithmic Management.">
+    <meta name="description"
+        content="Academic website of Nitin Sharma, an early-career researcher in Human Resource Management, Organisational Behaviour, AI-enabled HRM and Algorithmic Management.">
 
     <style>
+
         * {
             margin: 0;
             padding: 0;
@@ -20,114 +25,144 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
-            line-height: 1.7;
+            font-family:
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                Roboto,
+                Arial,
+                sans-serif;
             color: #263238;
-            background: #f7f9fb;
+            background: #f6f8fa;
+            line-height: 1.7;
         }
 
         a {
-            color: inherit;
             text-decoration: none;
+            color: inherit;
         }
 
-        /* NAVIGATION */
+        /* =========================
+           NAVIGATION
+        ========================= */
+
         nav {
             position: sticky;
             top: 0;
             z-index: 1000;
-            background: rgba(255,255,255,0.98);
+            background: rgba(255,255,255,0.97);
+            backdrop-filter: blur(10px);
             border-bottom: 1px solid #e4e8ec;
-            padding: 15px 6%;
+            padding: 16px 6%;
         }
 
         .nav-container {
-            max-width: 1150px;
+            max-width: 1180px;
             margin: auto;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            gap: 25px;
         }
 
         .logo {
-            font-size: 20px;
+            font-size: 21px;
             font-weight: 700;
-            letter-spacing: 0.3px;
             color: #17202a;
+            white-space: nowrap;
         }
 
         .nav-links {
             display: flex;
-            gap: 22px;
-            flex-wrap: wrap;
+            align-items: center;
             justify-content: flex-end;
+            gap: 21px;
+            flex-wrap: wrap;
         }
 
         .nav-links a {
             font-size: 14px;
             color: #455a64;
+            transition: 0.2s;
         }
 
         .nav-links a:hover {
             color: #1565c0;
         }
 
-        /* HERO */
+        /* =========================
+           HERO
+        ========================= */
+
         .hero {
-            background: white;
-            padding: 95px 6% 85px;
-            border-bottom: 1px solid #e8edf1;
+            background:
+                linear-gradient(
+                    135deg,
+                    #ffffff 0%,
+                    #f5f8fc 100%
+                );
+            padding: 90px 6% 85px;
+            border-bottom: 1px solid #e6ebef;
         }
 
         .hero-container {
-            max-width: 1150px;
+            max-width: 1180px;
             margin: auto;
+            display: grid;
+            grid-template-columns: 1.35fr 0.65fr;
+            gap: 70px;
+            align-items: center;
         }
 
         .eyebrow {
+            display: inline-block;
             color: #1565c0;
-            font-weight: 600;
-            font-size: 14px;
-            letter-spacing: 1px;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 1.2px;
             text-transform: uppercase;
-            margin-bottom: 15px;
+            margin-bottom: 18px;
         }
 
         h1 {
-            font-size: clamp(44px, 6vw, 70px);
-            line-height: 1.05;
+            font-size: clamp(48px, 6vw, 74px);
+            line-height: 1.02;
             color: #17202a;
             margin-bottom: 20px;
+            letter-spacing: -1.5px;
         }
 
         .hero-title {
-            font-size: 22px;
-            color: #455a64;
-            max-width: 900px;
-            margin-bottom: 25px;
+            font-size: 23px;
+            line-height: 1.45;
+            color: #37474f;
+            max-width: 820px;
+            margin-bottom: 22px;
+            font-weight: 500;
         }
 
         .hero-description {
-            max-width: 900px;
+            max-width: 820px;
             font-size: 17px;
-            color: #546e7a;
+            color: #607d8b;
+            line-height: 1.8;
         }
 
-        .buttons {
-            margin-top: 30px;
+        .hero-buttons {
+            margin-top: 32px;
             display: flex;
             gap: 12px;
             flex-wrap: wrap;
         }
 
         .button {
-            padding: 11px 19px;
-            border-radius: 6px;
-            border: 1px solid #1565c0;
-            font-size: 14px;
-            font-weight: 600;
-            transition: 0.2s;
             display: inline-block;
+            padding: 12px 21px;
+            border-radius: 7px;
+            font-size: 14px;
+            font-weight: 650;
+            border: 1px solid #1565c0;
+            transition: all 0.2s ease;
         }
 
         .button-primary {
@@ -137,153 +172,328 @@
 
         .button-primary:hover {
             background: #0d47a1;
+            transform: translateY(-1px);
         }
 
         .button-secondary {
-            color: #1565c0;
             background: white;
+            color: #1565c0;
         }
 
         .button-secondary:hover {
             background: #eef5fc;
         }
 
-        /* GENERAL */
+        /* =========================
+           PROFILE PHOTO
+        ========================= */
+
+        .profile-area {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .profile-photo-wrapper {
+            width: 310px;
+            height: 370px;
+            padding: 7px;
+            background: white;
+            border-radius: 22px;
+            box-shadow:
+                0 18px 50px rgba(23,32,42,0.15);
+            border: 1px solid #e0e6eb;
+        }
+
+        .profile-photo {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 17px;
+            display: block;
+        }
+
+        .profile-caption {
+            margin-top: 18px;
+            background: white;
+            border: 1px solid #e0e6eb;
+            border-radius: 9px;
+            padding: 13px 19px;
+            text-align: center;
+            box-shadow:
+                0 8px 25px rgba(23,32,42,0.06);
+        }
+
+        .profile-caption strong {
+            display: block;
+            color: #17202a;
+            font-size: 14px;
+        }
+
+        .profile-caption span {
+            color: #78909c;
+            font-size: 12px;
+        }
+
+        /* =========================
+           GENERAL SECTIONS
+        ========================= */
+
         section {
-            padding: 75px 6%;
+            padding: 78px 6%;
         }
 
         .container {
-            max-width: 1050px;
+            max-width: 1080px;
             margin: auto;
         }
 
+        .section-label {
+            color: #1565c0;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 7px;
+        }
+
         .section-title {
-            font-size: 32px;
+            font-size: 34px;
+            line-height: 1.25;
             color: #17202a;
-            margin-bottom: 12px;
+            margin-bottom: 14px;
         }
 
         .section-intro {
             color: #607d8b;
             max-width: 850px;
-            margin-bottom: 35px;
+            margin-bottom: 38px;
+            font-size: 16px;
         }
 
-        /* ABOUT */
+        /* =========================
+           ABOUT
+        ========================= */
+
         .about-grid {
             display: grid;
-            grid-template-columns: 1.5fr 1fr;
-            gap: 50px;
+            grid-template-columns: 1.5fr 0.8fr;
+            gap: 55px;
+            align-items: start;
         }
 
         .about-text p {
-            margin-bottom: 18px;
+            margin-bottom: 19px;
+            color: #455a64;
+            font-size: 16px;
         }
 
-        .info-card {
+        .profile-card {
             background: white;
+            border: 1px solid #e1e7eb;
+            border-radius: 12px;
             padding: 28px;
-            border: 1px solid #e3e8ed;
-            border-radius: 10px;
+            box-shadow:
+                0 7px 25px rgba(23,32,42,0.04);
         }
 
-        .info-card h3 {
-            margin-bottom: 15px;
+        .profile-card h3 {
             color: #17202a;
+            margin-bottom: 18px;
+            font-size: 19px;
         }
 
-        .info-card p {
-            margin-bottom: 10px;
-            color: #546e7a;
-            font-size: 15px;
+        .profile-item {
+            padding: 11px 0;
+            border-bottom: 1px solid #edf0f2;
+            color: #607d8b;
+            font-size: 14px;
         }
 
-        /* RESEARCH */
+        .profile-item:last-child {
+            border-bottom: none;
+        }
+
+        .profile-item strong {
+            display: block;
+            color: #37474f;
+            margin-bottom: 2px;
+        }
+
+        /* =========================
+           RESEARCH AREAS
+        ========================= */
+
         .research-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 19px;
         }
 
         .research-card {
             background: white;
-            border: 1px solid #e3e8ed;
-            border-radius: 10px;
-            padding: 28px;
-            transition: 0.2s;
+            border: 1px solid #e2e7eb;
+            border-radius: 11px;
+            padding: 27px;
+            transition: all 0.25s ease;
         }
 
         .research-card:hover {
-            transform: translateY(-3px);
+            transform: translateY(-4px);
+            box-shadow:
+                0 13px 32px rgba(23,32,42,0.08);
+        }
+
+        .research-number {
+            color: #1565c0;
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 9px;
         }
 
         .research-card h3 {
             color: #17202a;
+            font-size: 18px;
             margin-bottom: 10px;
         }
 
         .research-card p {
             color: #607d8b;
-            font-size: 15px;
+            font-size: 14px;
         }
 
-        /* CARDS */
-        .card {
-            background: white;
-            border: 1px solid #e3e8ed;
-            border-radius: 10px;
-            padding: 28px;
+        /* =========================
+           CURRENT RESEARCH
+        ========================= */
+
+        .featured-research {
+            background: #17202a;
+            color: white;
+            border-radius: 15px;
+            padding: 42px;
+            box-shadow:
+                0 15px 40px rgba(23,32,42,0.12);
+        }
+
+        .featured-research .section-label {
+            color: #90caf9;
+        }
+
+        .featured-research h2 {
+            font-size: 29px;
+            line-height: 1.35;
             margin-bottom: 20px;
         }
 
-        .card h3 {
+        .featured-research p {
+            color: #cfd8dc;
+            max-width: 900px;
+            margin-bottom: 17px;
+            font-size: 15px;
+        }
+
+        /* =========================
+           EDUCATION
+        ========================= */
+
+        .timeline {
+            position: relative;
+            border-left: 2px solid #dce5ec;
+            margin-left: 10px;
+            padding-left: 30px;
+        }
+
+        .timeline-item {
+            position: relative;
+            background: white;
+            border: 1px solid #e1e7eb;
+            border-radius: 11px;
+            padding: 27px;
+            margin-bottom: 22px;
+            box-shadow:
+                0 5px 20px rgba(23,32,42,0.03);
+        }
+
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #1565c0;
+            left: -37px;
+            top: 31px;
+            border: 3px solid #f6f8fa;
+        }
+
+        .timeline-item h3 {
             color: #17202a;
+            font-size: 18px;
             margin-bottom: 7px;
         }
 
-        .card .date {
+        .timeline-date {
             color: #1565c0;
-            font-size: 14px;
-            font-weight: 600;
+            font-size: 13px;
+            font-weight: 650;
             margin-bottom: 10px;
         }
 
-        .card p {
+        .timeline-item p {
             color: #607d8b;
+            font-size: 14px;
         }
 
-        /* PUBLICATIONS */
+        /* =========================
+           PUBLICATIONS
+        ========================= */
+
         .publication {
             background: white;
-            padding: 25px;
+            border: 1px solid #e1e7eb;
             border-left: 4px solid #1565c0;
-            margin-bottom: 18px;
-            border-radius: 0 8px 8px 0;
-            border-top: 1px solid #e5eaee;
-            border-right: 1px solid #e5eaee;
-            border-bottom: 1px solid #e5eaee;
+            border-radius: 0 10px 10px 0;
+            padding: 27px;
+            margin-bottom: 19px;
+            box-shadow:
+                0 5px 20px rgba(23,32,42,0.03);
         }
 
         .publication h3 {
             color: #17202a;
             font-size: 18px;
-            margin-bottom: 8px;
+            line-height: 1.5;
+            margin-bottom: 9px;
         }
 
-        .publication p {
+        .publication-meta {
             color: #607d8b;
             font-size: 14px;
-            margin-bottom: 8px;
+            margin-bottom: 13px;
         }
 
         .publication-link {
             color: #1565c0;
-            font-weight: 600;
             font-size: 14px;
+            font-weight: 700;
         }
 
-        /* TAGS */
+        .publication-link:hover {
+            text-decoration: underline;
+        }
+
+        .subheading {
+            color: #17202a;
+            font-size: 24px;
+            margin-top: 52px;
+            margin-bottom: 20px;
+        }
+
+        /* =========================
+           METHODS
+        ========================= */
+
         .tags {
             display: flex;
             flex-wrap: wrap;
@@ -293,81 +503,236 @@
         .tag {
             background: white;
             border: 1px solid #dce3e8;
-            padding: 9px 14px;
-            border-radius: 20px;
-            font-size: 14px;
             color: #455a64;
+            padding: 9px 15px;
+            border-radius: 25px;
+            font-size: 13px;
+            transition: 0.2s;
         }
 
-        /* CONTACT */
+        .tag:hover {
+            border-color: #1565c0;
+            color: #1565c0;
+        }
+
+        /* =========================
+           EXPERIENCE
+        ========================= */
+
+        .experience-card {
+            background: white;
+            border: 1px solid #e1e7eb;
+            border-radius: 11px;
+            padding: 27px;
+            margin-bottom: 19px;
+        }
+
+        .experience-card h3 {
+            color: #17202a;
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .experience-date {
+            color: #1565c0;
+            font-size: 13px;
+            font-weight: 650;
+            margin-bottom: 11px;
+        }
+
+        .experience-card p {
+            color: #607d8b;
+            font-size: 14px;
+        }
+
+        /* =========================
+           CV
+        ========================= */
+
+        .cv-section {
+            background: white;
+        }
+
+        .cv-box {
+            border: 1px solid #dfe6eb;
+            border-radius: 13px;
+            padding: 38px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .cv-box h3 {
+            color: #17202a;
+            margin-bottom: 7px;
+            font-size: 22px;
+        }
+
+        .cv-box p {
+            color: #607d8b;
+            font-size: 14px;
+        }
+
+        /* =========================
+           CONTACT
+        ========================= */
+
         .contact-box {
             background: white;
-            border: 1px solid #e3e8ed;
-            border-radius: 10px;
-            padding: 35px;
+            border: 1px solid #e1e7eb;
+            border-radius: 13px;
+            padding: 38px;
+        }
+
+        .contact-box > p {
+            max-width: 850px;
+            color: #607d8b;
+            font-size: 15px;
         }
 
         .contact-links {
             display: flex;
             flex-wrap: wrap;
-            gap: 18px;
-            margin-top: 22px;
+            gap: 12px;
+            margin-top: 25px;
         }
 
-        .contact-links a {
+        .contact-link {
+            padding: 10px 16px;
+            border: 1px solid #d9e2e8;
+            border-radius: 7px;
             color: #1565c0;
-            font-weight: 600;
+            font-size: 14px;
+            font-weight: 650;
+            background: white;
+            transition: 0.2s;
         }
 
-        .contact-links a:hover {
-            text-decoration: underline;
+        .contact-link:hover {
+            background: #eef5fc;
+            border-color: #1565c0;
         }
 
-        /* FOOTER */
+        /* =========================
+           FOOTER
+        ========================= */
+
         footer {
             background: #17202a;
             color: #cfd8dc;
-            padding: 30px 6%;
             text-align: center;
-            font-size: 14px;
+            padding: 32px 6%;
+            font-size: 13px;
         }
 
-        /* MOBILE */
-        @media (max-width: 750px) {
+        footer strong {
+            color: white;
+        }
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 900px) {
+
+            .hero-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-description {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .profile-area {
+                order: -1;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .research-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .cv-box {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+        }
+
+        @media (max-width: 650px) {
+
+            nav {
+                padding: 14px 5%;
+            }
 
             .nav-container {
                 flex-direction: column;
-                gap: 12px;
             }
 
             .nav-links {
                 justify-content: center;
-                gap: 13px;
+                gap: 11px;
+            }
+
+            .nav-links a {
+                font-size: 13px;
             }
 
             .hero {
-                padding-top: 60px;
+                padding: 60px 5% 60px;
             }
 
-            .about-grid,
+            .profile-photo-wrapper {
+                width: 245px;
+                height: 295px;
+            }
+
             .research-grid {
                 grid-template-columns: 1fr;
             }
 
             section {
-                padding: 55px 6%;
+                padding: 58px 5%;
             }
+
+            .featured-research {
+                padding: 28px;
+            }
+
+            .cv-box {
+                padding: 28px;
+            }
+
+            .contact-box {
+                padding: 28px;
+            }
+
         }
+
     </style>
+
 </head>
+
 
 <body>
 
-<!-- =========================
+
+<!-- =====================================
      NAVIGATION
-========================= -->
+===================================== -->
 
 <nav>
+
     <div class="nav-container">
 
         <a href="#" class="logo">
@@ -377,142 +742,277 @@
         <div class="nav-links">
 
             <a href="#about">About</a>
+
             <a href="#research">Research</a>
+
             <a href="#education">Education</a>
+
             <a href="#publications">Publications</a>
+
             <a href="#experience">Experience</a>
+
             <a href="#teaching">Teaching</a>
+
             <a href="#cv">CV</a>
+
             <a href="#contact">Contact</a>
 
         </div>
 
     </div>
+
 </nav>
 
 
-<!-- =========================
-     HERO
-========================= -->
+
+<!-- =====================================
+     HERO / PROFILE
+===================================== -->
 
 <header class="hero">
 
     <div class="hero-container">
 
-        <div class="eyebrow">
-            Human Resource Management · Organisational Behaviour · AI
+
+        <div>
+
+            <div class="eyebrow">
+
+                Human Resource Management · Organisational Behaviour · AI
+
+            </div>
+
+
+            <h1>
+                Nitin Sharma
+            </h1>
+
+
+            <div class="hero-title">
+
+                Early-Career Researcher in Human Resource Management,
+                Organisational Behaviour and Algorithmic Management
+
+            </div>
+
+
+            <p class="hero-description">
+
+                My research examines how AI-enabled HRM and algorithmic
+                management reshape employee–organisation relationships,
+                psychological contracts, employee trust, organisational
+                justice and the future of work.
+
+            </p>
+
+
+            <div class="hero-buttons">
+
+
+                <a class="button button-primary"
+                   href="#research">
+
+                    Explore My Research
+
+                </a>
+
+
+                <a class="button button-secondary"
+                   href="Nitin_Sharma_CV.pdf"
+                   target="_blank">
+
+                    View CV
+
+                </a>
+
+
+                <a class="button button-secondary"
+                   href="#contact">
+
+                    Contact
+
+                </a>
+
+
+            </div>
+
         </div>
 
-        <h1>
-            Nitin Sharma
-        </h1>
 
-        <div class="hero-title">
-            Early-Career Researcher in Human Resource Management,
-            Organisational Behaviour and Algorithmic Management
+
+        <!-- PROFILE PHOTO -->
+
+        <div class="profile-area">
+
+
+            <div class="profile-photo-wrapper">
+
+                <img
+                    src="My Photo.jpeg"
+                    alt="Nitin Sharma"
+                    class="profile-photo"
+                >
+
+            </div>
+
+
+            <div class="profile-caption">
+
+                <strong>
+                    Researcher in HRM & AI
+                </strong>
+
+                <span>
+                    Human Resource Management · Organisational Behaviour
+                </span>
+
+            </div>
+
+
         </div>
 
-        <p class="hero-description">
-            My research examines how AI-enabled HRM and algorithmic management
-            reshape employee–organisation relationships, psychological contracts,
-            employee trust, organisational justice and the future of work.
-        </p>
-
-        <div class="buttons">
-
-            <a class="button button-primary" href="#research">
-                Explore My Research
-            </a>
-
-            <a class="button button-secondary" href="#publications">
-                View Publications
-            </a>
-
-        </div>
 
     </div>
 
 </header>
 
 
-<!-- =========================
+
+<!-- =====================================
      ABOUT
-========================= -->
+===================================== -->
 
 <section id="about">
 
     <div class="container">
 
+
+        <div class="section-label">
+            Profile
+        </div>
+
+
         <h2 class="section-title">
             About
         </h2>
 
+
         <div class="about-grid">
+
 
             <div class="about-text">
 
-                <p>
-                    I am an early-career researcher working at the intersection
-                    of Human Resource Management, Organisational Behaviour,
-                    employment relationships and emerging technologies.
-                </p>
 
                 <p>
+
+                    I am an early-career researcher working at the
+                    intersection of Human Resource Management,
+                    Organisational Behaviour, employment relationships
+                    and emerging technologies.
+
+                </p>
+
+
+                <p>
+
                     My research focuses particularly on AI-enabled HRM,
-                    algorithmic management, psychological contracts, employee
-                    trust, organisational justice, employee voice and responsible
-                    AI in the workplace.
+                    algorithmic management, psychological contracts,
+                    employee trust, organisational justice, employee
+                    voice and responsible AI in the workplace.
+
                 </p>
 
-                <p>
-                    I am interested in understanding how AI-mediated organisational
-                    decision-making changes employees' perceptions of authority,
-                    fairness, responsibility, accountability and mutual obligations
-                    within the employment relationship.
-                </p>
 
                 <p>
-                    My methodological interests include quantitative research,
-                    mixed methods, structural equation modelling, scale
-                    development and validation, qualitative research and
-                    computational approaches to organisational research.
+
+                    I am interested in understanding how AI-mediated
+                    organisational decision-making changes employees'
+                    perceptions of authority, fairness, responsibility,
+                    accountability and mutual obligations within the
+                    employment relationship.
+
                 </p>
+
+
+                <p>
+
+                    My methodological interests include quantitative
+                    research, mixed methods, structural equation modelling,
+                    scale development and validation, qualitative research
+                    and computational approaches to organisational research.
+
+                </p>
+
 
             </div>
 
 
-            <div class="info-card">
+
+            <div class="profile-card">
+
 
                 <h3>
                     Academic Profile
                 </h3>
 
-                <p>
-                    <strong>Primary field:</strong>
+
+                <div class="profile-item">
+
+                    <strong>
+                        Primary Field
+                    </strong>
+
                     Human Resource Management
-                </p>
 
-                <p>
-                    <strong>Secondary areas:</strong>
-                    Organisational Behaviour, Employment Relations
-                </p>
+                </div>
 
-                <p>
-                    <strong>Research focus:</strong>
-                    AI-enabled HRM & Algorithmic Management
-                </p>
 
-                <p>
-                    <strong>Research approach:</strong>
-                    Quantitative, Mixed Methods & Qualitative
-                </p>
+                <div class="profile-item">
 
-                <p>
-                    <strong>Location:</strong>
-                    Delhi, India
-                </p>
+                    <strong>
+                        Secondary Areas
+                    </strong>
+
+                    Organisational Behaviour · Employment Relations
+
+                </div>
+
+
+                <div class="profile-item">
+
+                    <strong>
+                        Research Focus
+                    </strong>
+
+                    AI-enabled HRM · Algorithmic Management
+
+                </div>
+
+
+                <div class="profile-item">
+
+                    <strong>
+                        Research Approach
+                    </strong>
+
+                    Quantitative · Mixed Methods · Qualitative
+
+                </div>
+
+
+                <div class="profile-item">
+
+                    <strong>
+                        Research Interests
+                    </strong>
+
+                    AI · Trust · Psychological Contracts · Justice · Future of Work
+
+                </div>
+
 
             </div>
+
 
         </div>
 
@@ -521,21 +1021,32 @@
 </section>
 
 
-<!-- =========================
-     RESEARCH
-========================= -->
+
+<!-- =====================================
+     RESEARCH AREAS
+===================================== -->
 
 <section id="research">
 
     <div class="container">
 
-        <h2 class="section-title">
+
+        <div class="section-label">
             Research
+        </div>
+
+
+        <h2 class="section-title">
+            Research Areas
         </h2>
 
+
         <p class="section-intro">
-            My research explores how technological and organisational changes
-            affect employees, employment relationships and organisational practices.
+
+            My research explores how technological and organisational
+            changes affect employees, employment relationships and
+            organisational practices.
+
         </p>
 
 
@@ -544,84 +1055,129 @@
 
             <div class="research-card">
 
+                <div class="research-number">
+                    01
+                </div>
+
                 <h3>
                     AI-enabled HRM
                 </h3>
 
                 <p>
-                    Examining employee acceptance and organisational implications
-                    of artificial intelligence in recruitment and other HR practices.
+
+                    Examining employee acceptance and organisational
+                    implications of artificial intelligence in recruitment
+                    and other HR practices.
+
                 </p>
 
             </div>
 
 
+
             <div class="research-card">
+
+                <div class="research-number">
+                    02
+                </div>
 
                 <h3>
                     Algorithmic Management
                 </h3>
 
                 <p>
-                    Investigating how algorithmic systems influence managerial
-                    authority, decision-making, fairness, accountability and work.
+
+                    Investigating how algorithmic systems influence
+                    managerial authority, decision-making, fairness,
+                    accountability and work.
+
                 </p>
 
             </div>
 
 
+
             <div class="research-card">
+
+                <div class="research-number">
+                    03
+                </div>
 
                 <h3>
                     Psychological Contracts
                 </h3>
 
                 <p>
+
                     Studying how employees understand and revise perceived
-                    obligations when organisational practices and decision-making
+                    obligations when organisational practices and decision
                     processes change.
+
                 </p>
 
             </div>
 
 
+
             <div class="research-card">
+
+                <div class="research-number">
+                    04
+                </div>
 
                 <h3>
                     Employee Trust
                 </h3>
 
                 <p>
-                    Exploring how transparency, fairness, human oversight and
-                    responsible AI influence employee trust in organisations.
+
+                    Exploring how transparency, fairness, human oversight
+                    and responsible AI influence employee trust.
+
                 </p>
 
             </div>
 
 
+
             <div class="research-card">
+
+                <div class="research-number">
+                    05
+                </div>
 
                 <h3>
                     Organisational Justice
                 </h3>
 
                 <p>
-                    Examining employee perceptions of procedural fairness,
-                    transparency and accountability in technology-mediated decisions.
+
+                    Examining perceptions of procedural fairness,
+                    transparency and accountability in technology-mediated
+                    organisational decisions.
+
                 </p>
 
             </div>
 
 
+
             <div class="research-card">
+
+                <div class="research-number">
+                    06
+                </div>
 
                 <h3>
                     Future of Work
                 </h3>
 
                 <p>
+
                     Understanding how digitalisation and AI are transforming
-                    organisational practices, employee relationships and work.
+                    organisational practices, employee relationships
+                    and work.
+
                 </p>
 
             </div>
@@ -634,43 +1190,61 @@
 </section>
 
 
-<!-- =========================
+
+<!-- =====================================
      CURRENT RESEARCH
-========================= -->
+===================================== -->
 
 <section>
 
     <div class="container">
 
-        <h2 class="section-title">
-            Current Research Direction
-        </h2>
 
-        <p class="section-intro">
-            Psychological Contract Reconfiguration in AI-Governed Organisations:
-            Employee Trust and Responsible AI
-        </p>
+        <div class="featured-research">
 
 
-        <div class="publication">
+            <div class="section-label">
+                Current Research Direction
+            </div>
 
-            <h3>
-                Psychological Contract Reconfiguration in AI-Governed Organisations
-            </h3>
 
-            <p>
-                This research investigates how employees experience and interpret
-                AI-mediated HR decisions and how the increasing involvement of AI
-                in organisational decision-making may reshape psychological
-                contracts, employee trust, perceptions of fairness, responsibility,
-                accountability and workplace well-being.
-            </p>
+            <h2>
+
+                Psychological Contract Reconfiguration
+                in AI-Governed Organisations
+
+            </h2>
+
 
             <p>
-                The proposed research uses a phased mixed-methods design combining
-                qualitative interviews, scale development, longitudinal quantitative
-                research and multilevel analysis.
+
+                <strong>
+                    Employee Trust and Responsible AI
+                </strong>
+
             </p>
+
+
+            <p>
+
+                This research investigates how employees experience and
+                interpret AI-mediated HR decisions and how the increasing
+                involvement of AI in organisational decision-making may
+                reshape psychological contracts, employee trust,
+                perceptions of fairness, responsibility, accountability
+                and workplace well-being.
+
+            </p>
+
+
+            <p>
+
+                The proposed research uses a phased mixed-methods design
+                combining qualitative interviews, scale development,
+                longitudinal quantitative research and multilevel analysis.
+
+            </p>
+
 
         </div>
 
@@ -679,52 +1253,97 @@
 </section>
 
 
-<!-- =========================
+
+<!-- =====================================
      EDUCATION
-========================= -->
+===================================== -->
 
 <section id="education">
 
     <div class="container">
+
+
+        <div class="section-label">
+            Academic Background
+        </div>
+
 
         <h2 class="section-title">
             Education
         </h2>
 
 
-        <div class="card">
+        <p class="section-intro">
 
-            <h3>
-                Master of Business Administration (MBA) — Human Resource Management
-            </h3>
+            Academic preparation in Human Resource Management,
+            management and organisational studies.
 
-            <div class="date">
-                University of Delhi, School of Open Learning · Expected 2026
+        </p>
+
+
+        <div class="timeline">
+
+
+            <div class="timeline-item">
+
+
+                <h3>
+
+                    Master of Business Administration (MBA)
+                    — Human Resource Management
+
+                </h3>
+
+
+                <div class="timeline-date">
+
+                    University of Delhi, School of Open Learning · Expected 2026
+
+                </div>
+
+
+                <p>
+
+                    Graduate study in Human Resource Management and
+                    related management disciplines.
+
+                </p>
+
+
             </div>
 
-            <p>
-                Graduate study in Human Resource Management and related
-                management disciplines.
-            </p>
-
-        </div>
 
 
-        <div class="card">
+            <div class="timeline-item">
 
-            <h3>
-                Master of Commerce (M.Com) — Human Resource Management
-            </h3>
 
-            <div class="date">
-                Amity University · CGPA: 9.04/10
+                <h3>
+
+                    Master of Commerce (M.Com)
+                    — Human Resource Management
+
+                </h3>
+
+
+                <div class="timeline-date">
+
+                    Amity University · CGPA: 9.04/10
+
+                </div>
+
+
+                <p>
+
+                    Master's research examined employee acceptance of
+                    AI-enabled recruitment systems in the Indian IT sector
+                    using the Technology Acceptance Model (TAM), survey
+                    research and PLS-SEM.
+
+                </p>
+
+
             </div>
 
-            <p>
-                Master's research examined employee acceptance of AI-enabled
-                recruitment systems in the Indian IT sector using the Technology
-                Acceptance Model (TAM), survey research and PLS-SEM.
-            </p>
 
         </div>
 
@@ -733,193 +1352,343 @@
 </section>
 
 
-<!-- =========================
+
+<!-- =====================================
      PUBLICATIONS
-========================= -->
+===================================== -->
 
 <section id="publications">
 
     <div class="container">
 
+
+        <div class="section-label">
+            Scholarly Work
+        </div>
+
+
         <h2 class="section-title">
             Publications
         </h2>
 
+
         <p class="section-intro">
+
             Selected peer-reviewed research and scholarly work.
+
         </p>
 
 
-        <!-- Publication 1 -->
+
+        <!-- PUBLICATION 1 -->
 
         <div class="publication">
 
+
             <h3>
-                Trust as the Dominant Driver of Employee Acceptance of
-                AI-Enabled Recruitment Systems: An Extended Technology
-                Acceptance Model
+
+                Trust as the Dominant Driver of Employee Acceptance
+                of AI-Enabled Recruitment Systems:
+                An Extended Technology Acceptance Model
+
             </h3>
 
-            <p>
-                Sharma, N. (2026).
-                International Journal of Research and Analytical Reviews (IJRAAR),
-                13(3).
-            </p>
+
+            <div class="publication-meta">
+
+                <strong>Sharma, N. (2026).</strong>
+                International Journal of Research and Analytical Reviews
+                (IJRAAR), 13(3).
+
+            </div>
+
 
             <a class="publication-link"
-               href="#"
-               target="_blank">
-                Publication link →
+               href="https://www.researchgate.net/publication/409530596_Trust_as_the_Dominant_Driver_of_Employee_Acceptance_of_AI-Enabled_Recruitment_Systems_An_Extended_Technology_Acceptance_Model"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                View on ResearchGate →
+
             </a>
+
 
         </div>
 
 
-        <!-- Publication 2 -->
+
+        <!-- PUBLICATION 2 -->
 
         <div class="publication">
 
+
             <h3>
-                The Future of HRM: The Role of Artificial Intelligence
-                in HR Practices
+
+                The Future of Human Resource Management:
+                The Role of Artificial Intelligence in Shaping HR Practices
+
             </h3>
 
-            <p>
-                Sharma, N., & Dey, S. (2025).
-                International Journal of Research and Analytical Reviews (IJRAAR),
-                12(3).
-            </p>
+
+            <div class="publication-meta">
+
+                <strong>Sharma, N., & Dey, S. (2025).</strong>
+                International Journal of Research and Analytical Reviews
+                (IJRAAR), 12(3).
+
+            </div>
+
 
             <a class="publication-link"
-               href="#"
-               target="_blank">
-                Publication link →
+               href="https://www.researchgate.net/publication/394407526_The_Future_of_Human_Resource_Management_The_Role_of_Artificial_Intelligence_in_Shaping_HR_Practices"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                View on ResearchGate →
+
             </a>
+
 
         </div>
 
 
-        <!-- Publication 3 -->
+
+        <!-- PUBLICATION 3 -->
 
         <div class="publication">
 
+
             <h3>
+
                 Role of Artificial Intelligence in the Banking Sector
+
             </h3>
 
-            <p>
-                Sharma, N. (2025).
+
+            <div class="publication-meta">
+
+                <strong>Sharma, N. (2025).</strong>
                 International Journal of Current Research and Thought,
                 12(3).
-            </p>
+
+            </div>
+
 
             <a class="publication-link"
-               href="#"
-               target="_blank">
-                Publication link →
+               href="https://www.researchgate.net/publication/394407193_Role_of_AI_in_Banking_Sector"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                View on ResearchGate →
+
             </a>
+
 
         </div>
 
 
-        <!-- Conference Paper -->
+
+        <!-- PUBLICATION 4 -->
 
         <div class="publication">
 
+
             <h3>
-                A TAM-Based Empirical Investigation of Employee Acceptance
-                of AI-Enabled Recruitment in the Indian IT Sector
+
+                A TAM-Based Empirical Investigation of Employee
+                Acceptance of AI-Enabled Recruitment in the Indian IT Sector
+
             </h3>
 
-            <p>
-                Sharma, N. (2026).
+
+            <div class="publication-meta">
+
+                <strong>Sharma, N. (2026).</strong>
                 Conference paper presented at IC-AISSTMH 2026.
-            </p>
+
+            </div>
+
 
             <a class="publication-link"
-               href="#"
-               target="_blank">
-                Conference paper →
+               href="https://www.researchgate.net/publication/404358916_A_TAM-based_Empirical_Investigation_of_Employee_Acceptance_of_AI-enabled_Recruitment_in_the_Indian_IT_Sector"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                View on ResearchGate →
+
             </a>
 
+
         </div>
 
 
-        <!-- Under Review -->
 
-        <h2 style="margin-top:55px; margin-bottom:22px;">
+        <!-- UNDER REVIEW -->
+
+        <h3 class="subheading">
             Manuscripts Under Review
-        </h2>
+        </h3>
+
 
 
         <div class="publication">
 
+
             <h3>
-                Algorithmic Management and the Evolution of the Psychological
-                Contract: A Multilevel Investigation
+
+                Algorithmic Management and the Evolution of the
+                Psychological Contract: A Multilevel Investigation
+
             </h3>
 
-            <p>
-                Manuscript under review at the International Journal of Human
-                Resource Development and Management.
-            </p>
+
+            <div class="publication-meta">
+
+                Manuscript under review at the International Journal
+                of Human Resource Development and Management.
+
+            </div>
+
 
         </div>
 
 
+
         <div class="publication">
 
+
             <h3>
+
                 Integrating Strategic and Human-Centred HR Practices:
                 Development and Validation of a Hierarchical HR Architecture
+
             </h3>
 
-            <p>
+
+            <div class="publication-meta">
+
                 Manuscript under review at Management Research Review.
-            </p>
+
+            </div>
+
 
         </div>
+
 
     </div>
 
 </section>
 
 
-<!-- =========================
+
+<!-- =====================================
      RESEARCH METHODS
-========================= -->
+===================================== -->
 
 <section>
 
     <div class="container">
 
+
+        <div class="section-label">
+            Methodological Profile
+        </div>
+
+
         <h2 class="section-title">
             Research Methods & Tools
         </h2>
 
+
         <p class="section-intro">
+
             Methods and software used across my research projects.
+
         </p>
 
 
         <div class="tags">
 
-            <span class="tag">Research Design</span>
-            <span class="tag">Survey Research</span>
-            <span class="tag">Mixed Methods</span>
-            <span class="tag">Qualitative Research</span>
-            <span class="tag">Structural Equation Modelling</span>
-            <span class="tag">PLS-SEM</span>
-            <span class="tag">Psychometrics</span>
-            <span class="tag">Scale Development</span>
-            <span class="tag">SPSS</span>
-            <span class="tag">SmartPLS</span>
-            <span class="tag">R</span>
-            <span class="tag">Power BI</span>
-            <span class="tag">Excel</span>
-            <span class="tag">PRISMA</span>
-            <span class="tag">Bibliometric Analysis</span>
-            <span class="tag">VOSviewer</span>
+
+            <span class="tag">
+                Research Design
+            </span>
+
+
+            <span class="tag">
+                Survey Research
+            </span>
+
+
+            <span class="tag">
+                Mixed Methods
+            </span>
+
+
+            <span class="tag">
+                Qualitative Research
+            </span>
+
+
+            <span class="tag">
+                Structural Equation Modelling
+            </span>
+
+
+            <span class="tag">
+                PLS-SEM
+            </span>
+
+
+            <span class="tag">
+                Psychometrics
+            </span>
+
+
+            <span class="tag">
+                Scale Development
+            </span>
+
+
+            <span class="tag">
+                SPSS
+            </span>
+
+
+            <span class="tag">
+                SmartPLS
+            </span>
+
+
+            <span class="tag">
+                R
+            </span>
+
+
+            <span class="tag">
+                Power BI
+            </span>
+
+
+            <span class="tag">
+                Excel
+            </span>
+
+
+            <span class="tag">
+                PRISMA
+            </span>
+
+
+            <span class="tag">
+                Bibliometric Analysis
+            </span>
+
+
+            <span class="tag">
+                VOSviewer
+            </span>
+
 
         </div>
 
@@ -928,254 +1697,382 @@
 </section>
 
 
-<!-- =========================
+
+<!-- =====================================
      EXPERIENCE
-========================= -->
+===================================== -->
 
 <section id="experience">
 
     <div class="container">
+
+
+        <div class="section-label">
+            Experience
+        </div>
+
 
         <h2 class="section-title">
             Research & Professional Experience
         </h2>
 
 
-        <div class="card">
+        <p class="section-intro">
+
+            Professional and teaching experiences supporting my development
+            as a researcher and educator.
+
+        </p>
+
+
+
+        <div class="experience-card">
+
 
             <h3>
                 Co-Teacher — GLECTA
             </h3>
 
-            <div class="date">
+
+            <div class="experience-date">
                 2026 – Present
             </div>
 
+
             <p>
+
                 Teaching UK Business Studies and supporting students in
                 understanding business concepts and applications.
+
             </p>
+
 
         </div>
 
 
-        <div class="card">
+
+        <div class="experience-card">
+
 
             <h3>
                 HR Associate Intern — TEN: Brain Research
             </h3>
 
-            <div class="date">
+
+            <div class="experience-date">
                 2025
             </div>
 
+
             <p>
-                Worked with AI-assisted recruitment workflows, candidate
-                screening and recruitment coordination.
+
+                Worked with AI-assisted recruitment workflows,
+                candidate screening and recruitment coordination.
+
             </p>
+
 
         </div>
 
 
-        <div class="card">
+
+        <div class="experience-card">
+
 
             <h3>
                 HR Operations Support — Cook N Klean & Kinds Being
             </h3>
 
-            <div class="date">
+
+            <div class="experience-date">
                 2025
             </div>
 
+
             <p>
+
                 Supported HR operations and related organisational activities.
+
             </p>
+
 
         </div>
 
 
-        <div class="card">
+
+        <div class="experience-card">
+
 
             <h3>
                 Teaching Assistant — Vidya Bal Bhawan
             </h3>
 
-            <div class="date">
+
+            <div class="experience-date">
                 2024
             </div>
 
+
             <p>
+
                 Supported classroom teaching and student learning activities.
+
             </p>
 
+
         </div>
+
 
     </div>
 
 </section>
 
 
-<!-- =========================
+
+<!-- =====================================
      TEACHING
-========================= -->
+===================================== -->
 
 <section id="teaching">
 
     <div class="container">
 
+
+        <div class="section-label">
+            Teaching
+        </div>
+
+
         <h2 class="section-title">
             Teaching
         </h2>
 
+
         <p class="section-intro">
-            My teaching experience complements my research interests in
-            management, business and organisational studies.
+
+            My teaching experience complements my research interests
+            in management, business and organisational studies.
+
         </p>
 
 
-        <div class="card">
+
+        <div class="experience-card">
+
 
             <h3>
                 Co-Teacher — UK Business Studies
             </h3>
 
-            <div class="date">
+
+            <div class="experience-date">
                 GLECTA · 2026 – Present
             </div>
 
+
             <p>
-                Teaching and explaining business concepts, supporting student
-                learning and contributing to classroom activities.
+
+                Teaching and explaining business concepts, supporting
+                student learning and contributing to classroom activities.
+
             </p>
+
 
         </div>
 
 
-        <div class="card">
+
+        <div class="experience-card">
+
 
             <h3>
                 Teaching Assistant
             </h3>
 
-            <div class="date">
+
+            <div class="experience-date">
                 Vidya Bal Bhawan · 2024
             </div>
 
+
             <p>
+
                 Supported classroom teaching and student learning activities.
+
             </p>
 
+
         </div>
+
 
     </div>
 
 </section>
 
 
-<!-- =========================
-     ACADEMIC ACTIVITIES
-========================= -->
+
+<!-- =====================================
+     ACADEMIC & LEADERSHIP
+===================================== -->
 
 <section>
 
     <div class="container">
+
+
+        <div class="section-label">
+            Academic Engagement
+        </div>
+
 
         <h2 class="section-title">
             Academic & Leadership Activities
         </h2>
 
 
-        <div class="card">
+
+        <div class="experience-card">
+
 
             <h3>
                 President — Aparajit Sports Club
             </h3>
 
+
             <p>
-                Academic and student leadership experience involving coordination,
-                organisation and student engagement.
+
+                Academic and student leadership experience involving
+                coordination, organisation and student engagement.
+
             </p>
+
 
         </div>
 
 
-        <div class="card">
+
+        <div class="experience-card">
+
 
             <h3>
                 Vice President — Innovation & Entrepreneurship Cell
             </h3>
 
+
             <p>
-                Contributed to student innovation and entrepreneurship activities.
+
+                Contributed to student innovation and entrepreneurship
+                activities.
+
             </p>
+
 
         </div>
 
 
-        <div class="card">
+
+        <div class="experience-card">
+
 
             <h3>
                 Organising Head — Sanagathan Conference
             </h3>
 
+
             <p>
-                Contributed to the organisation and coordination of academic
-                conference activities in 2024 and 2025.
+
+                Contributed to the organisation and coordination of
+                academic conference activities in 2024 and 2025.
+
             </p>
 
+
         </div>
+
 
     </div>
 
 </section>
 
 
-<!-- =========================
-     CV
-========================= -->
 
-<section id="cv">
+<!-- =====================================
+     CV
+===================================== -->
+
+<section id="cv" class="cv-section">
 
     <div class="container">
+
+
+        <div class="section-label">
+            Academic CV
+        </div>
+
 
         <h2 class="section-title">
             Curriculum Vitae
         </h2>
 
-        <p class="section-intro">
-            My CV provides a detailed overview of my academic background,
-            research experience, publications, teaching and professional activities.
-        </p>
+
+        <div class="cv-box">
 
 
-        <div class="buttons">
+            <div>
 
-            <a class="button button-primary"
-               href="Nitin_Sharma_CV.pdf"
-               target="_blank">
-                View / Download CV
-            </a>
+                <h3>
+                    Nitin Sharma — Academic CV
+                </h3>
+
+
+                <p>
+
+                    A detailed overview of my academic background,
+                    research experience, publications, teaching,
+                    professional activities and research interests.
+
+                </p>
+
+
+            </div>
+
+
+            <div>
+
+
+                <a class="button button-primary"
+                   href="Nitin_Sharma_CV.pdf"
+                   target="_blank">
+
+                    View / Download CV
+
+                </a>
+
+
+            </div>
+
 
         </div>
-
-
-        <p style="margin-top:15px; font-size:13px; color:#78909c;">
-            Please upload Nitin_Sharma_CV.pdf to the main repository for this
-            button to work.
-        </p>
 
     </div>
 
 </section>
 
 
-<!-- =========================
+
+<!-- =====================================
      CONTACT
-========================= -->
+===================================== -->
 
 <section id="contact">
 
     <div class="container">
+
+
+        <div class="section-label">
+            Connect
+        </div>
+
 
         <h2 class="section-title">
             Contact
@@ -1184,41 +2081,70 @@
 
         <div class="contact-box">
 
+
             <p>
+
                 I am open to opportunities for doctoral research,
-                research collaboration and academic discussion in Human
-                Resource Management, Organisational Behaviour and
-                AI-enabled HRM.
+                research collaboration and academic discussion in
+                Human Resource Management, Organisational Behaviour
+                and AI-enabled HRM.
+
             </p>
 
 
             <div class="contact-links">
 
-                <a href="mailto:Nitin.au02@gmail.com">
+
+                <a class="contact-link"
+                   href="mailto:Nitin.au02@gmail.com">
+
                     Email
+
                 </a>
 
-                <a href="https://orcid.org/0009-0008-3451-1729"
-                   target="_blank">
+
+                <a class="contact-link"
+                   href="https://orcid.org/0009-0008-3451-1729"
+                   target="_blank"
+                   rel="noopener noreferrer">
+
                     ORCID
+
                 </a>
 
-                <a href="https://scholar.google.com/citations?user=nA5j7yUAAAAJ&hl=en"
-                   target="_blank">
+
+                <a class="contact-link"
+                   href="https://scholar.google.com/citations?user=nA5j7yUAAAAJ&hl=en"
+                   target="_blank"
+                   rel="noopener noreferrer">
+
                     Google Scholar
+
                 </a>
 
-                <a href="https://www.researchgate.net/profile/Nitin-Sharma-94"
-                   target="_blank">
+
+                <a class="contact-link"
+                   href="https://www.researchgate.net/profile/Nitin-Sharma-94"
+                   target="_blank"
+                   rel="noopener noreferrer">
+
                     ResearchGate
+
                 </a>
 
-                <a href="https://www.linkedin.com/in/nitin-sharma-449bb824b/"
-                   target="_blank">
+
+                <a class="contact-link"
+                   href="https://www.linkedin.com/in/nitin-sharma-449bb824b/"
+                   target="_blank"
+                   rel="noopener noreferrer">
+
                     LinkedIn
+
                 </a>
+
 
             </div>
+
 
         </div>
 
@@ -1227,22 +2153,32 @@
 </section>
 
 
-<!-- =========================
+
+<!-- =====================================
      FOOTER
-========================= -->
+===================================== -->
 
 <footer>
 
+
     <p>
-        © 2026 Nitin Sharma · Academic Researcher
+
+        © 2026 <strong>Nitin Sharma</strong>
+        · Academic Researcher
+
     </p>
 
-    <p style="margin-top:5px;">
+
+    <p style="margin-top:6px;">
+
         Human Resource Management · Organisational Behaviour · AI & Work
+
     </p>
+
 
 </footer>
 
 
 </body>
+
 </html>
