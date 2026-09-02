@@ -1,1 +1,910 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>Nitin Sharma | HRM & Organisational Behaviour Researcher</title>
+
+    <meta name="description" content="Academic website of Nitin Sharma, an early-career researcher in Human Resource Management, Organisational Behaviour, AI-enabled HRM and Algorithmic Management.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+            line-height: 1.7;
+            color: #263238;
+            background: #f7f9fb;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        /* NAVIGATION */
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255,255,255,0.97);
+            border-bottom: 1px solid #e4e8ec;
+            padding: 15px 6%;
+        }
+
+        .nav-container {
+            max-width: 1150px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: 700;
+            letter-spacing: 0.3px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+        }
+
+        .nav-links a {
+            font-size: 14px;
+            color: #455a64;
+        }
+
+        .nav-links a:hover {
+            color: #1565c0;
+        }
+
+        /* HERO */
+        .hero {
+            background: white;
+            padding: 90px 6% 80px;
+            border-bottom: 1px solid #e8edf1;
+        }
+
+        .hero-container {
+            max-width: 1150px;
+            margin: auto;
+        }
+
+        .eyebrow {
+            color: #1565c0;
+            font-weight: 600;
+            font-size: 14px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 14px;
+        }
+
+        h1 {
+            font-size: clamp(42px, 6vw, 68px);
+            line-height: 1.05;
+            color: #17202a;
+            margin-bottom: 20px;
+        }
+
+        .hero-title {
+            font-size: 22px;
+            color: #455a64;
+            max-width: 850px;
+            margin-bottom: 25px;
+        }
+
+        .hero-description {
+            max-width: 850px;
+            font-size: 17px;
+            color: #546e7a;
+        }
+
+        .buttons {
+            margin-top: 30px;
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .button {
+            padding: 11px 19px;
+            border-radius: 6px;
+            border: 1px solid #1565c0;
+            font-size: 14px;
+            font-weight: 600;
+            transition: 0.2s;
+        }
+
+        .button-primary {
+            background: #1565c0;
+            color: white;
+        }
+
+        .button-primary:hover {
+            background: #0d47a1;
+        }
+
+        .button-secondary {
+            color: #1565c0;
+            background: white;
+        }
+
+        .button-secondary:hover {
+            background: #eef5fc;
+        }
+
+        /* GENERAL */
+        section {
+            padding: 75px 6%;
+        }
+
+        .container {
+            max-width: 1050px;
+            margin: auto;
+        }
+
+        .section-title {
+            font-size: 32px;
+            color: #17202a;
+            margin-bottom: 12px;
+        }
+
+        .section-intro {
+            color: #607d8b;
+            max-width: 800px;
+            margin-bottom: 35px;
+        }
+
+        /* ABOUT */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 50px;
+        }
+
+        .about-text p {
+            margin-bottom: 18px;
+        }
+
+        .info-card {
+            background: white;
+            padding: 28px;
+            border: 1px solid #e3e8ed;
+            border-radius: 10px;
+        }
+
+        .info-card h3 {
+            margin-bottom: 15px;
+            color: #17202a;
+        }
+
+        .info-card p {
+            margin-bottom: 10px;
+            color: #546e7a;
+            font-size: 15px;
+        }
+
+        /* RESEARCH */
+        .research-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .research-card {
+            background: white;
+            border: 1px solid #e3e8ed;
+            border-radius: 10px;
+            padding: 28px;
+        }
+
+        .research-card h3 {
+            color: #17202a;
+            margin-bottom: 10px;
+        }
+
+        .research-card p {
+            color: #607d8b;
+            font-size: 15px;
+        }
+
+        /* PUBLICATIONS */
+        .publication {
+            background: white;
+            padding: 25px;
+            border-left: 4px solid #1565c0;
+            margin-bottom: 18px;
+            border-radius: 0 8px 8px 0;
+            border-top: 1px solid #e5eaee;
+            border-right: 1px solid #e5eaee;
+            border-bottom: 1px solid #e5eaee;
+        }
+
+        .publication h3 {
+            color: #17202a;
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .publication p {
+            color: #607d8b;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+
+        .publication a {
+            color: #1565c0;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        /* EXPERIENCE */
+        .timeline-item {
+            background: white;
+            padding: 25px;
+            margin-bottom: 18px;
+            border: 1px solid #e3e8ed;
+            border-radius: 9px;
+        }
+
+        .timeline-item h3 {
+            color: #17202a;
+            margin-bottom: 4px;
+        }
+
+        .timeline-item .date {
+            color: #1565c0;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        /* SKILLS */
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tag {
+            background: white;
+            border: 1px solid #dce3e8;
+            padding: 9px 14px;
+            border-radius: 20px;
+            font-size: 14px;
+            color: #455a64;
+        }
+
+        /* CONTACT */
+        .contact-box {
+            background: white;
+            border: 1px solid #e3e8ed;
+            border-radius: 10px;
+            padding: 35px;
+        }
+
+        .contact-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .contact-links a {
+            color: #1565c0;
+            font-weight: 600;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #17202a;
+            color: #cfd8dc;
+            padding: 30px 6%;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        /* MOBILE */
+        @media (max-width: 750px) {
+            .nav-container {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .nav-links {
+                justify-content: center;
+                gap: 14px;
+            }
+
+            .hero {
+                padding-top: 60px;
+            }
+
+            .about-grid,
+            .research-grid {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 55px 6%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+    <div class="nav-container">
+        <a href="#" class="logo">Nitin Sharma</a>
+
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#research">Research</a>
+            <a href="#publications">Publications</a>
+            <a href="#experience">Experience</a>
+            <a href="#teaching">Teaching</a>
+            <a href="#cv">CV</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </div>
+</nav>
+
+
+<!-- HERO -->
+<header class="hero">
+    <div class="hero-container">
+
+        <div class="eyebrow">
+            Human Resource Management · Organisational Behaviour · AI
+        </div>
+
+        <h1>Nitin Sharma</h1>
+
+        <div class="hero-title">
+            Early-Career Researcher in Human Resource Management,
+            Organisational Behaviour and Algorithmic Management
+        </div>
+
+        <p class="hero-description">
+            My research examines how AI-enabled HRM and algorithmic management
+            reshape employee–organisation relationships, psychological contracts,
+            employee trust, organisational justice and the future of work.
+        </p>
+
+        <div class="buttons">
+            <a class="button button-primary" href="#research">
+                Explore My Research
+            </a>
+
+            <a class="button button-secondary" href="#contact">
+                Contact
+            </a>
+        </div>
+
+    </div>
+</header>
+
+
+<!-- ABOUT -->
+<section id="about">
+    <div class="container">
+
+        <h2 class="section-title">About</h2>
+
+        <div class="about-grid">
+
+            <div class="about-text">
+
+                <p>
+                    I am an early-career researcher working at the intersection
+                    of Human Resource Management, Organisational Behaviour,
+                    employment relationships and emerging technologies.
+                </p>
+
+                <p>
+                    My research focuses particularly on AI-enabled HRM,
+                    algorithmic management, psychological contracts, employee
+                    trust, organisational justice, employee voice and responsible
+                    AI in the workplace.
+                </p>
+
+                <p>
+                    I am interested in understanding how AI-mediated organisational
+                    decision-making changes employees' perceptions of authority,
+                    fairness, responsibility, accountability and mutual obligations
+                    within the employment relationship.
+                </p>
+
+                <p>
+                    My methodological interests include quantitative research,
+                    mixed methods, structural equation modelling, scale
+                    development and validation, qualitative research and
+                    computational approaches to organisational research.
+                </p>
+
+            </div>
+
+            <div class="info-card">
+
+                <h3>Academic Profile</h3>
+
+                <p><strong>Field:</strong> Human Resource Management</p>
+
+                <p><strong>Secondary areas:</strong>
+                    Organisational Behaviour, Employment Relations
+                </p>
+
+                <p><strong>Location:</strong> Delhi, India</p>
+
+                <p><strong>Research focus:</strong>
+                    AI-enabled HRM & Algorithmic Management
+                </p>
+
+                <p><strong>Methods:</strong>
+                    Quantitative, Mixed Methods & Qualitative
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- RESEARCH -->
+<section id="research">
+    <div class="container">
+
+        <h2 class="section-title">Research</h2>
+
+        <p class="section-intro">
+            My research explores how technological and organisational changes
+            affect employees, employment relationships and organisational practices.
+        </p>
+
+        <div class="research-grid">
+
+            <div class="research-card">
+                <h3>AI-enabled HRM</h3>
+                <p>
+                    Examining employee acceptance and organisational implications
+                    of artificial intelligence in recruitment and other HR practices.
+                </p>
+            </div>
+
+            <div class="research-card">
+                <h3>Algorithmic Management</h3>
+                <p>
+                    Investigating how algorithmic systems influence managerial
+                    authority, decision-making, fairness, accountability and work.
+                </p>
+            </div>
+
+            <div class="research-card">
+                <h3>Psychological Contracts</h3>
+                <p>
+                    Studying how employees understand and revise perceived
+                    obligations when organisational practices and decision-making
+                    processes change.
+                </p>
+            </div>
+
+            <div class="research-card">
+                <h3>Employee Trust</h3>
+                <p>
+                    Exploring how transparency, fairness, human oversight and
+                    responsible AI influence employee trust in organisations.
+                </p>
+            </div>
+
+            <div class="research-card">
+                <h3>Organisational Justice</h3>
+                <p>
+                    Examining employee perceptions of procedural fairness,
+                    transparency and accountability in technology-mediated decisions.
+                </p>
+            </div>
+
+            <div class="research-card">
+                <h3>Future of Work</h3>
+                <p>
+                    Understanding how digitalisation and AI are transforming
+                    organisational practices, employee relationships and work.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- CURRENT PHD RESEARCH -->
+<section>
+    <div class="container">
+
+        <h2 class="section-title">
+            Current Research Direction
+        </h2>
+
+        <p class="section-intro">
+            Psychological Contract Reconfiguration in AI-Governed Organisations:
+            Employee Trust and Responsible AI
+        </p>
+
+        <div class="publication">
+
+            <h3>
+                Psychological Contract Reconfiguration in AI-Governed Organisations
+            </h3>
+
+            <p>
+                This research investigates how employees experience and interpret
+                AI-mediated HR decisions and how the increasing involvement of AI
+                in organisational decision-making may reshape psychological
+                contracts, employee trust, perceptions of fairness, responsibility,
+                accountability and workplace well-being.
+            </p>
+
+            <p>
+                The proposed research uses a phased mixed-methods design combining
+                qualitative interviews, scale development, longitudinal quantitative
+                research and multilevel analysis.
+            </p>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- PUBLICATIONS -->
+<section id="publications">
+    <div class="container">
+
+        <h2 class="section-title">Publications</h2>
+
+        <p class="section-intro">
+            Selected peer-reviewed research and scholarly work.
+        </p>
+
+
+        <div class="publication">
+
+            <h3>
+                Trust as the Dominant Driver of Employee Acceptance of
+                AI-Enabled Recruitment Systems: An Extended Technology
+                Acceptance Model
+            </h3>
+
+            <p>
+                Sharma, N. (2026). International Journal of Research and
+                Analytical Reviews (IJRAAR), 13(3).
+            </p>
+
+            <a href="#" target="_blank">
+                Publication link →
+            </a>
+
+        </div>
+
+
+        <div class="publication">
+
+            <h3>
+                The Future of HRM: The Role of Artificial Intelligence
+                in HR Practices
+            </h3>
+
+            <p>
+                Sharma, N., & Dey, S. (2025).
+                International Journal of Research and Analytical Reviews,
+                12(3).
+            </p>
+
+            <a href="#" target="_blank">
+                Publication link →
+            </a>
+
+        </div>
+
+
+        <div class="publication">
+
+            <h3>
+                Role of Artificial Intelligence in the Banking Sector
+            </h3>
+
+            <p>
+                Sharma, N. (2025).
+                International Journal of Current Research and Thought,
+                12(3).
+            </p>
+
+            <a href="#" target="_blank">
+                Publication link →
+            </a>
+
+        </div>
+
+
+        <div class="publication">
+
+            <h3>
+                A TAM-Based Empirical Investigation of Employee Acceptance
+                of AI-Enabled Recruitment in the Indian IT Sector
+            </h3>
+
+            <p>
+                Sharma, N. (2026). Conference paper presented at
+                IC-AISSTMH 2026.
+            </p>
+
+            <a href="#" target="_blank">
+                Conference paper →
+            </a>
+
+        </div>
+
+
+        <h2 style="margin-top:50px; margin-bottom:20px;">
+            Manuscripts Under Review
+        </h2>
+
+
+        <div class="publication">
+
+            <h3>
+                Algorithmic Management and the Evolution of the Psychological
+                Contract: A Multilevel Investigation
+            </h3>
+
+            <p>
+                Manuscript under review.
+            </p>
+
+        </div>
+
+
+        <div class="publication">
+
+            <h3>
+                Integrating Strategic and Human-Centred HR Practices:
+                Development and Validation of a Hierarchical HR Architecture
+            </h3>
+
+            <p>
+                Manuscript under review.
+            </p>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- METHODS -->
+<section>
+    <div class="container">
+
+        <h2 class="section-title">Research Methods & Tools</h2>
+
+        <p class="section-intro">
+            Methods and software used across my research projects.
+        </p>
+
+        <div class="tags">
+
+            <span class="tag">Research Design</span>
+            <span class="tag">Survey Research</span>
+            <span class="tag">Mixed Methods</span>
+            <span class="tag">Qualitative Research</span>
+            <span class="tag">Structural Equation Modelling</span>
+            <span class="tag">PLS-SEM</span>
+            <span class="tag">Psychometrics</span>
+            <span class="tag">Scale Development</span>
+            <span class="tag">SPSS</span>
+            <span class="tag">SmartPLS</span>
+            <span class="tag">R</span>
+            <span class="tag">Power BI</span>
+            <span class="tag">Excel</span>
+            <span class="tag">PRISMA</span>
+            <span class="tag">Bibliometric Analysis</span>
+            <span class="tag">VOSviewer</span>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- EXPERIENCE -->
+<section id="experience">
+    <div class="container">
+
+        <h2 class="section-title">Research & Professional Experience</h2>
+
+        <div class="timeline-item">
+
+            <h3>Co-Teacher — GLECTA</h3>
+
+            <div class="date">2026 – Present</div>
+
+            <p>
+                Teaching UK Business Studies and supporting students in
+                understanding business concepts and applications.
+            </p>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <h3>HR Associate Intern — TEN: Brain Research</h3>
+
+            <div class="date">2025</div>
+
+            <p>
+                Worked with AI-assisted recruitment workflows, candidate
+                screening and recruitment coordination.
+            </p>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <h3>HR Operations Support — Cook N Klean & Kinds Being</h3>
+
+            <div class="date">2025</div>
+
+            <p>
+                Supported HR operations and related organisational activities.
+            </p>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <h3>Teaching Assistant — Vidya Bal Bhawan</h3>
+
+            <div class="date">2024</div>
+
+            <p>
+                Supported classroom teaching and student learning activities.
+            </p>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- TEACHING -->
+<section id="teaching">
+    <div class="container">
+
+        <h2 class="section-title">Teaching</h2>
+
+        <p class="section-intro">
+            My teaching experience complements my research interests in
+            management, business and organisational studies.
+        </p>
+
+        <div class="timeline-item">
+
+            <h3>Co-Teacher — UK Business Studies</h3>
+
+            <div class="date">GLECTA · 2026 – Present</div>
+
+            <p>
+                Teaching and explaining business concepts, supporting student
+                learning and contributing to classroom activities.
+            </p>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- CV -->
+<section id="cv">
+    <div class="container">
+
+        <h2 class="section-title">Curriculum Vitae</h2>
+
+        <p class="section-intro">
+            My CV provides a detailed overview of my academic background,
+            research experience, publications, teaching and professional activities.
+        </p>
+
+        <div class="buttons">
+
+            <a class="button button-primary" href="Nitin_Sharma_CV.pdf" target="_blank">
+                View / Download CV
+            </a>
+
+        </div>
+
+        <p style="margin-top:15px; font-size:13px; color:#78909c;">
+            CV will be available once the PDF is uploaded to this website.
+        </p>
+
+    </div>
+</section>
+
+
+<!-- CONTACT -->
+<section id="contact">
+    <div class="container">
+
+        <h2 class="section-title">Contact</h2>
+
+        <div class="contact-box">
+
+            <p>
+                I am open to opportunities for doctoral research,
+                research collaboration and academic discussion in Human
+                Resource Management, Organisational Behaviour and
+                AI-enabled HRM.
+            </p>
+
+            <div class="contact-links">
+
+                <a href="mailto:YOUR_EMAIL@example.com">
+                    Email
+                </a>
+
+                <a href="YOUR_ORCID_LINK" target="_blank">
+                    ORCID
+                </a>
+
+                <a href="YOUR_GOOGLE_SCHOLAR_LINK" target="_blank">
+                    Google Scholar
+                </a>
+
+                <a href="YOUR_LINKEDIN_LINK" target="_blank">
+                    LinkedIn
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+
+    <p>
+        © 2026 Nitin Sharma · Academic Researcher
+    </p>
+
+    <p style="margin-top:5px;">
+        Human Resource Management · Organisational Behaviour · AI & Work
+    </p>
+
+</footer>
+
+</body>
+</html>
