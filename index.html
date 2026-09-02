@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Nitin Sharma | HRM & Organisational Behaviour Researcher</title>
+    <title>Nitin Sharma | Academic Researcher</title>
 
     <meta name="description" content="Academic website of Nitin Sharma, an early-career researcher in Human Resource Management, Organisational Behaviour, AI-enabled HRM and Algorithmic Management.">
 
@@ -36,7 +36,7 @@
             position: sticky;
             top: 0;
             z-index: 1000;
-            background: rgba(255,255,255,0.97);
+            background: rgba(255,255,255,0.98);
             border-bottom: 1px solid #e4e8ec;
             padding: 15px 6%;
         }
@@ -53,11 +53,12 @@
             font-size: 20px;
             font-weight: 700;
             letter-spacing: 0.3px;
+            color: #17202a;
         }
 
         .nav-links {
             display: flex;
-            gap: 24px;
+            gap: 22px;
             flex-wrap: wrap;
             justify-content: flex-end;
         }
@@ -74,7 +75,7 @@
         /* HERO */
         .hero {
             background: white;
-            padding: 90px 6% 80px;
+            padding: 95px 6% 85px;
             border-bottom: 1px solid #e8edf1;
         }
 
@@ -89,11 +90,11 @@
             font-size: 14px;
             letter-spacing: 1px;
             text-transform: uppercase;
-            margin-bottom: 14px;
+            margin-bottom: 15px;
         }
 
         h1 {
-            font-size: clamp(42px, 6vw, 68px);
+            font-size: clamp(44px, 6vw, 70px);
             line-height: 1.05;
             color: #17202a;
             margin-bottom: 20px;
@@ -102,12 +103,12 @@
         .hero-title {
             font-size: 22px;
             color: #455a64;
-            max-width: 850px;
+            max-width: 900px;
             margin-bottom: 25px;
         }
 
         .hero-description {
-            max-width: 850px;
+            max-width: 900px;
             font-size: 17px;
             color: #546e7a;
         }
@@ -126,6 +127,7 @@
             font-size: 14px;
             font-weight: 600;
             transition: 0.2s;
+            display: inline-block;
         }
 
         .button-primary {
@@ -164,7 +166,7 @@
 
         .section-intro {
             color: #607d8b;
-            max-width: 800px;
+            max-width: 850px;
             margin-bottom: 35px;
         }
 
@@ -209,6 +211,11 @@
             border: 1px solid #e3e8ed;
             border-radius: 10px;
             padding: 28px;
+            transition: 0.2s;
+        }
+
+        .research-card:hover {
+            transform: translateY(-3px);
         }
 
         .research-card h3 {
@@ -219,6 +226,31 @@
         .research-card p {
             color: #607d8b;
             font-size: 15px;
+        }
+
+        /* CARDS */
+        .card {
+            background: white;
+            border: 1px solid #e3e8ed;
+            border-radius: 10px;
+            padding: 28px;
+            margin-bottom: 20px;
+        }
+
+        .card h3 {
+            color: #17202a;
+            margin-bottom: 7px;
+        }
+
+        .card .date {
+            color: #1565c0;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #607d8b;
         }
 
         /* PUBLICATIONS */
@@ -245,34 +277,13 @@
             margin-bottom: 8px;
         }
 
-        .publication a {
+        .publication-link {
             color: #1565c0;
             font-weight: 600;
             font-size: 14px;
         }
 
-        /* EXPERIENCE */
-        .timeline-item {
-            background: white;
-            padding: 25px;
-            margin-bottom: 18px;
-            border: 1px solid #e3e8ed;
-            border-radius: 9px;
-        }
-
-        .timeline-item h3 {
-            color: #17202a;
-            margin-bottom: 4px;
-        }
-
-        .timeline-item .date {
-            color: #1565c0;
-            font-size: 14px;
-            font-weight: 600;
-            margin-bottom: 10px;
-        }
-
-        /* SKILLS */
+        /* TAGS */
         .tags {
             display: flex;
             flex-wrap: wrap;
@@ -299,13 +310,17 @@
         .contact-links {
             display: flex;
             flex-wrap: wrap;
-            gap: 15px;
-            margin-top: 20px;
+            gap: 18px;
+            margin-top: 22px;
         }
 
         .contact-links a {
             color: #1565c0;
             font-weight: 600;
+        }
+
+        .contact-links a:hover {
+            text-decoration: underline;
         }
 
         /* FOOTER */
@@ -319,6 +334,7 @@
 
         /* MOBILE */
         @media (max-width: 750px) {
+
             .nav-container {
                 flex-direction: column;
                 gap: 12px;
@@ -326,7 +342,7 @@
 
             .nav-links {
                 justify-content: center;
-                gap: 14px;
+                gap: 13px;
             }
 
             .hero {
@@ -347,33 +363,49 @@
 
 <body>
 
-<!-- NAVIGATION -->
+<!-- =========================
+     NAVIGATION
+========================= -->
+
 <nav>
     <div class="nav-container">
-        <a href="#" class="logo">Nitin Sharma</a>
+
+        <a href="#" class="logo">
+            Nitin Sharma
+        </a>
 
         <div class="nav-links">
+
             <a href="#about">About</a>
             <a href="#research">Research</a>
+            <a href="#education">Education</a>
             <a href="#publications">Publications</a>
             <a href="#experience">Experience</a>
             <a href="#teaching">Teaching</a>
             <a href="#cv">CV</a>
             <a href="#contact">Contact</a>
+
         </div>
+
     </div>
 </nav>
 
 
-<!-- HERO -->
+<!-- =========================
+     HERO
+========================= -->
+
 <header class="hero">
+
     <div class="hero-container">
 
         <div class="eyebrow">
             Human Resource Management · Organisational Behaviour · AI
         </div>
 
-        <h1>Nitin Sharma</h1>
+        <h1>
+            Nitin Sharma
+        </h1>
 
         <div class="hero-title">
             Early-Career Researcher in Human Resource Management,
@@ -387,24 +419,33 @@
         </p>
 
         <div class="buttons">
+
             <a class="button button-primary" href="#research">
                 Explore My Research
             </a>
 
-            <a class="button button-secondary" href="#contact">
-                Contact
+            <a class="button button-secondary" href="#publications">
+                View Publications
             </a>
+
         </div>
 
     </div>
+
 </header>
 
 
-<!-- ABOUT -->
+<!-- =========================
+     ABOUT
+========================= -->
+
 <section id="about">
+
     <div class="container">
 
-        <h2 class="section-title">About</h2>
+        <h2 class="section-title">
+            About
+        </h2>
 
         <div class="about-grid">
 
@@ -439,24 +480,36 @@
 
             </div>
 
+
             <div class="info-card">
 
-                <h3>Academic Profile</h3>
+                <h3>
+                    Academic Profile
+                </h3>
 
-                <p><strong>Field:</strong> Human Resource Management</p>
+                <p>
+                    <strong>Primary field:</strong>
+                    Human Resource Management
+                </p>
 
-                <p><strong>Secondary areas:</strong>
+                <p>
+                    <strong>Secondary areas:</strong>
                     Organisational Behaviour, Employment Relations
                 </p>
 
-                <p><strong>Location:</strong> Delhi, India</p>
-
-                <p><strong>Research focus:</strong>
+                <p>
+                    <strong>Research focus:</strong>
                     AI-enabled HRM & Algorithmic Management
                 </p>
 
-                <p><strong>Methods:</strong>
+                <p>
+                    <strong>Research approach:</strong>
                     Quantitative, Mixed Methods & Qualitative
+                </p>
+
+                <p>
+                    <strong>Location:</strong>
+                    Delhi, India
                 </p>
 
             </div>
@@ -464,79 +517,129 @@
         </div>
 
     </div>
+
 </section>
 
 
-<!-- RESEARCH -->
+<!-- =========================
+     RESEARCH
+========================= -->
+
 <section id="research">
+
     <div class="container">
 
-        <h2 class="section-title">Research</h2>
+        <h2 class="section-title">
+            Research
+        </h2>
 
         <p class="section-intro">
             My research explores how technological and organisational changes
             affect employees, employment relationships and organisational practices.
         </p>
 
+
         <div class="research-grid">
 
+
             <div class="research-card">
-                <h3>AI-enabled HRM</h3>
+
+                <h3>
+                    AI-enabled HRM
+                </h3>
+
                 <p>
                     Examining employee acceptance and organisational implications
                     of artificial intelligence in recruitment and other HR practices.
                 </p>
+
             </div>
 
+
             <div class="research-card">
-                <h3>Algorithmic Management</h3>
+
+                <h3>
+                    Algorithmic Management
+                </h3>
+
                 <p>
                     Investigating how algorithmic systems influence managerial
                     authority, decision-making, fairness, accountability and work.
                 </p>
+
             </div>
 
+
             <div class="research-card">
-                <h3>Psychological Contracts</h3>
+
+                <h3>
+                    Psychological Contracts
+                </h3>
+
                 <p>
                     Studying how employees understand and revise perceived
                     obligations when organisational practices and decision-making
                     processes change.
                 </p>
+
             </div>
 
+
             <div class="research-card">
-                <h3>Employee Trust</h3>
+
+                <h3>
+                    Employee Trust
+                </h3>
+
                 <p>
                     Exploring how transparency, fairness, human oversight and
                     responsible AI influence employee trust in organisations.
                 </p>
+
             </div>
 
+
             <div class="research-card">
-                <h3>Organisational Justice</h3>
+
+                <h3>
+                    Organisational Justice
+                </h3>
+
                 <p>
                     Examining employee perceptions of procedural fairness,
                     transparency and accountability in technology-mediated decisions.
                 </p>
+
             </div>
 
+
             <div class="research-card">
-                <h3>Future of Work</h3>
+
+                <h3>
+                    Future of Work
+                </h3>
+
                 <p>
                     Understanding how digitalisation and AI are transforming
                     organisational practices, employee relationships and work.
                 </p>
+
             </div>
+
 
         </div>
 
     </div>
+
 </section>
 
 
-<!-- CURRENT PHD RESEARCH -->
+<!-- =========================
+     CURRENT RESEARCH
+========================= -->
+
 <section>
+
     <div class="container">
 
         <h2 class="section-title">
@@ -547,6 +650,7 @@
             Psychological Contract Reconfiguration in AI-Governed Organisations:
             Employee Trust and Responsible AI
         </p>
+
 
         <div class="publication">
 
@@ -571,19 +675,82 @@
         </div>
 
     </div>
+
 </section>
 
 
-<!-- PUBLICATIONS -->
-<section id="publications">
+<!-- =========================
+     EDUCATION
+========================= -->
+
+<section id="education">
+
     <div class="container">
 
-        <h2 class="section-title">Publications</h2>
+        <h2 class="section-title">
+            Education
+        </h2>
+
+
+        <div class="card">
+
+            <h3>
+                Master of Business Administration (MBA) — Human Resource Management
+            </h3>
+
+            <div class="date">
+                University of Delhi, School of Open Learning · Expected 2026
+            </div>
+
+            <p>
+                Graduate study in Human Resource Management and related
+                management disciplines.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>
+                Master of Commerce (M.Com) — Human Resource Management
+            </h3>
+
+            <div class="date">
+                Amity University · CGPA: 9.04/10
+            </div>
+
+            <p>
+                Master's research examined employee acceptance of AI-enabled
+                recruitment systems in the Indian IT sector using the Technology
+                Acceptance Model (TAM), survey research and PLS-SEM.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     PUBLICATIONS
+========================= -->
+
+<section id="publications">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            Publications
+        </h2>
 
         <p class="section-intro">
             Selected peer-reviewed research and scholarly work.
         </p>
 
+
+        <!-- Publication 1 -->
 
         <div class="publication">
 
@@ -594,16 +761,21 @@
             </h3>
 
             <p>
-                Sharma, N. (2026). International Journal of Research and
-                Analytical Reviews (IJRAAR), 13(3).
+                Sharma, N. (2026).
+                International Journal of Research and Analytical Reviews (IJRAAR),
+                13(3).
             </p>
 
-            <a href="#" target="_blank">
+            <a class="publication-link"
+               href="#"
+               target="_blank">
                 Publication link →
             </a>
 
         </div>
 
+
+        <!-- Publication 2 -->
 
         <div class="publication">
 
@@ -614,16 +786,20 @@
 
             <p>
                 Sharma, N., & Dey, S. (2025).
-                International Journal of Research and Analytical Reviews,
+                International Journal of Research and Analytical Reviews (IJRAAR),
                 12(3).
             </p>
 
-            <a href="#" target="_blank">
+            <a class="publication-link"
+               href="#"
+               target="_blank">
                 Publication link →
             </a>
 
         </div>
 
+
+        <!-- Publication 3 -->
 
         <div class="publication">
 
@@ -637,12 +813,16 @@
                 12(3).
             </p>
 
-            <a href="#" target="_blank">
+            <a class="publication-link"
+               href="#"
+               target="_blank">
                 Publication link →
             </a>
 
         </div>
 
+
+        <!-- Conference Paper -->
 
         <div class="publication">
 
@@ -652,18 +832,22 @@
             </h3>
 
             <p>
-                Sharma, N. (2026). Conference paper presented at
-                IC-AISSTMH 2026.
+                Sharma, N. (2026).
+                Conference paper presented at IC-AISSTMH 2026.
             </p>
 
-            <a href="#" target="_blank">
+            <a class="publication-link"
+               href="#"
+               target="_blank">
                 Conference paper →
             </a>
 
         </div>
 
 
-        <h2 style="margin-top:50px; margin-bottom:20px;">
+        <!-- Under Review -->
+
+        <h2 style="margin-top:55px; margin-bottom:22px;">
             Manuscripts Under Review
         </h2>
 
@@ -676,7 +860,8 @@
             </h3>
 
             <p>
-                Manuscript under review.
+                Manuscript under review at the International Journal of Human
+                Resource Development and Management.
             </p>
 
         </div>
@@ -690,24 +875,32 @@
             </h3>
 
             <p>
-                Manuscript under review.
+                Manuscript under review at Management Research Review.
             </p>
 
         </div>
 
     </div>
+
 </section>
 
 
-<!-- METHODS -->
+<!-- =========================
+     RESEARCH METHODS
+========================= -->
+
 <section>
+
     <div class="container">
 
-        <h2 class="section-title">Research Methods & Tools</h2>
+        <h2 class="section-title">
+            Research Methods & Tools
+        </h2>
 
         <p class="section-intro">
             Methods and software used across my research projects.
         </p>
+
 
         <div class="tags">
 
@@ -731,20 +924,32 @@
         </div>
 
     </div>
+
 </section>
 
 
-<!-- EXPERIENCE -->
+<!-- =========================
+     EXPERIENCE
+========================= -->
+
 <section id="experience">
+
     <div class="container">
 
-        <h2 class="section-title">Research & Professional Experience</h2>
+        <h2 class="section-title">
+            Research & Professional Experience
+        </h2>
 
-        <div class="timeline-item">
 
-            <h3>Co-Teacher — GLECTA</h3>
+        <div class="card">
 
-            <div class="date">2026 – Present</div>
+            <h3>
+                Co-Teacher — GLECTA
+            </h3>
+
+            <div class="date">
+                2026 – Present
+            </div>
 
             <p>
                 Teaching UK Business Studies and supporting students in
@@ -754,11 +959,15 @@
         </div>
 
 
-        <div class="timeline-item">
+        <div class="card">
 
-            <h3>HR Associate Intern — TEN: Brain Research</h3>
+            <h3>
+                HR Associate Intern — TEN: Brain Research
+            </h3>
 
-            <div class="date">2025</div>
+            <div class="date">
+                2025
+            </div>
 
             <p>
                 Worked with AI-assisted recruitment workflows, candidate
@@ -768,11 +977,15 @@
         </div>
 
 
-        <div class="timeline-item">
+        <div class="card">
 
-            <h3>HR Operations Support — Cook N Klean & Kinds Being</h3>
+            <h3>
+                HR Operations Support — Cook N Klean & Kinds Being
+            </h3>
 
-            <div class="date">2025</div>
+            <div class="date">
+                2025
+            </div>
 
             <p>
                 Supported HR operations and related organisational activities.
@@ -781,11 +994,15 @@
         </div>
 
 
-        <div class="timeline-item">
+        <div class="card">
 
-            <h3>Teaching Assistant — Vidya Bal Bhawan</h3>
+            <h3>
+                Teaching Assistant — Vidya Bal Bhawan
+            </h3>
 
-            <div class="date">2024</div>
+            <div class="date">
+                2024
+            </div>
 
             <p>
                 Supported classroom teaching and student learning activities.
@@ -794,25 +1011,37 @@
         </div>
 
     </div>
+
 </section>
 
 
-<!-- TEACHING -->
+<!-- =========================
+     TEACHING
+========================= -->
+
 <section id="teaching">
+
     <div class="container">
 
-        <h2 class="section-title">Teaching</h2>
+        <h2 class="section-title">
+            Teaching
+        </h2>
 
         <p class="section-intro">
             My teaching experience complements my research interests in
             management, business and organisational studies.
         </p>
 
-        <div class="timeline-item">
 
-            <h3>Co-Teacher — UK Business Studies</h3>
+        <div class="card">
 
-            <div class="date">GLECTA · 2026 – Present</div>
+            <h3>
+                Co-Teacher — UK Business Studies
+            </h3>
+
+            <div class="date">
+                GLECTA · 2026 – Present
+            </div>
 
             <p>
                 Teaching and explaining business concepts, supporting student
@@ -821,42 +1050,137 @@
 
         </div>
 
+
+        <div class="card">
+
+            <h3>
+                Teaching Assistant
+            </h3>
+
+            <div class="date">
+                Vidya Bal Bhawan · 2024
+            </div>
+
+            <p>
+                Supported classroom teaching and student learning activities.
+            </p>
+
+        </div>
+
     </div>
+
 </section>
 
 
-<!-- CV -->
-<section id="cv">
+<!-- =========================
+     ACADEMIC ACTIVITIES
+========================= -->
+
+<section>
+
     <div class="container">
 
-        <h2 class="section-title">Curriculum Vitae</h2>
+        <h2 class="section-title">
+            Academic & Leadership Activities
+        </h2>
+
+
+        <div class="card">
+
+            <h3>
+                President — Aparajit Sports Club
+            </h3>
+
+            <p>
+                Academic and student leadership experience involving coordination,
+                organisation and student engagement.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>
+                Vice President — Innovation & Entrepreneurship Cell
+            </h3>
+
+            <p>
+                Contributed to student innovation and entrepreneurship activities.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>
+                Organising Head — Sanagathan Conference
+            </h3>
+
+            <p>
+                Contributed to the organisation and coordination of academic
+                conference activities in 2024 and 2025.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CV
+========================= -->
+
+<section id="cv">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            Curriculum Vitae
+        </h2>
 
         <p class="section-intro">
             My CV provides a detailed overview of my academic background,
             research experience, publications, teaching and professional activities.
         </p>
 
+
         <div class="buttons">
 
-            <a class="button button-primary" href="Nitin_Sharma_CV.pdf" target="_blank">
+            <a class="button button-primary"
+               href="Nitin_Sharma_CV.pdf"
+               target="_blank">
                 View / Download CV
             </a>
 
         </div>
 
+
         <p style="margin-top:15px; font-size:13px; color:#78909c;">
-            CV will be available once the PDF is uploaded to this website.
+            Please upload Nitin_Sharma_CV.pdf to the main repository for this
+            button to work.
         </p>
 
     </div>
+
 </section>
 
 
-<!-- CONTACT -->
+<!-- =========================
+     CONTACT
+========================= -->
+
 <section id="contact">
+
     <div class="container">
 
-        <h2 class="section-title">Contact</h2>
+        <h2 class="section-title">
+            Contact
+        </h2>
+
 
         <div class="contact-box">
 
@@ -867,21 +1191,30 @@
                 AI-enabled HRM.
             </p>
 
+
             <div class="contact-links">
 
-                <a href="mailto:nitin.au02@gmail.com">
+                <a href="mailto:Nitin.au02@gmail.com">
                     Email
                 </a>
 
-                <a href="https://orcid.org/0009-0008-3451-1729" target="_blank">
+                <a href="https://orcid.org/0009-0008-3451-1729"
+                   target="_blank">
                     ORCID
                 </a>
 
-                <a href="https://scholar.google.com/citations?user=nA5j7yUAAAAJ&hl=en" target="_blank">
+                <a href="https://scholar.google.com/citations?user=nA5j7yUAAAAJ&hl=en"
+                   target="_blank">
                     Google Scholar
                 </a>
 
-                <a href="https://www.linkedin.com/in/nitin-sharma-449bb824b/" target="_blank">
+                <a href="https://www.researchgate.net/profile/Nitin-Sharma-94"
+                   target="_blank">
+                    ResearchGate
+                </a>
+
+                <a href="https://www.linkedin.com/in/nitin-sharma-449bb824b/"
+                   target="_blank">
                     LinkedIn
                 </a>
 
@@ -890,10 +1223,14 @@
         </div>
 
     </div>
+
 </section>
 
 
-<!-- FOOTER -->
+<!-- =========================
+     FOOTER
+========================= -->
+
 <footer>
 
     <p>
@@ -905,6 +1242,7 @@
     </p>
 
 </footer>
+
 
 </body>
 </html>
