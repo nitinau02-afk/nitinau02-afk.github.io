@@ -4,31 +4,20 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Nitin Sharma — Researcher</title>
+<title>Nitin Sharma | Research & Ideas</title>
 
-<meta name="description" content="Nitin Sharma — researcher working at the intersection of Human Resource Management, Organisational Behaviour, Artificial Intelligence and Algorithmic Management.">
-<meta name="author" content="Nitin Sharma">
+<meta name="description" content="Nitin Sharma — researcher exploring artificial intelligence, human resource management, organisational behaviour and the future of work.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
 
 <style>
 
 /* =========================================================
-   BASE
+   RESET
 ========================================================= */
-
-:root{
-    --background:#f8f7f3;
-    --paper:#ffffff;
-    --ink:#181818;
-    --soft:#686868;
-    --line:#deddd7;
-    --accent:#7257d8;
-    --accent-light:#eeeafb;
-    --max:1180px;
-}
 
 *{
     margin:0;
@@ -41,16 +30,10 @@ html{
 }
 
 body{
-    background:var(--background);
-    color:var(--ink);
+    background:#f5f2ec;
+    color:#181818;
     font-family:"DM Sans",sans-serif;
-    line-height:1.7;
-    overflow-x:hidden;
-}
-
-img{
-    max-width:100%;
-    display:block;
+    line-height:1.6;
 }
 
 a{
@@ -58,78 +41,85 @@ a{
     text-decoration:none;
 }
 
-button{
-    font-family:inherit;
+img{
+    display:block;
+    max-width:100%;
 }
 
 .container{
-    width:min(var(--max),90%);
+    width:90%;
+    max-width:1250px;
     margin:auto;
 }
 
 
 /* =========================================================
-   NAVIGATION
+   TOP BAR
 ========================================================= */
 
-header{
+.topbar{
     position:fixed;
     top:0;
     left:0;
-    width:100%;
+    right:0;
     z-index:1000;
-    background:rgba(248,247,243,.88);
-    backdrop-filter:blur(16px);
-    border-bottom:1px solid rgba(222,221,215,.7);
-}
 
-.nav{
-    height:78px;
+    height:72px;
+
     display:flex;
     align-items:center;
+
+    background:rgba(245,242,236,.88);
+    backdrop-filter:blur(15px);
+
+    border-bottom:1px solid rgba(24,24,24,.08);
+}
+
+.topbar-inner{
+    width:90%;
+    max-width:1250px;
+    margin:auto;
+
+    display:flex;
     justify-content:space-between;
-}
-
-.logo{
-    font-family:"Playfair Display",serif;
-    font-size:25px;
-    font-weight:600;
-    letter-spacing:-.5px;
-}
-
-.logo-dot{
-    color:var(--accent);
-}
-
-.navigation{
-    display:flex;
     align-items:center;
-    gap:30px;
 }
 
-.navigation a{
-    font-size:13px;
-    color:#666;
-    transition:.25s ease;
+.brand{
+    font-family:"DM Serif Display",serif;
+    font-size:25px;
 }
 
-.navigation a:hover{
-    color:var(--accent);
-}
-
-.nav-social{
-    font-size:13px;
-    color:var(--accent);
-    border-bottom:1px solid var(--accent);
-    padding-bottom:2px;
+.brand span{
+    color:#7a58d6;
 }
 
 .menu{
+    display:flex;
+    gap:28px;
+    align-items:center;
+}
+
+.menu a{
+    font-size:13px;
+    color:#555;
+}
+
+.menu a:hover{
+    color:#7a58d6;
+}
+
+.menu .contact-link{
+    color:#181818;
+    border-bottom:1px solid #181818;
+    padding-bottom:2px;
+}
+
+.mobile-menu{
     display:none;
-    background:none;
     border:0;
+    background:none;
     font-size:24px;
-    cursor:pointer;
 }
 
 
@@ -138,155 +128,234 @@ header{
 ========================================================= */
 
 .hero{
+    padding-top:72px;
     min-height:100vh;
-    padding-top:78px;
+
     display:flex;
     align-items:center;
 }
 
-.hero-layout{
+.hero-grid{
     display:grid;
-    grid-template-columns:1.35fr .65fr;
-    gap:90px;
+    grid-template-columns:1.05fr .95fr;
+    min-height:calc(100vh - 72px);
     align-items:center;
-    padding:80px 0 90px;
 }
 
-.hero-kicker{
-    font-size:12px;
-    letter-spacing:2.5px;
+.hero-left{
+    padding:90px 60px 90px 0;
+}
+
+.hero-small{
     text-transform:uppercase;
-    color:var(--accent);
+    letter-spacing:3px;
+    font-size:11px;
     font-weight:700;
-    margin-bottom:22px;
+    color:#7a58d6;
+    margin-bottom:25px;
 }
 
-.hero-title{
-    font-family:"Playfair Display",serif;
-    font-size:clamp(58px,8vw,100px);
-    line-height:.98;
-    letter-spacing:-4px;
-    font-weight:600;
-    max-width:800px;
+.hero h1{
+    font-family:"DM Serif Display",serif;
+
+    font-size:clamp(70px,9vw,135px);
+
+    line-height:.88;
+
+    letter-spacing:-5px;
+
+    font-weight:400;
 }
 
-.hero-title span{
-    display:block;
+.hero h1 .second{
+    margin-left:80px;
 }
 
-.hero-description{
-    max-width:690px;
-    margin-top:35px;
-    font-size:19px;
-    line-height:1.75;
-    color:var(--soft);
+.hero-intro{
+    margin-top:42px;
+
+    max-width:570px;
+
+    font-size:20px;
+    color:#5e5e5e;
+
+    line-height:1.7;
 }
 
-.hero-links{
+.hero-bottom{
+    margin-top:40px;
+
     display:flex;
+    align-items:center;
     gap:25px;
-    margin-top:35px;
-    flex-wrap:wrap;
 }
 
-.hero-links a{
-    font-size:14px;
-    font-weight:600;
-    border-bottom:1px solid var(--ink);
-    padding-bottom:3px;
-    transition:.25s;
+.circle-link{
+    width:58px;
+    height:58px;
+
+    border:1px solid #222;
+
+    border-radius:50%;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:20px;
+
+    transition:.3s;
 }
 
-.hero-links a:hover{
-    color:var(--accent);
-    border-color:var(--accent);
+.circle-link:hover{
+    background:#181818;
+    color:white;
+}
+
+.hero-note{
+    font-size:12px;
+    color:#777;
 }
 
 
 /* =========================================================
-   PHOTO
+   HERO PHOTO
 ========================================================= */
 
-.hero-photo{
-    position:relative;
+.hero-right{
+    height:calc(100vh - 72px);
+
     display:flex;
-    justify-content:flex-end;
+    align-items:center;
+    justify-content:center;
+
+    padding:55px 0 55px 30px;
 }
 
-.photo-frame{
-    width:min(390px,100%);
+.photo-area{
+    width:100%;
+    max-width:530px;
+
     position:relative;
 }
 
-.photo-frame::before{
-    content:"";
-    position:absolute;
+.photo-area img{
     width:100%;
-    height:100%;
-    border:1px solid var(--accent);
-    top:18px;
-    left:18px;
-    z-index:0;
-}
 
-.photo-frame img{
-    position:relative;
-    z-index:1;
-    width:100%;
-    aspect-ratio:4/5;
+    height:min(650px,72vh);
+
     object-fit:cover;
 
     /*
        IMPORTANT:
-       No filter, tint, opacity or colour overlay.
-       The original photograph is displayed naturally.
+       No filter.
+       No tint.
+       No opacity.
+       No overlay.
     */
 
-    filter:none;
-    opacity:1;
+    filter:none !important;
+    opacity:1 !important;
 
-    background:#eee;
+    position:relative;
+    z-index:2;
+}
+
+.photo-number{
+    position:absolute;
+
+    right:-22px;
+    bottom:35px;
+
+    z-index:3;
+
+    background:#7a58d6;
+    color:white;
+
+    width:105px;
+    height:105px;
+
+    border-radius:50%;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
+    font-size:11px;
+    line-height:1.4;
+
+    text-transform:uppercase;
+    letter-spacing:1px;
+}
+
+.photo-line{
+    position:absolute;
+
+    width:130px;
+    height:1px;
+
+    background:#181818;
+
+    left:-65px;
+    top:35px;
+
+    z-index:3;
 }
 
 
 /* =========================================================
-   INTRODUCTION
+   INTRO
 ========================================================= */
 
-.introduction{
-    padding:125px 0;
-    border-top:1px solid var(--line);
+.intro{
+    background:#181818;
+    color:white;
+
+    padding:150px 0;
 }
 
-.intro-grid{
+.intro-layout{
     display:grid;
-    grid-template-columns:.55fr 1.45fr;
-    gap:80px;
+
+    grid-template-columns:.65fr 1.35fr;
+
+    gap:90px;
 }
 
-.section-label{
-    font-size:11px;
+.intro-label{
+    color:#a895ef;
+
     text-transform:uppercase;
-    letter-spacing:2.5px;
-    color:var(--accent);
+    letter-spacing:3px;
+
+    font-size:11px;
     font-weight:700;
 }
 
 .intro-heading{
-    font-family:"Playfair Display",serif;
-    font-size:clamp(34px,4vw,55px);
-    line-height:1.15;
-    letter-spacing:-1.5px;
+    font-family:"DM Serif Display",serif;
+
+    font-size:clamp(42px,5vw,72px);
+
+    font-weight:400;
+
+    line-height:1.08;
+
+    letter-spacing:-2px;
 }
 
 .intro-text{
-    max-width:760px;
+    max-width:720px;
 }
 
 .intro-text p{
-    font-size:18px;
-    color:var(--soft);
-    margin-bottom:24px;
+    font-size:19px;
+
+    color:#bdbdbd;
+
+    margin-bottom:27px;
 }
 
 .intro-text p:last-child{
@@ -299,132 +368,204 @@ header{
 ========================================================= */
 
 .research{
-    padding:125px 0;
-    background:#eeeDE8;
+    padding:150px 0;
 }
 
-.section-top{
-    display:flex;
-    justify-content:space-between;
-    align-items:flex-end;
-    gap:30px;
-    margin-bottom:70px;
-}
+.section-kicker{
+    color:#7a58d6;
 
-.section-title{
-    font-family:"Playfair Display",serif;
-    font-size:clamp(42px,5vw,65px);
-    line-height:1;
-    letter-spacing:-2px;
-    margin-top:12px;
-}
-
-.section-note{
-    max-width:400px;
-    color:var(--soft);
-    font-size:14px;
-}
-
-.research-feature{
-    display:grid;
-    grid-template-columns:1.1fr .9fr;
-    gap:70px;
-    align-items:start;
-}
-
-.research-main{
-    background:var(--paper);
-    padding:55px;
-}
-
-.research-main h3{
-    font-family:"Playfair Display",serif;
-    font-size:35px;
-    line-height:1.25;
-    margin-bottom:25px;
-}
-
-.research-main p{
-    color:var(--soft);
-    font-size:16px;
-}
-
-.research-side{
-    padding-top:15px;
-}
-
-.research-side-item{
-    padding:23px 0;
-    border-top:1px solid #cfcfc9;
-}
-
-.research-side-item:last-child{
-    border-bottom:1px solid #cfcfc9;
-}
-
-.research-side-item span{
-    display:block;
-    font-size:11px;
-    color:var(--accent);
     text-transform:uppercase;
-    letter-spacing:1.5px;
-    margin-bottom:5px;
+    letter-spacing:3px;
+
+    font-size:11px;
+    font-weight:700;
+
+    margin-bottom:18px;
+}
+
+.big-title{
+    font-family:"DM Serif Display",serif;
+
+    font-size:clamp(48px,7vw,95px);
+
+    line-height:.95;
+
+    letter-spacing:-3px;
+
+    font-weight:400;
+}
+
+.research-header{
+    max-width:900px;
+}
+
+.research-header p{
+    margin-top:30px;
+
+    max-width:650px;
+
+    color:#696969;
+
+    font-size:17px;
+}
+
+
+/* FEATURED RESEARCH */
+
+.featured-research{
+    margin-top:90px;
+
+    display:grid;
+
+    grid-template-columns:1.3fr .7fr;
+
+    gap:0;
+}
+
+.feature-main{
+    background:#ded7fa;
+
+    min-height:570px;
+
+    padding:65px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+}
+
+.feature-tag{
+    font-size:11px;
+
+    text-transform:uppercase;
+
+    letter-spacing:2px;
+
+    color:#5c43a9;
+
     font-weight:700;
 }
 
-.research-side-item h4{
-    font-size:18px;
-    font-weight:600;
+.feature-main h3{
+    font-family:"DM Serif Display",serif;
+
+    font-weight:400;
+
+    font-size:clamp(38px,4vw,58px);
+
+    line-height:1.08;
+
+    letter-spacing:-1.5px;
+
+    max-width:650px;
 }
 
-.research-side-item p{
-    color:var(--soft);
-    font-size:13px;
-    margin-top:5px;
+.feature-main p{
+    max-width:600px;
+
+    color:#514d5c;
+
+    font-size:15px;
+}
+
+.feature-side{
+    background:#222;
+
+    color:white;
+
+    padding:55px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+}
+
+.feature-side-title{
+    font-size:12px;
+
+    text-transform:uppercase;
+
+    letter-spacing:2px;
+
+    color:#a895ef;
+
+    margin-bottom:35px;
+}
+
+.question{
+    padding:22px 0;
+
+    border-top:1px solid #444;
+}
+
+.question:last-child{
+    border-bottom:1px solid #444;
+}
+
+.question span{
+    color:#999;
+
+    font-size:11px;
+}
+
+.question h4{
+    font-family:"DM Serif Display",serif;
+
+    font-size:25px;
+
+    font-weight:400;
+
+    margin-top:4px;
 }
 
 
 /* =========================================================
-   RESEARCH INTERESTS
+   INTERESTS
 ========================================================= */
 
 .interests{
-    padding:125px 0;
+    padding:20px 0 150px;
 }
 
-.interest-list{
-    margin-top:60px;
-    border-top:1px solid var(--line);
-}
-
-.interest{
+.interest-row{
     display:grid;
-    grid-template-columns:80px 1fr 1fr;
-    gap:35px;
-    padding:32px 0;
-    border-bottom:1px solid var(--line);
-    align-items:start;
-    transition:.25s;
+
+    grid-template-columns:70px 1fr 1fr;
+
+    gap:40px;
+
+    padding:35px 0;
+
+    border-top:1px solid #d7d3cb;
+
+    align-items:center;
 }
 
-.interest:hover{
-    padding-left:12px;
+.interest-row:last-child{
+    border-bottom:1px solid #d7d3cb;
 }
 
-.interest-number{
+.interest-num{
     font-size:12px;
-    color:var(--accent);
+
+    color:#7a58d6;
+
     font-weight:700;
 }
 
-.interest h3{
-    font-family:"Playfair Display",serif;
-    font-size:27px;
-    font-weight:600;
+.interest-row h3{
+    font-family:"DM Serif Display",serif;
+
+    font-size:30px;
+
+    font-weight:400;
 }
 
-.interest p{
-    color:var(--soft);
+.interest-row p{
+    color:#696969;
+
     font-size:14px;
 }
 
@@ -433,98 +574,153 @@ header{
    PUBLICATIONS
 ========================================================= */
 
-.publications{
-    padding:125px 0;
-    background:#151515;
-    color:#f5f4ef;
+.writing{
+    background:#e9e5dd;
+
+    padding:150px 0;
 }
 
-.publications .section-label{
-    color:#a996ff;
-}
+.writing-intro{
+    display:flex;
 
-.publications .section-note{
-    color:#aaa;
-}
+    justify-content:space-between;
 
-.publication{
-    display:grid;
-    grid-template-columns:100px 1fr;
+    align-items:end;
+
     gap:40px;
-    padding:38px 0;
-    border-top:1px solid #363636;
 }
 
-.publication:last-child{
-    border-bottom:1px solid #363636;
+.writing-intro p{
+    max-width:390px;
+
+    color:#686868;
+
+    font-size:14px;
 }
 
-.pub-year{
-    color:#a996ff;
-    font-size:13px;
+.writing-list{
+    margin-top:75px;
+}
+
+.writing-item{
+    display:grid;
+
+    grid-template-columns:110px 1fr 100px;
+
+    gap:35px;
+
+    padding:35px 0;
+
+    border-top:1px solid #cbc7bf;
+
+    align-items:start;
+}
+
+.writing-item:last-child{
+    border-bottom:1px solid #cbc7bf;
+}
+
+.writing-year{
+    color:#7a58d6;
+
+    font-size:12px;
+
     font-weight:700;
 }
 
-.publication h3{
-    font-family:"Playfair Display",serif;
-    font-size:26px;
-    line-height:1.4;
-    font-weight:500;
+.writing-item h3{
+    font-family:"DM Serif Display",serif;
+
+    font-size:29px;
+
+    font-weight:400;
+
+    line-height:1.3;
 }
 
-.publication p{
-    color:#aaa;
-    font-size:14px;
-    margin-top:10px;
+.writing-item p{
+    color:#6c6a67;
+
+    font-size:13px;
+
+    margin-top:8px;
+
+    max-width:650px;
+}
+
+.writing-arrow{
+    text-align:right;
+
+    font-size:22px;
 }
 
 
 /* =========================================================
-   EDUCATION
+   ACADEMIC BACKGROUND
 ========================================================= */
 
-.education{
-    padding:125px 0;
+.background{
+    padding:150px 0;
 }
 
-.education-list{
-    margin-top:60px;
-}
-
-.education-item{
+.background-grid{
     display:grid;
-    grid-template-columns:170px 1fr auto;
-    gap:35px;
-    padding:35px 0;
-    border-top:1px solid var(--line);
-    align-items:start;
+
+    grid-template-columns:.7fr 1.3fr;
+
+    gap:90px;
 }
 
-.education-item:last-child{
-    border-bottom:1px solid var(--line);
+.background-copy{
+    max-width:400px;
 }
 
-.edu-date{
-    color:var(--accent);
-    font-size:13px;
+.background-copy p{
+    color:#696969;
+
+    margin-top:25px;
+
+    font-size:15px;
+}
+
+.academic-list{
+    border-top:1px solid #d7d3cb;
+}
+
+.academic{
+    padding:28px 0;
+
+    border-bottom:1px solid #d7d3cb;
+
+    display:grid;
+
+    grid-template-columns:120px 1fr;
+
+    gap:30px;
+}
+
+.academic-date{
+    color:#7a58d6;
+
+    font-size:12px;
+
     font-weight:700;
 }
 
-.education-item h3{
-    font-family:"Playfair Display",serif;
-    font-size:25px;
-    margin-bottom:5px;
+.academic h3{
+    font-family:"DM Serif Display",serif;
+
+    font-weight:400;
+
+    font-size:27px;
 }
 
-.education-item p{
-    color:var(--soft);
-    font-size:14px;
-}
+.academic p{
+    color:#707070;
 
-.edu-grade{
     font-size:13px;
-    color:var(--soft);
-    white-space:nowrap;
+
+    margin-top:3px;
 }
 
 
@@ -533,47 +729,69 @@ header{
 ========================================================= */
 
 .experience{
-    padding:125px 0;
-    background:#eeeDE8;
+    padding:150px 0;
+
+    background:#181818;
+
+    color:white;
+}
+
+.experience-grid{
+    display:grid;
+
+    grid-template-columns:.7fr 1.3fr;
+
+    gap:90px;
+}
+
+.experience-description{
+    color:#aaa;
+
+    font-size:15px;
+
+    max-width:400px;
+
+    margin-top:25px;
 }
 
 .experience-list{
-    margin-top:60px;
+    border-top:1px solid #3b3b3b;
 }
 
 .experience-item{
+    padding:30px 0;
+
+    border-bottom:1px solid #3b3b3b;
+
     display:grid;
-    grid-template-columns:170px 1fr;
-    gap:35px;
-    padding:35px 0;
-    border-top:1px solid #cecdc7;
+
+    grid-template-columns:120px 1fr;
+
+    gap:25px;
 }
 
-.experience-item:last-child{
-    border-bottom:1px solid #cecdc7;
-}
+.experience-item span{
+    color:#a895ef;
 
-.exp-date{
-    font-size:12px;
-    color:var(--accent);
+    font-size:11px;
+
     font-weight:700;
 }
 
 .experience-item h3{
-    font-family:"Playfair Display",serif;
-    font-size:25px;
-    margin-bottom:4px;
-}
+    font-family:"DM Serif Display",serif;
 
-.exp-company{
-    font-size:14px;
-    font-weight:600;
+    font-weight:400;
+
+    font-size:27px;
 }
 
 .experience-item p{
-    color:var(--soft);
-    font-size:14px;
-    margin-top:8px;
+    color:#999;
+
+    font-size:13px;
+
+    margin-top:4px;
 }
 
 
@@ -582,37 +800,54 @@ header{
 ========================================================= */
 
 .methods{
-    padding:125px 0;
+    padding:150px 0;
 }
 
-.method-grid{
+.methods-grid{
     display:grid;
+
     grid-template-columns:repeat(3,1fr);
-    gap:1px;
-    background:var(--line);
-    margin-top:60px;
-    border:1px solid var(--line);
+
+    margin-top:70px;
+
+    border-top:1px solid #d7d3cb;
 }
 
 .method{
-    background:var(--background);
-    padding:38px;
+    padding:35px 35px 35px 0;
+
+    border-right:1px solid #d7d3cb;
+
+    margin-right:35px;
+}
+
+.method:last-child{
+    border-right:0;
+
+    margin-right:0;
 }
 
 .method-number{
-    color:var(--accent);
-    font-size:12px;
+    color:#7a58d6;
+
+    font-size:11px;
+
     font-weight:700;
 }
 
 .method h3{
-    font-family:"Playfair Display",serif;
-    font-size:25px;
-    margin:20px 0 10px;
+    font-family:"DM Serif Display",serif;
+
+    font-size:30px;
+
+    font-weight:400;
+
+    margin:15px 0 8px;
 }
 
 .method p{
-    color:var(--soft);
+    color:#696969;
+
     font-size:14px;
 }
 
@@ -621,46 +856,64 @@ header{
    COLLABORATION
 ========================================================= */
 
-.contact{
-    padding:150px 0;
-    background:var(--accent);
+.collaboration{
+    padding:160px 0;
+
+    background:#7a58d6;
+
     color:white;
 }
 
-.contact-inner{
-    max-width:900px;
+.collaboration-inner{
+    max-width:1000px;
 }
 
-.contact .section-label{
-    color:#ddd5ff;
+.collaboration .section-kicker{
+    color:#ded6ff;
 }
 
-.contact h2{
-    font-family:"Playfair Display",serif;
-    font-size:clamp(48px,7vw,90px);
-    line-height:1;
-    letter-spacing:-3px;
-    margin:20px 0 25px;
+.collaboration h2{
+    font-family:"DM Serif Display",serif;
+
+    font-size:clamp(55px,8vw,110px);
+
+    font-weight:400;
+
+    line-height:.92;
+
+    letter-spacing:-4px;
+
+    max-width:950px;
 }
 
-.contact p{
-    max-width:650px;
-    font-size:18px;
-    color:#eee;
-}
-
-.contact-links{
-    display:flex;
-    gap:25px;
-    flex-wrap:wrap;
+.collaboration p{
     margin-top:35px;
+
+    max-width:650px;
+
+    font-size:18px;
+
+    color:#eee9ff;
 }
 
-.contact-links a{
+.collaboration-links{
+    display:flex;
+
+    gap:28px;
+
+    flex-wrap:wrap;
+
+    margin-top:40px;
+}
+
+.collaboration-links a{
     border-bottom:1px solid rgba(255,255,255,.8);
-    padding-bottom:3px;
-    font-weight:600;
+
+    padding-bottom:4px;
+
     font-size:14px;
+
+    font-weight:600;
 }
 
 
@@ -670,31 +923,36 @@ header{
 
 footer{
     background:#111;
+
     color:#aaa;
-    padding:40px 0;
+
+    padding:35px 0;
 }
 
-.footer{
+.footer-inner{
     display:flex;
+
     justify-content:space-between;
+
     align-items:center;
-    gap:20px;
 }
 
 .footer-name{
-    font-family:"Playfair Display",serif;
     color:white;
-    font-size:20px;
+
+    font-family:"DM Serif Display",serif;
+
+    font-size:21px;
 }
 
 .footer-links{
     display:flex;
-    gap:20px;
+
+    gap:25px;
 }
 
 .footer-links a{
     font-size:12px;
-    transition:.2s;
 }
 
 .footer-links a:hover{
@@ -703,20 +961,23 @@ footer{
 
 
 /* =========================================================
-   SCROLL ANIMATION
+   ANIMATION
 ========================================================= */
 
-.reveal{
+.fade{
     opacity:0;
-    transform:translateY(25px);
+
+    transform:translateY(28px);
+
     transition:
         opacity .8s ease,
         transform .8s ease;
 }
 
-.reveal.visible{
+.fade.show{
     opacity:1;
-    transform:none;
+
+    transform:translateY(0);
 }
 
 
@@ -724,161 +985,194 @@ footer{
    MOBILE
 ========================================================= */
 
-@media(max-width:850px){
+@media(max-width:900px){
+
+    .menu{
+        display:none;
+    }
+
+    .mobile-menu{
+        display:block;
+    }
 
     .navigation{
         display:none;
+
         position:absolute;
-        top:78px;
+
+        top:72px;
+
         left:0;
-        width:100%;
-        background:var(--background);
-        border-bottom:1px solid var(--line);
+
+        right:0;
+
+        background:#f5f2ec;
+
         padding:25px 5%;
+
         flex-direction:column;
+
         align-items:flex-start;
-        gap:18px;
+
+        border-bottom:1px solid #ddd;
     }
 
     .navigation.open{
         display:flex;
     }
 
-    .menu{
-        display:block;
-    }
-
-    .hero-layout{
+    .hero-grid{
         grid-template-columns:1fr;
-        gap:55px;
     }
 
-    .hero-photo{
-        justify-content:center;
-        order:-1;
+    .hero-left{
+        padding:75px 0 50px;
     }
 
-    .photo-frame{
-        width:270px;
+    .hero-right{
+        height:auto;
+
+        padding:20px 0 80px;
     }
 
-    .hero-title{
-        font-size:58px;
-        letter-spacing:-2px;
+    .photo-area{
+        max-width:480px;
     }
 
-    .intro-grid{
+    .photo-area img{
+        height:auto;
+        max-height:none;
+    }
+
+    .intro-layout,
+    .background-grid,
+    .experience-grid{
         grid-template-columns:1fr;
-        gap:35px;
+
+        gap:45px;
     }
 
-    .section-top{
-        display:block;
-    }
-
-    .section-note{
-        margin-top:20px;
-    }
-
-    .research-feature{
+    .featured-research{
         grid-template-columns:1fr;
-        gap:40px;
     }
 
-    .interest{
+    .interest-row{
         grid-template-columns:45px 1fr;
-        gap:15px;
     }
 
-    .interest p{
+    .interest-row p{
         grid-column:2;
     }
 
-    .publication{
-        grid-template-columns:60px 1fr;
+    .writing-intro{
+        display:block;
+    }
+
+    .writing-intro p{
+        margin-top:25px;
+    }
+
+    .writing-item{
+        grid-template-columns:70px 1fr 30px;
+
         gap:20px;
     }
 
-    .education-item{
-        grid-template-columns:1fr;
-        gap:8px;
-    }
-
-    .edu-grade{
-        white-space:normal;
-    }
-
-    .experience-item{
-        grid-template-columns:1fr;
-        gap:8px;
-    }
-
-    .method-grid{
+    .methods-grid{
         grid-template-columns:1fr;
     }
 
-    .contact h2{
-        letter-spacing:-2px;
+    .method{
+        border-right:0;
+
+        border-bottom:1px solid #d7d3cb;
+
+        margin-right:0;
     }
 
-    .footer{
+    .footer-inner{
         flex-direction:column;
+
         align-items:flex-start;
+
+        gap:20px;
     }
 
 }
 
 
-@media(max-width:500px){
+@media(max-width:600px){
 
-    .hero{
-        min-height:auto;
+    .container{
+        width:88%;
     }
 
-    .hero-layout{
-        padding:70px 0 80px;
+    .hero h1{
+        font-size:65px;
+
+        letter-spacing:-3px;
     }
 
-    .hero-title{
-        font-size:48px;
+    .hero h1 .second{
+        margin-left:40px;
     }
 
-    .hero-description{
+    .hero-intro{
         font-size:17px;
     }
 
-    .introduction,
+    .intro,
     .research,
     .interests,
-    .publications,
-    .education,
+    .writing,
+    .background,
     .experience,
     .methods{
-        padding:90px 0;
-    }
-
-    .research-main{
-        padding:30px;
-    }
-
-    .research-main h3{
-        font-size:29px;
-    }
-
-    .interest h3{
-        font-size:23px;
-    }
-
-    .publication h3{
-        font-size:21px;
-    }
-
-    .contact{
         padding:100px 0;
     }
 
-    .contact h2{
-        font-size:52px;
+    .feature-main{
+        padding:35px;
+
+        min-height:470px;
+    }
+
+    .feature-side{
+        padding:35px;
+    }
+
+    .writing-item{
+        grid-template-columns:1fr;
+
+        gap:8px;
+    }
+
+    .writing-arrow{
+        text-align:left;
+    }
+
+    .academic{
+        grid-template-columns:1fr;
+
+        gap:5px;
+    }
+
+    .experience-item{
+        grid-template-columns:1fr;
+
+        gap:6px;
+    }
+
+    .collaboration{
+        padding:110px 0;
+    }
+
+    .collaboration h2{
+        letter-spacing:-2px;
+    }
+
+    .footer-links{
+        flex-wrap:wrap;
     }
 
 }
@@ -891,35 +1185,36 @@ footer{
 
 
 <!-- =====================================================
-     NAVIGATION
+     HEADER
 ===================================================== -->
 
-<header>
+<header class="topbar">
 
-<div class="container nav">
+<div class="topbar-inner">
 
-<a href="#home" class="logo">
-Nitin<span class="logo-dot">.</span>
+<a href="#home" class="brand">
+Nitin<span>.</span>
 </a>
+
 
 <nav class="navigation" id="navigation">
 
 <a href="#about">About</a>
-<a href="#research">Research</a>
-<a href="#publications">Writing</a>
-<a href="#education">Background</a>
-<a href="#contact">Collaborate</a>
 
-<a
-class="nav-social"
-href="https://www.linkedin.com/in/nitin-sharma-449bb824/"
-target="_blank">
-LinkedIn ↗
+<a href="#research">Research</a>
+
+<a href="#writing">Writing</a>
+
+<a href="#background">Background</a>
+
+<a href="#contact" class="contact-link">
+Collaborate
 </a>
 
 </nav>
 
-<button class="menu" id="menu">
+
+<button class="mobile-menu" id="mobileMenu">
 ☰
 </button>
 
@@ -933,65 +1228,68 @@ LinkedIn ↗
      HERO
 ===================================================== -->
 
-<main id="home">
+<section class="hero" id="home">
 
-<section class="hero">
-
-<div class="container hero-layout">
+<div class="container hero-grid">
 
 
-<div class="hero-content reveal">
+<div class="hero-left fade">
 
-<div class="hero-kicker">
-Researcher · HRM · Organisational Behaviour · AI
+<div class="hero-small">
+Researcher · Human Resources · Artificial Intelligence
 </div>
 
-<h1 class="hero-title">
 
-<span>Nitin</span>
-<span>Sharma</span>
-
+<h1>
+Nitin
+<span class="second">
+Sharma
+</span>
 </h1>
 
-<p class="hero-description">
 
-I study how artificial intelligence is changing the way
-organisations manage people, make decisions and shape the
-employment relationship.
+<p class="hero-intro">
+
+I explore how artificial intelligence is changing
+organisations, work and the relationship between
+people and the systems that manage them.
 
 </p>
 
-<div class="hero-links">
 
-<a href="#research">
-Explore my research ↓
+<div class="hero-bottom">
+
+<a href="#research" class="circle-link">
+↓
 </a>
 
-<a
-href="https://scholar.google.com/citations?user=nA5j7yUAAAAJ&hl=en"
-target="_blank">
-Google Scholar ↗
-</a>
-
-<a
-href="Nitin_Sharma_CV.pdf"
-target="_blank">
-CV ↗
-</a>
+<span class="hero-note">
+Scroll to explore my research
+</span>
 
 </div>
 
 </div>
 
 
-<div class="hero-photo reveal">
 
-<div class="photo-frame">
+<div class="hero-right fade">
+
+<div class="photo-area">
+
+<div class="photo-line"></div>
 
 <img
 src="https://nitinau02-afk.github.io/My%20Photo.jpeg"
 alt="Nitin Sharma"
-onerror="this.onerror=null;this.src='./My%20Photo.jpeg';">
+onerror="this.onerror=null;this.src='./My%20Photo.jpeg';"
+>
+
+<div class="photo-number">
+Research<br>
+People<br>
+Technology
+</div>
 
 </div>
 
@@ -1008,42 +1306,45 @@ onerror="this.onerror=null;this.src='./My%20Photo.jpeg';">
      ABOUT
 ===================================================== -->
 
-<section class="introduction" id="about">
+<section class="intro" id="about">
 
-<div class="container intro-grid">
+<div class="container intro-layout">
 
-<div class="section-label reveal">
+
+<div class="intro-label fade">
 About
 </div>
 
 
-<div class="intro-text reveal">
+<div class="intro-text fade">
 
 <h2 class="intro-heading">
-Technology is changing work.
-I want to understand what
-that means for people.
+Technology may change the
+way work is organised —
+but people remain at the centre.
 </h2>
+
 
 <br>
 
+
 <p>
-My research sits at the intersection of Human Resource Management,
+My work sits at the intersection of Human Resource Management,
 Organisational Behaviour and emerging technologies.
-I am particularly interested in how artificial intelligence
-and algorithmic systems influence employees and organisations.
 </p>
 
-<p>
-My work explores questions of trust, fairness, responsibility,
-employee voice and mutual obligations when organisational
-decisions increasingly involve AI-enabled systems.
-</p>
 
 <p>
-I approach these questions through empirical research, combining
-quantitative, qualitative and mixed-method approaches to understand
-both organisational systems and employee experiences.
+I am particularly interested in what happens when artificial
+intelligence moves beyond being a tool and becomes part of
+organisational decision-making.
+</p>
+
+
+<p>
+This leads me to questions about trust, fairness, accountability,
+employee voice, psychological contracts and the changing
+relationship between employees and organisations.
 </p>
 
 </div>
@@ -1062,111 +1363,104 @@ both organisational systems and employee experiences.
 
 <div class="container">
 
-<div class="section-top reveal">
 
-<div>
+<div class="research-header fade">
 
-<div class="section-label">
+<div class="section-kicker">
 Research
 </div>
 
-<h2 class="section-title">
-What I study
+<h2 class="big-title">
+The questions<br>
+behind my work.
 </h2>
 
-</div>
-
-<p class="section-note">
-My current research agenda examines the changing relationship
-between employees, organisations and algorithmic systems.
+<p>
+My current research explores the human consequences of
+algorithmic management and AI-enabled HRM.
 </p>
 
 </div>
 
 
-<div class="research-feature">
+
+<div class="featured-research">
 
 
-<div class="research-main reveal">
+<div class="feature-main fade">
+
+<div class="feature-tag">
+Current research direction
+</div>
+
 
 <h3>
-Algorithmic Management and the Employment Relationship
+Algorithmic Management
+and the Employment Relationship
 </h3>
 
+
 <p>
-
-My current research investigates how algorithmic management
-reconfigures the employment relationship in AI-enabled
-organisations.
-
-The project focuses particularly on employee trust and the
-psychological contract — examining how employees understand
-organisational obligations, fairness, authority and responsibility
-when decisions are increasingly mediated by artificial intelligence.
-
+Employee trust and psychological contract reconfiguration
+in AI-enabled HRM. The project examines how employees
+interpret organisational authority, responsibility and
+fairness when decisions are increasingly mediated by
+algorithmic systems.
 </p>
 
 </div>
 
 
-<div class="research-side reveal">
+
+<div class="feature-side fade">
+
+<div class="feature-side-title">
+Questions I am exploring
+</div>
 
 
-<div class="research-side-item">
+<div class="question">
 
 <span>01</span>
 
-<h4>Employee Trust</h4>
-
-<p>
-How employees develop, maintain or lose trust in AI-mediated
-organisational decisions.
-</p>
+<h4>
+Can employees trust decisions made by algorithms?
+</h4>
 
 </div>
 
 
-<div class="research-side-item">
+<div class="question">
 
 <span>02</span>
 
-<h4>Psychological Contracts</h4>
-
-<p>
-How AI changes employees' perceptions of mutual obligations
-between themselves and their organisations.
-</p>
+<h4>
+How does AI change the psychological contract?
+</h4>
 
 </div>
 
 
-<div class="research-side-item">
+<div class="question">
 
 <span>03</span>
 
-<h4>Organisational Justice</h4>
-
-<p>
-How employees perceive fairness, transparency and accountability
-in algorithmic decision-making.
-</p>
+<h4>
+Who is responsible when an algorithm makes a decision?
+</h4>
 
 </div>
 
 
-<div class="research-side-item">
+<div class="question">
 
 <span>04</span>
 
-<h4>Future of Work</h4>
-
-<p>
-How emerging technologies reshape work, authority and
-organisational relationships.
-</p>
+<h4>
+What does fairness mean in an AI-mediated workplace?
+</h4>
 
 </div>
-
 
 </div>
 
@@ -1186,98 +1480,119 @@ organisational relationships.
 
 <div class="container">
 
-<div class="section-label reveal">
+
+<div class="section-kicker fade">
 Research interests
 </div>
 
-<div class="interest-list">
 
+<div class="interest-row fade">
 
-<div class="interest reveal">
+<div class="interest-num">
+01
+</div>
 
-<div class="interest-number">01</div>
-
-<h3>AI-enabled HRM</h3>
+<h3>
+AI-enabled HRM
+</h3>
 
 <p>
-The adoption and organisational consequences of artificial
-intelligence across contemporary HR practices.
+Understanding how artificial intelligence is transforming
+HR practices and organisational decision-making.
 </p>
 
 </div>
 
 
-<div class="interest reveal">
+<div class="interest-row fade">
 
-<div class="interest-number">02</div>
+<div class="interest-num">
+02
+</div>
 
-<h3>Algorithmic Management</h3>
+<h3>
+Algorithmic Management
+</h3>
 
 <p>
-How algorithmic systems influence managerial authority,
-employee experiences and organisational decision-making.
+Exploring how algorithmic systems influence managerial
+authority, employee experiences and workplace relationships.
 </p>
 
 </div>
 
 
-<div class="interest reveal">
+<div class="interest-row fade">
 
-<div class="interest-number">03</div>
+<div class="interest-num">
+03
+</div>
 
-<h3>Trust & Psychological Contracts</h3>
+<h3>
+Trust & Psychological Contracts
+</h3>
 
 <p>
-The evolving expectations, trust relationships and perceived
-obligations between employees and organisations.
+Examining changing employee expectations, trust and perceived
+mutual obligations in technology-enabled organisations.
 </p>
 
 </div>
 
 
-<div class="interest reveal">
+<div class="interest-row fade">
 
-<div class="interest-number">04</div>
+<div class="interest-num">
+04
+</div>
 
-<h3>Organisational Justice</h3>
+<h3>
+Organisational Justice
+</h3>
 
 <p>
-Employee perceptions of fairness, transparency, accountability
-and responsible decision-making.
+Investigating fairness, transparency and accountability in
+AI-mediated organisational decisions.
 </p>
 
 </div>
 
 
-<div class="interest reveal">
+<div class="interest-row fade">
 
-<div class="interest-number">05</div>
+<div class="interest-num">
+05
+</div>
 
-<h3>Employee Voice</h3>
+<h3>
+Employee Voice
+</h3>
 
 <p>
-How employees respond to technological and organisational change
-and how their voices are incorporated into decision-making.
+Understanding how employees respond to organisational and
+technological change and how their voices are heard.
 </p>
 
 </div>
 
 
-<div class="interest reveal">
+<div class="interest-row fade">
 
-<div class="interest-number">06</div>
+<div class="interest-num">
+06
+</div>
 
-<h3>Responsible AI & Future of Work</h3>
+<h3>
+Future of Work
+</h3>
 
 <p>
-The human and organisational implications of increasingly
-AI-mediated workplaces.
+Exploring the broader human and organisational consequences
+of increasingly AI-mediated workplaces.
 </p>
 
 </div>
 
-
-</div>
 
 </div>
 
@@ -1286,38 +1601,46 @@ AI-mediated workplaces.
 
 
 <!-- =====================================================
-     PUBLICATIONS
+     WRITING
 ===================================================== -->
 
-<section class="publications" id="publications">
+<section class="writing" id="writing">
 
 <div class="container">
 
-<div class="section-top reveal">
+
+<div class="writing-intro fade">
 
 <div>
 
-<div class="section-label">
+<div class="section-kicker">
 Selected writing
 </div>
 
-<h2 class="section-title">
-Research & publications
+<h2 class="big-title">
+Research,<br>
+published.
 </h2>
 
 </div>
 
-<p class="section-note">
-Selected published and ongoing work across AI, HRM and
-organisational research.
+
+<p>
+Selected work examining artificial intelligence,
+technology acceptance, human resources and organisational
+change.
 </p>
 
 </div>
 
 
-<div class="publication reveal">
 
-<div class="pub-year">
+<div class="writing-list">
+
+
+<div class="writing-item fade">
+
+<div class="writing-year">
 2026
 </div>
 
@@ -1330,19 +1653,24 @@ Acceptance Model
 </h3>
 
 <p>
-Published research examining employee acceptance of
-AI-enabled recruitment systems through an extended
-Technology Acceptance Model.
+Research examining employee acceptance of AI-enabled
+recruitment systems using an extended Technology
+Acceptance Model.
 </p>
 
 </div>
 
+<div class="writing-arrow">
+↗
+</div>
+
 </div>
 
 
-<div class="publication reveal">
 
-<div class="pub-year">
+<div class="writing-item fade">
+
+<div class="writing-year">
 2026
 </div>
 
@@ -1359,12 +1687,17 @@ employee responses to AI-enabled recruitment systems.
 
 </div>
 
+<div class="writing-arrow">
+↗
+</div>
+
 </div>
 
 
-<div class="publication reveal">
 
-<div class="pub-year">
+<div class="writing-item fade">
+
+<div class="writing-year">
 2025
 </div>
 
@@ -1375,18 +1708,23 @@ Role of Artificial Intelligence in the Banking Sector
 </h3>
 
 <p>
-Research exploring the growing role and organisational
-implications of artificial intelligence within banking.
+Research exploring the role and organisational implications
+of artificial intelligence within banking.
 </p>
 
 </div>
 
+<div class="writing-arrow">
+↗
+</div>
+
 </div>
 
 
-<div class="publication reveal">
 
-<div class="pub-year">
+<div class="writing-item fade">
+
+<div class="writing-year">
 2025
 </div>
 
@@ -1398,14 +1736,20 @@ Artificial Intelligence in Shaping HR Practices
 </h3>
 
 <p>
-Research examining how artificial intelligence is transforming
-contemporary HR practices and the future of HRM.
+Research examining the transformation of HR practices
+through artificial intelligence.
 </p>
 
 </div>
 
+<div class="writing-arrow">
+↗
 </div>
 
+</div>
+
+
+</div>
 
 </div>
 
@@ -1414,38 +1758,28 @@ contemporary HR practices and the future of HRM.
 
 
 <!-- =====================================================
-     ONGOING WORK
+     WORK IN PROGRESS
 ===================================================== -->
 
 <section class="interests">
 
 <div class="container">
 
-<div class="section-label reveal">
+
+<div class="section-kicker fade">
 Work in progress
 </div>
 
-<div class="section-top reveal" style="margin-top:15px;">
 
-<div>
+<div class="interest-row fade">
 
-<h2 class="section-title">
-Questions I'm continuing to explore
-</h2>
-
+<div class="interest-num">
+01
 </div>
-
-</div>
-
-
-<div class="interest-list">
-
-<div class="interest reveal">
-
-<div class="interest-number">01</div>
 
 <h3>
-Algorithmic Management and the Evolution of the Psychological Contract
+Algorithmic Management and the Evolution of the
+Psychological Contract
 </h3>
 
 <p>
@@ -1457,9 +1791,11 @@ employee–organisation relationship.
 </div>
 
 
-<div class="interest reveal">
+<div class="interest-row fade">
 
-<div class="interest-number">02</div>
+<div class="interest-num">
+02
+</div>
 
 <h3>
 Integrating Strategic and Human-Centred HR Practices
@@ -1472,7 +1808,6 @@ integrating strategic and human-centred approaches to HR practice.
 
 </div>
 
-</div>
 
 </div>
 
@@ -1481,28 +1816,41 @@ integrating strategic and human-centred approaches to HR practice.
 
 
 <!-- =====================================================
-     EDUCATION
+     BACKGROUND
 ===================================================== -->
 
-<section class="education" id="education">
+<section class="background" id="background">
 
-<div class="container">
+<div class="container background-grid">
 
-<div class="section-label reveal">
+
+<div class="background-copy fade">
+
+<div class="section-kicker">
 Background
 </div>
 
-<h2 class="section-title reveal">
-Academic journey
+<h2 class="big-title">
+A foundation<br>
+in HR & business.
 </h2>
 
+<p>
+My academic background combines commerce, human resource
+management and business education, alongside practical
+experience in HR, teaching and research.
+</p>
 
-<div class="education-list">
+</div>
 
 
-<div class="education-item reveal">
 
-<div class="edu-date">
+<div class="academic-list">
+
+
+<div class="academic fade">
+
+<div class="academic-date">
 2021–2024
 </div>
 
@@ -1513,22 +1861,19 @@ B.Com (Hons.)
 </h3>
 
 <p>
-Amity University
+Amity University · Grade 8.76 / 10
 </p>
 
 </div>
 
-<div class="edu-grade">
-Grade 8.76 / 10
-</div>
-
 </div>
 
 
-<div class="education-item reveal">
 
-<div class="edu-date">
-Completed
+<div class="academic fade">
+
+<div class="academic-date">
+COMPLETED
 </div>
 
 <div>
@@ -1538,27 +1883,25 @@ M.Com — Human Resource Management
 </h3>
 
 <p>
-Amity University
+Amity University · CGPA 9.04 / 10
 </p>
 
-<p style="margin-top:8px;">
-Dissertation: A TAM-Based Empirical Investigation of Employee
-Acceptance of AI-Enabled Recruitment Systems in the Indian IT Sector.
+<p>
+Dissertation: A TAM-Based Empirical Investigation of
+Employee Acceptance of AI-Enabled Recruitment Systems
+in the Indian IT Sector.
 </p>
 
 </div>
 
-<div class="edu-grade">
-CGPA 9.04 / 10
-</div>
-
 </div>
 
 
-<div class="education-item reveal">
 
-<div class="edu-date">
-Expected 2026
+<div class="academic fade">
+
+<div class="academic-date">
+2026
 </div>
 
 <div>
@@ -1569,12 +1912,9 @@ MBA — Human Resource Management
 
 <p>
 University of Delhi — School of Open Learning
+· CGPA 7.56 / 10
 </p>
 
-</div>
-
-<div class="edu-grade">
-CGPA 7.56 / 10
 </div>
 
 </div>
@@ -1594,25 +1934,38 @@ CGPA 7.56 / 10
 
 <section class="experience">
 
-<div class="container">
+<div class="container experience-grid">
 
-<div class="section-label reveal">
+
+<div class="fade">
+
+<div class="section-kicker">
 Experience
 </div>
 
-<h2 class="section-title reveal">
-Working with people, research & learning
+<h2 class="big-title">
+Beyond<br>
+research.
 </h2>
+
+<p class="experience-description">
+My work outside formal research has given me experience
+across teaching, HR operations, recruitment and student
+leadership.
+</p>
+
+</div>
+
 
 
 <div class="experience-list">
 
 
-<div class="experience-item reveal">
+<div class="experience-item fade">
 
-<div class="exp-date">
-CURRENT
-</div>
+<span>
+01
+</span>
 
 <div>
 
@@ -1620,13 +1973,8 @@ CURRENT
 Co-Teacher — UK Business Studies
 </h3>
 
-<div class="exp-company">
-GLECTA
-</div>
-
 <p>
-Supporting teaching, classroom activities, learning resources
-and student engagement in UK Business Studies.
+GLECTA
 </p>
 
 </div>
@@ -1634,11 +1982,11 @@ and student engagement in UK Business Studies.
 </div>
 
 
-<div class="experience-item reveal">
+<div class="experience-item fade">
 
-<div class="exp-date">
-EXPERIENCE
-</div>
+<span>
+02
+</span>
 
 <div>
 
@@ -1646,13 +1994,8 @@ EXPERIENCE
 HR Associate Intern
 </h3>
 
-<div class="exp-company">
-TEN Brain Research
-</div>
-
 <p>
-Worked with AI-assisted recruitment workflows and HR-related
-research and operational activities.
+TEN Brain Research · AI-assisted recruitment workflows
 </p>
 
 </div>
@@ -1660,11 +2003,11 @@ research and operational activities.
 </div>
 
 
-<div class="experience-item reveal">
+<div class="experience-item fade">
 
-<div class="exp-date">
-EXPERIENCE
-</div>
+<span>
+03
+</span>
 
 <div>
 
@@ -1672,13 +2015,8 @@ EXPERIENCE
 HR Operations
 </h3>
 
-<div class="exp-company">
-Cook N Klean & Kinds Being
-</div>
-
 <p>
-Experience across HR operations, coordination and
-people-management activities.
+Cook N Klean & Kinds Being
 </p>
 
 </div>
@@ -1686,11 +2024,11 @@ people-management activities.
 </div>
 
 
-<div class="experience-item reveal">
+<div class="experience-item fade">
 
-<div class="exp-date">
-EXPERIENCE
-</div>
+<span>
+04
+</span>
 
 <div>
 
@@ -1698,12 +2036,8 @@ EXPERIENCE
 Teaching Assistant
 </h3>
 
-<div class="exp-company">
-Vidya Bal Bhawan
-</div>
-
 <p>
-Supporting teaching and student learning activities.
+Vidya Bal Bhawan
 </p>
 
 </div>
@@ -1711,26 +2045,21 @@ Supporting teaching and student learning activities.
 </div>
 
 
-<div class="experience-item reveal">
+<div class="experience-item fade">
 
-<div class="exp-date">
-LEADERSHIP
-</div>
+<span>
+05
+</span>
 
 <div>
 
 <h3>
-Student Leadership & Engagement
+Student Leadership
 </h3>
 
-<div class="exp-company">
-University & Student Organisations
-</div>
-
 <p>
-President, Aparajit Sports Club · Vice President,
-Innovation & Entrepreneurship Cell · Organising Head,
-Sanagathan Conference 2024/2025.
+Aparajit Sports Club · Innovation & Entrepreneurship Cell
+· Sanagathan Conference
 </p>
 
 </div>
@@ -1754,19 +2083,22 @@ Sanagathan Conference 2024/2025.
 
 <div class="container">
 
-<div class="section-label reveal">
-Research methods
+
+<div class="section-kicker fade">
+Research practice
 </div>
 
-<h2 class="section-title reveal">
-How I work
+<h2 class="big-title fade">
+How I approach<br>
+research.
 </h2>
 
 
-<div class="method-grid">
+
+<div class="methods-grid">
 
 
-<div class="method reveal">
+<div class="method fade">
 
 <div class="method-number">
 01
@@ -1777,39 +2109,41 @@ Quantitative
 </h3>
 
 <p>
-Structural Equation Modelling, psychometrics, scale development,
-survey research, hypothesis testing and statistical analysis.
+Structural Equation Modelling, psychometrics, scale
+development, survey research and statistical analysis.
 </p>
 
 </div>
 
 
-<div class="method reveal">
+
+<div class="method fade">
 
 <div class="method-number">
 02
 </div>
 
 <h3>
-Qualitative & Mixed Methods
+Mixed Methods
 </h3>
 
 <p>
-Qualitative research, mixed-method designs, thematic analysis
-and integration of quantitative and qualitative evidence.
+Qualitative research, mixed-method designs, thematic
+analysis and integration of quantitative and qualitative evidence.
 </p>
 
 </div>
 
 
-<div class="method reveal">
+
+<div class="method fade">
 
 <div class="method-number">
 03
 </div>
 
 <h3>
-Tools
+Research Tools
 </h3>
 
 <p>
@@ -1831,31 +2165,34 @@ SmartPLS · SPSS · R · Power BI · Microsoft Excel · VOSviewer
      COLLABORATION
 ===================================================== -->
 
-<section class="contact" id="contact">
+<section class="collaboration" id="contact">
 
-<div class="container contact-inner">
+<div class="container collaboration-inner">
 
-<div class="section-label reveal">
+
+<div class="section-kicker fade">
 Collaboration
 </div>
 
-<h2 class="reveal">
-Let's build meaningful research.
+
+<h2 class="fade">
+Good research begins with a good conversation.
 </h2>
 
-<p class="reveal">
 
-I am interested in research collaborations, academic discussions,
-interdisciplinary projects and opportunities to contribute to
-research on AI, HRM, organisational behaviour and the future of work.
+<p class="fade">
+
+I am interested in research collaborations, academic
+discussions, interdisciplinary projects and conversations
+around AI, HRM, organisational behaviour and the future of work.
 
 </p>
 
 
-<div class="contact-links reveal">
+<div class="collaboration-links fade">
 
 <a href="mailto:nitin.au02@gmail.com">
-Email me
+nitin.au02@gmail.com
 </a>
 
 <a
@@ -1888,8 +2225,6 @@ ResearchGate ↗
 
 </section>
 
-</main>
-
 
 
 <!-- =====================================================
@@ -1898,7 +2233,7 @@ ResearchGate ↗
 
 <footer>
 
-<div class="container footer">
+<div class="container footer-inner">
 
 <div>
 
@@ -1906,8 +2241,8 @@ ResearchGate ↗
 Nitin Sharma
 </div>
 
-<div style="font-size:12px;margin-top:5px;">
-Human Resource Management · Organisational Behaviour · AI
+<div style="font-size:11px;margin-top:4px;">
+Research · People · Technology
 </div>
 
 </div>
@@ -1916,8 +2251,13 @@ Human Resource Management · Organisational Behaviour · AI
 <div class="footer-links">
 
 <a href="#home">Home</a>
+
+<a href="#about">About</a>
+
 <a href="#research">Research</a>
-<a href="#publications">Writing</a>
+
+<a href="#writing">Writing</a>
+
 <a href="#contact">Contact</a>
 
 </div>
@@ -1931,23 +2271,28 @@ Human Resource Management · Organisational Behaviour · AI
 <script>
 
 /* =========================================================
-   MOBILE MENU
+   MOBILE NAVIGATION
 ========================================================= */
 
-const menu =
-document.getElementById("menu");
+const mobileMenu =
+document.getElementById("mobileMenu");
 
 const navigation =
 document.getElementById("navigation");
 
-menu.addEventListener("click",function(){
+
+mobileMenu.addEventListener("click",function(){
 
     navigation.classList.toggle("open");
 
     if(navigation.classList.contains("open")){
-        menu.textContent="✕";
+
+        mobileMenu.textContent="✕";
+
     }else{
-        menu.textContent="☰";
+
+        mobileMenu.textContent="☰";
+
     }
 
 });
@@ -1959,7 +2304,8 @@ document.querySelectorAll(".navigation a")
     link.addEventListener("click",function(){
 
         navigation.classList.remove("open");
-        menu.textContent="☰";
+
+        mobileMenu.textContent="☰";
 
     });
 
@@ -1967,10 +2313,10 @@ document.querySelectorAll(".navigation a")
 
 
 /* =========================================================
-   SCROLL REVEAL
+   SCROLL ANIMATION
 ========================================================= */
 
-const revealObserver =
+const observer =
 new IntersectionObserver(
 
 function(entries){
@@ -1979,33 +2325,30 @@ function(entries){
 
         if(entry.isIntersecting){
 
-            entry.target.classList.add("visible");
+            entry.target.classList.add("show");
 
-            revealObserver.unobserve(entry.target);
+            observer.unobserve(entry.target);
 
         }
 
     });
 
 },
-
 {
-    threshold:.12
-}
-
-);
+    threshold:.10
+});
 
 
-document.querySelectorAll(".reveal")
+document.querySelectorAll(".fade")
 .forEach(function(element){
 
-    revealObserver.observe(element);
+    observer.observe(element);
 
 });
 
 
 /* =========================================================
-   ESCAPE CLOSE MENU
+   ESCAPE
 ========================================================= */
 
 document.addEventListener("keydown",function(event){
@@ -2013,13 +2356,15 @@ document.addEventListener("keydown",function(event){
     if(event.key==="Escape"){
 
         navigation.classList.remove("open");
-        menu.textContent="☰";
+
+        mobileMenu.textContent="☰";
 
     }
 
 });
 
 </script>
+
 
 </body>
 </html>
