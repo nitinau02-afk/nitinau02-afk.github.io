@@ -15,7 +15,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
 <style>
 * {
@@ -34,6 +34,13 @@ body {
     color: #243447;
     background: #f7f9fc;
     transition: background 0.3s, color 0.3s;
+}
+
+h1,
+h2,
+h3,
+.logo {
+    font-family: "Playfair Display", Georgia, serif;
 }
 
 a {
@@ -147,6 +154,8 @@ nav {
     font-size: 12px;
     font-weight: 700;
     margin-bottom: 17px;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
 }
 
 .hero h1 {
@@ -155,10 +164,12 @@ nav {
     color: #173b63;
     margin-bottom: 18px;
     letter-spacing: -1.8px;
+    font-weight: 700;
 }
 
 .hero h2 {
     font-size: 22px;
+    font-family: "Inter", Arial, sans-serif;
     font-weight: 500;
     color: #506275;
     margin-bottom: 24px;
@@ -302,6 +313,18 @@ nav {
     font-size: 34px;
     color: #173b63;
     margin-bottom: 8px;
+    letter-spacing: -0.5px;
+}
+
+.section-title::after {
+    content: "";
+    display: block;
+    width: 48px;
+    height: 3px;
+    margin-top: 12px;
+    border-radius: 4px;
+    background: currentColor;
+    opacity: 0.35;
 }
 
 .section-subtitle {
@@ -372,44 +395,64 @@ nav {
 }
 
 /* EDUCATION */
-.timeline {
-    border-left: 3px solid #d8e3ed;
-    padding-left: 30px;
+.education-card {
+    background: linear-gradient(135deg, #ffffff, #f7fafc);
+    border: 1px solid #dfe7ee;
+    border-radius: 14px;
+    padding: 26px;
+    margin-bottom: 28px;
+    box-shadow: 0 8px 24px rgba(31,57,82,0.06);
+    transition: 0.3s;
 }
 
-.timeline-item {
-    position: relative;
-    margin-bottom: 38px;
+.education-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 32px rgba(31,57,82,0.10);
 }
 
-.timeline-item::before {
-    content: "";
-    position: absolute;
-    left: -39px;
-    top: 7px;
-    width: 13px;
-    height: 13px;
-    border-radius: 50%;
-    background: #2b638e;
-    border: 3px solid white;
-    box-shadow: 0 0 0 2px #c8d7e5;
+.education-card:last-child {
+    margin-bottom: 0;
 }
 
-.timeline-item h3 {
+.education-card h3 {
     color: #244b6c;
-    font-size: 20px;
+    font-size: 21px;
     margin-bottom: 5px;
 }
 
-.timeline-item .institution {
+.education-card .institution {
+    font-family: "Inter", Arial, sans-serif;
     font-weight: 650;
     color: #53687b;
 }
 
-.timeline-item .date {
+.education-card .date {
     font-size: 13px;
     color: #8793a0;
-    margin-bottom: 8px;
+    margin-top: 2px;
+}
+
+.education-card p {
+    color: #5e6f7e;
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+.education-summary {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin-top: 13px;
+}
+
+.education-pill {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 20px;
+    background: #edf5fa;
+    color: #285271;
+    font-size: 12px;
+    font-weight: 700;
 }
 
 /* PUBLICATIONS */
@@ -540,6 +583,7 @@ nav {
 }
 
 .experience-card .role {
+    font-family: "Inter", Arial, sans-serif;
     font-weight: 650;
     color: #687887;
     font-size: 14px;
@@ -689,7 +733,8 @@ body.dark .fact-card,
 body.dark .method-card,
 body.dark .experience-card,
 body.dark .publication,
-body.dark .photo-card {
+body.dark .photo-card,
+body.dark .education-card {
     background: #172532;
     border-color: #304454;
     color: #dce8f1;
@@ -706,19 +751,27 @@ body.dark .interest,
 body.dark .publication h3,
 body.dark .publication h3 a,
 body.dark .method-card h3,
-body.dark .experience-card h3 {
+body.dark .experience-card h3,
+body.dark .education-card h3 {
     color: #bcdcff;
 }
 
 body.dark .publication p,
 body.dark .method-card p,
 body.dark .experience-card p,
+body.dark .education-card p,
+body.dark .education-card .institution,
 body.dark .fact-card span {
     color: #9eafbd;
 }
 
 body.dark .fact-card strong {
     color: #cbe4fa;
+}
+
+body.dark .education-pill {
+    background: #21394b;
+    color: #bcdcff;
 }
 
 /* RESPONSIVE */
@@ -1082,31 +1135,32 @@ mutual obligations within the employment relationship.
 <h2 class="section-title">Education</h2>
 
 <p class="section-subtitle">
-Academic background
+Academic background and qualifications
 </p>
 
-<div class="timeline">
+<div class="education-card reveal">
 
-<div class="timeline-item">
-
-<h3>MBA – Human Resource Management</h3>
+<h3>Bachelor of Commerce (B.Com Hons.)</h3>
 
 <div class="institution">
-University of Delhi – School of Open Learning
+Amity University
 </div>
 
 <div class="date">
-Expected 2026
+2021 – 2024
 </div>
 
-<p>CGPA: 7.56 / 10</p>
+<div class="education-summary">
+<span class="education-pill">Grade: 8.76 / 10</span>
+<span class="education-pill">B.Com (Hons.)</span>
+</div>
 
 </div>
 
 
-<div class="timeline-item">
+<div class="education-card reveal">
 
-<h3>M.Com – Human Resource Management</h3>
+<h3>Master of Commerce (M.Com) – Human Resource Management</h3>
 
 <div class="institution">
 Amity University
@@ -1116,16 +1170,37 @@ Amity University
 Completed
 </div>
 
-<p>CGPA: 9.04 / 10</p>
+<div class="education-summary">
+<span class="education-pill">CGPA: 9.04 / 10</span>
+<span class="education-pill">Human Resource Management</span>
+</div>
 
 <p>
-Dissertation:
+<strong>Dissertation:</strong>
 <em>
 A TAM-Based Empirical Investigation of Employee Acceptance
 of AI-Enabled Recruitment Systems in the Indian IT Sector
 </em>
 </p>
 
+</div>
+
+
+<div class="education-card reveal">
+
+<h3>Master of Business Administration (MBA) – Human Resource Management</h3>
+
+<div class="institution">
+University of Delhi – School of Open Learning
+</div>
+
+<div class="date">
+Expected 2026
+</div>
+
+<div class="education-summary">
+<span class="education-pill">CGPA: 7.56 / 10</span>
+<span class="education-pill">Human Resource Management</span>
 </div>
 
 </div>
@@ -1571,6 +1646,7 @@ function toggleMenu() {
     document.getElementById("navLinks").classList.toggle("open");
 }
 
+
 /* THEME */
 function toggleTheme() {
 
@@ -1597,6 +1673,7 @@ if (localStorage.getItem("theme") === "dark") {
 window.addEventListener("scroll", function() {
 
     const scrollTop = window.scrollY;
+
     const documentHeight =
         document.documentElement.scrollHeight -
         document.documentElement.clientHeight;
