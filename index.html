@@ -10,24 +10,21 @@
     <meta name="keywords" content="Nitin Sharma, HRM researcher, organisational behaviour, algorithmic management, AI HRM, psychological contract, employee trust, PhD researcher">
     <meta name="author" content="Nitin Sharma">
 
-    <!-- Open Graph -->
     <meta property="og:title" content="Nitin Sharma | HRM & Organisational Behaviour Researcher">
     <meta property="og:description" content="Researching AI-enabled HRM, algorithmic management, employee trust, psychological contracts and responsible AI.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://nitinau02-afk.github.io/">
 
-    <!-- Favicon -->
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3EN%3C/text%3E%3C/svg%3E">
 
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
     <style>
+
         :root {
             --bg: #f7f8fc;
             --surface: #ffffff;
@@ -88,7 +85,6 @@
             margin: auto;
         }
 
-        /* Scroll progress */
         #progress {
             position: fixed;
             top: 0;
@@ -99,7 +95,8 @@
             z-index: 9999;
         }
 
-        /* Navigation */
+        /* NAVIGATION */
+
         nav {
             position: fixed;
             top: 0;
@@ -174,7 +171,8 @@
             display: none;
         }
 
-        /* Hero */
+        /* HERO */
+
         .hero {
             min-height: 100vh;
             display: flex;
@@ -199,7 +197,7 @@
 
         .hero-grid {
             display: grid;
-            grid-template-columns: 1.35fr .65fr;
+            grid-template-columns: 1.15fr .85fr;
             gap: 60px;
             align-items: center;
         }
@@ -286,6 +284,44 @@
             transform: translateY(-2px);
         }
 
+        /* PHOTO */
+
+        .photo-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 28px;
+        }
+
+        .profile-photo {
+            width: 285px;
+            height: 285px;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 50%;
+            padding: 7px;
+            background: var(--surface);
+            border: 3px solid var(--primary);
+            box-shadow:
+                0 0 0 10px rgba(49,87,213,.08),
+                0 20px 55px rgba(22,34,63,.16);
+            transition: transform .4s ease, box-shadow .4s ease;
+        }
+
+        .profile-photo:hover {
+            transform: scale(1.035);
+            box-shadow:
+                0 0 0 14px rgba(49,87,213,.10),
+                0 25px 65px rgba(22,34,63,.22);
+        }
+
+        .photo-caption {
+            text-align: center;
+            color: var(--muted);
+            font-size: .82rem;
+            margin-top: 12px;
+        }
+
         .hero-card {
             background: var(--surface);
             border: 1px solid var(--border);
@@ -331,7 +367,8 @@
             font-size: .78rem;
         }
 
-        /* Sections */
+        /* SECTIONS */
+
         section {
             padding: 95px 0;
         }
@@ -361,7 +398,8 @@
             color: var(--muted);
         }
 
-        /* About */
+        /* ABOUT */
+
         .about-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -396,7 +434,8 @@
             font-weight: 600;
         }
 
-        /* Research */
+        /* RESEARCH */
+
         .research-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -434,7 +473,8 @@
             font-size: .9rem;
         }
 
-        /* Current Research */
+        /* CURRENT RESEARCH */
+
         .featured {
             background: var(--surface);
             border: 1px solid var(--border);
@@ -493,7 +533,8 @@
             color: var(--muted);
         }
 
-        /* Education */
+        /* EDUCATION */
+
         .timeline {
             position: relative;
             max-width: 850px;
@@ -542,7 +583,8 @@
             color: var(--muted);
         }
 
-        /* Publications */
+        /* PUBLICATIONS */
+
         .publication {
             padding: 24px 0;
             border-bottom: 1px solid var(--border);
@@ -562,15 +604,8 @@
             font-size: .88rem;
         }
 
-        .publication a {
-            color: var(--primary);
-            font-size: .82rem;
-            font-weight: 700;
-            display: inline-block;
-            margin-top: 7px;
-        }
+        /* METHODS */
 
-        /* Methods */
         .tools-grid {
             display: flex;
             flex-wrap: wrap;
@@ -586,7 +621,8 @@
             font-weight: 600;
         }
 
-        /* Experience */
+        /* EXPERIENCE */
+
         .experience-grid {
             display: grid;
             grid-template-columns: repeat(2,1fr);
@@ -616,6 +652,7 @@
         }
 
         /* CTA */
+
         .cta {
             background: var(--primary);
             color: white;
@@ -642,7 +679,8 @@
             border-color: white;
         }
 
-        /* Contact */
+        /* CONTACT */
+
         .contact-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -657,6 +695,12 @@
             background: var(--surface);
             border: 1px solid var(--border);
             border-radius: 14px;
+            transition: .25s;
+        }
+
+        .contact-item:hover {
+            border-color: var(--primary);
+            transform: translateY(-3px);
         }
 
         .contact-icon {
@@ -667,6 +711,7 @@
             place-items: center;
             background: var(--surface-2);
             color: var(--primary);
+            flex-shrink: 0;
         }
 
         .contact-item small {
@@ -679,7 +724,8 @@
             word-break: break-word;
         }
 
-        /* Footer */
+        /* FOOTER */
+
         footer {
             border-top: 1px solid var(--border);
             padding: 30px 0;
@@ -715,7 +761,8 @@
             transform: translateY(-2px);
         }
 
-        /* Back to top */
+        /* BACK TO TOP */
+
         #topBtn {
             position: fixed;
             right: 22px;
@@ -741,7 +788,8 @@
             visibility: visible;
         }
 
-        /* Reveal animation */
+        /* REVEAL */
+
         .reveal {
             opacity: 0;
             transform: translateY(25px);
@@ -753,7 +801,8 @@
             transform: translateY(0);
         }
 
-        /* Mobile */
+        /* MOBILE */
+
         @media (max-width: 900px) {
 
             .nav-links {
@@ -786,6 +835,10 @@
 
             .research-grid {
                 grid-template-columns: 1fr 1fr;
+            }
+
+            .photo-wrapper {
+                order: -1;
             }
         }
 
@@ -826,11 +879,17 @@
                 width: 100%;
             }
 
+            .profile-photo {
+                width: 230px;
+                height: 230px;
+            }
+
             .footer-inner {
                 flex-direction: column;
                 text-align: center;
             }
         }
+
     </style>
 </head>
 
@@ -838,8 +897,13 @@
 
 <div id="progress"></div>
 
-<!-- NAVIGATION -->
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
 <nav>
+
     <div class="container nav-inner">
 
         <a href="#home" class="logo">
@@ -847,169 +911,357 @@
         </a>
 
         <ul class="nav-links" id="navLinks">
-            <li><a href="#about">About</a></li>
-            <li><a href="#research">Research</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#publications">Publications</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#contact">Contact</a></li>
+
+            <li>
+                <a href="#about">About</a>
+            </li>
+
+            <li>
+                <a href="#research">Research</a>
+            </li>
+
+            <li>
+                <a href="#education">Education</a>
+            </li>
+
+            <li>
+                <a href="#publications">Publications</a>
+            </li>
+
+            <li>
+                <a href="#experience">Experience</a>
+            </li>
+
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+
         </ul>
 
         <div class="nav-actions">
 
-            <button class="icon-btn" id="themeBtn" aria-label="Toggle dark mode">
+            <button
+                class="icon-btn"
+                id="themeBtn"
+                aria-label="Toggle dark mode">
+
                 <i class="fa-solid fa-moon"></i>
+
             </button>
 
-            <button class="icon-btn menu-btn" id="menuBtn" aria-label="Open menu">
+            <button
+                class="icon-btn menu-btn"
+                id="menuBtn"
+                aria-label="Open menu">
+
                 <i class="fa-solid fa-bars"></i>
+
             </button>
 
         </div>
+
     </div>
+
 </nav>
 
 
-<!-- HERO -->
+<!-- =========================
+     HERO
+========================= -->
+
 <header class="hero" id="home">
 
     <div class="container hero-grid">
 
+
+        <!-- LEFT SIDE -->
+
         <div class="reveal">
 
             <div class="badge">
+
                 <span class="badge-dot"></span>
-                Research & PhD Opportunities
+
+                Open to PhD Opportunities & Research Collaboration
+
             </div>
 
+
             <h1>
+
                 Nitin<br>
+
                 <span>Sharma</span>
+
             </h1>
 
+
             <p class="hero-subtitle">
+
                 Early-career researcher exploring the intersection of
-                <strong>Human Resource Management, Organisational Behaviour,
-                Artificial Intelligence and Algorithmic Management.</strong>
+
+                <strong>
+                    Human Resource Management,
+                    Organisational Behaviour,
+                    Artificial Intelligence and Algorithmic Management.
+                </strong>
+
             </p>
+
 
             <div class="hero-buttons">
 
-                <a href="#research" class="btn btn-primary">
+
+                <a
+                    href="#research"
+                    class="btn btn-primary">
+
                     <i class="fa-solid fa-flask"></i>
+
                     Explore Research
+
                 </a>
 
-                <a href="https://www.linkedin.com/in/nitin-sharma-449bb824/"
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   class="btn btn-secondary">
+
+                <a
+                    href="https://www.linkedin.com/in/nitin-sharma-449bb824/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn btn-secondary">
+
                     <i class="fa-brands fa-linkedin"></i>
+
                     LinkedIn
+
                 </a>
 
-                <a href="#contact" class="btn btn-secondary">
+
+                <a
+                    href="mailto:nitin.au02@gmail.com"
+                    class="btn btn-secondary">
+
                     <i class="fa-regular fa-envelope"></i>
-                    Contact Me
+
+                    Email Me
+
                 </a>
+
 
             </div>
+
         </div>
 
 
-        <div class="hero-card reveal">
+        <!-- RIGHT SIDE -->
 
-            <h3>Research Focus</h3>
+        <div class="reveal">
 
-            <div class="focus-item">
-                <div class="focus-icon">
-                    <i class="fa-solid fa-robot"></i>
-                </div>
+
+            <!-- PHOTO -->
+
+            <div class="photo-wrapper">
+
                 <div>
-                    <strong>AI-enabled HRM</strong>
-                    <small>AI and digital transformation of HR practices</small>
+
+                    <img
+                        src="MY%20Photo.jpg"
+                        alt="Nitin Sharma - HRM and Organisational Behaviour Researcher"
+                        class="profile-photo">
+
+                    <div class="photo-caption">
+                        HRM · Organisational Behaviour · AI
+                    </div>
+
                 </div>
+
             </div>
 
-            <div class="focus-item">
-                <div class="focus-icon">
-                    <i class="fa-solid fa-network-wired"></i>
-                </div>
-                <div>
-                    <strong>Algorithmic Management</strong>
-                    <small>Technology-mediated organisational decision-making</small>
-                </div>
-            </div>
 
-            <div class="focus-item">
-                <div class="focus-icon">
-                    <i class="fa-solid fa-handshake"></i>
-                </div>
-                <div>
-                    <strong>Employee Trust</strong>
-                    <small>Trust, fairness and employee acceptance of AI</small>
-                </div>
-            </div>
+            <!-- RESEARCH FOCUS -->
 
-            <div class="focus-item">
-                <div class="focus-icon">
-                    <i class="fa-solid fa-scale-balanced"></i>
+            <div class="hero-card">
+
+                <h3>
+                    Research Focus
+                </h3>
+
+
+                <div class="focus-item">
+
+                    <div class="focus-icon">
+                        <i class="fa-solid fa-robot"></i>
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            AI-enabled HRM
+                        </strong>
+
+                        <small>
+                            AI and digital transformation of HR practices
+                        </small>
+
+                    </div>
+
                 </div>
-                <div>
-                    <strong>Organisational Justice</strong>
-                    <small>Fairness, accountability and responsible AI</small>
+
+
+                <div class="focus-item">
+
+                    <div class="focus-icon">
+                        <i class="fa-solid fa-network-wired"></i>
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Algorithmic Management
+                        </strong>
+
+                        <small>
+                            Technology-mediated organisational decision-making
+                        </small>
+
+                    </div>
+
                 </div>
+
+
+                <div class="focus-item">
+
+                    <div class="focus-icon">
+                        <i class="fa-solid fa-handshake"></i>
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Employee Trust
+                        </strong>
+
+                        <small>
+                            Trust, fairness and employee acceptance of AI
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="focus-item">
+
+                    <div class="focus-icon">
+                        <i class="fa-solid fa-scale-balanced"></i>
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Organisational Justice
+                        </strong>
+
+                        <small>
+                            Fairness, accountability and responsible AI
+                        </small>
+
+                    </div>
+
+                </div>
+
             </div>
 
         </div>
 
     </div>
+
 </header>
 
 
-<!-- ABOUT -->
+<!-- =========================
+     ABOUT
+========================= -->
+
 <section id="about">
 
     <div class="container">
 
+
         <div class="section-heading reveal">
-            <div class="eyebrow">About</div>
-            <h2>Researching the future of work.</h2>
+
+            <div class="eyebrow">
+                About
+            </div>
+
+            <h2>
+                Researching the future of work.
+            </h2>
+
             <p>
                 My work examines how emerging technologies are changing
                 employment relationships, organisational practices and
                 employee experiences.
             </p>
+
         </div>
 
 
         <div class="about-grid">
 
+
             <div class="card reveal">
 
-                <h3>Research Profile</h3>
+                <h3>
+                    Research Profile
+                </h3>
 
                 <br>
 
                 <p>
+
                     I am an early-career researcher working across Human
                     Resource Management, Organisational Behaviour and
                     Algorithmic Management. My research focuses on how
                     artificial intelligence influences organisational
                     decision-making, employee trust, psychological contracts,
                     fairness and employee voice.
+
                 </p>
+
 
                 <div class="interest-list">
 
-                    <span class="tag">AI-enabled HRM</span>
-                    <span class="tag">Algorithmic Management</span>
-                    <span class="tag">Employee Trust</span>
-                    <span class="tag">Psychological Contracts</span>
-                    <span class="tag">Organisational Justice</span>
-                    <span class="tag">Employee Voice</span>
-                    <span class="tag">Responsible AI</span>
-                    <span class="tag">Future of Work</span>
+                    <span class="tag">
+                        AI-enabled HRM
+                    </span>
+
+                    <span class="tag">
+                        Algorithmic Management
+                    </span>
+
+                    <span class="tag">
+                        Employee Trust
+                    </span>
+
+                    <span class="tag">
+                        Psychological Contracts
+                    </span>
+
+                    <span class="tag">
+                        Organisational Justice
+                    </span>
+
+                    <span class="tag">
+                        Employee Voice
+                    </span>
+
+                    <span class="tag">
+                        Responsible AI
+                    </span>
+
+                    <span class="tag">
+                        Future of Work
+                    </span>
 
                 </div>
 
@@ -1018,24 +1270,30 @@
 
             <div class="card reveal">
 
-                <h3>Research Philosophy</h3>
+                <h3>
+                    Research Philosophy
+                </h3>
 
                 <br>
 
                 <p>
+
                     I am particularly interested in understanding not only
                     whether organisations adopt AI, but how employees
                     experience and interpret technology-mediated changes in
                     authority, responsibility, fairness and mutual
                     obligations.
+
                 </p>
 
                 <br>
 
                 <p>
+
                     My broader research agenda seeks to contribute to a more
                     human-centred understanding of digital transformation
                     within organisations.
+
                 </p>
 
             </div>
@@ -1047,16 +1305,24 @@
 </section>
 
 
-<!-- RESEARCH -->
+<!-- =========================
+     RESEARCH
+========================= -->
+
 <section id="research">
 
     <div class="container">
 
+
         <div class="section-heading reveal">
 
-            <div class="eyebrow">Research</div>
+            <div class="eyebrow">
+                Research
+            </div>
 
-            <h2>Areas I investigate.</h2>
+            <h2>
+                Areas I investigate.
+            </h2>
 
             <p>
                 My research interests connect technology, people and
@@ -1068,65 +1334,115 @@
 
         <div class="research-grid">
 
+
             <div class="research-card reveal">
-                <div class="number">01</div>
-                <h3>AI & HRM</h3>
+
+                <div class="number">
+                    01
+                </div>
+
+                <h3>
+                    AI & HRM
+                </h3>
+
                 <p>
                     Understanding how artificial intelligence transforms
                     recruitment, workforce management and HR decision-making.
                 </p>
+
             </div>
 
 
             <div class="research-card reveal">
-                <div class="number">02</div>
-                <h3>Algorithmic Management</h3>
+
+                <div class="number">
+                    02
+                </div>
+
+                <h3>
+                    Algorithmic Management
+                </h3>
+
                 <p>
                     Examining algorithm-mediated control, authority,
                     accountability and decision-making in organisations.
                 </p>
+
             </div>
 
 
             <div class="research-card reveal">
-                <div class="number">03</div>
-                <h3>Employee Trust</h3>
+
+                <div class="number">
+                    03
+                </div>
+
+                <h3>
+                    Employee Trust
+                </h3>
+
                 <p>
                     Investigating the factors that shape employee trust,
                     acceptance and perceptions of AI-enabled HR systems.
                 </p>
+
             </div>
 
 
             <div class="research-card reveal">
-                <div class="number">04</div>
-                <h3>Psychological Contracts</h3>
+
+                <div class="number">
+                    04
+                </div>
+
+                <h3>
+                    Psychological Contracts
+                </h3>
+
                 <p>
                     Exploring how digital technologies reshape perceived
                     obligations and expectations between employees and
                     organisations.
                 </p>
+
             </div>
 
 
             <div class="research-card reveal">
-                <div class="number">05</div>
-                <h3>Organisational Justice</h3>
+
+                <div class="number">
+                    05
+                </div>
+
+                <h3>
+                    Organisational Justice
+                </h3>
+
                 <p>
                     Studying fairness, transparency and accountability in
                     technology-mediated organisational decisions.
                 </p>
+
             </div>
 
 
             <div class="research-card reveal">
-                <div class="number">06</div>
-                <h3>Future of Work</h3>
+
+                <div class="number">
+                    06
+                </div>
+
+                <h3>
+                    Future of Work
+                </h3>
+
                 <p>
                     Examining how AI and digitalisation are changing jobs,
                     employment relationships and organisational structures.
                 </p>
+
             </div>
+
 
         </div>
 
@@ -1135,20 +1451,33 @@
 </section>
 
 
-<!-- CURRENT RESEARCH -->
+<!-- =========================
+     CURRENT RESEARCH
+========================= -->
+
 <section id="current-research">
 
     <div class="container">
 
+
         <div class="section-heading reveal">
-            <div class="eyebrow">Current Research</div>
-            <h2>My current research direction.</h2>
+
+            <div class="eyebrow">
+                Current Research
+            </div>
+
+            <h2>
+                My current research direction.
+            </h2>
+
         </div>
 
 
         <div class="featured reveal">
 
+
             <div class="featured-grid">
+
 
                 <div>
 
@@ -1156,23 +1485,32 @@
                         Research Programme
                     </div>
 
+
                     <h3>
+
                         Algorithmic Management and the Employment
                         Relationship: Employee Trust and Psychological
                         Contract Reconfiguration in AI-enabled HRM
+
                     </h3>
 
+
                     <p>
+
                         This research direction investigates how the growing
                         use of AI in organisational decision-making may
                         influence employee trust, perceived organisational
                         obligations, psychological contracts and perceptions
                         of fairness.
+
                     </p>
+
 
                     <div class="research-question">
 
-                        <strong>Core question</strong>
+                        <strong>
+                            Core question
+                        </strong>
 
                         How does algorithmic management reshape the
                         employment relationship and employees' perceptions
@@ -1185,22 +1523,48 @@
 
                 <div>
 
-                    <div class="mini-stat">
-                        <strong>AI</strong>
-                        <span>Technology & HRM</span>
-                    </div>
 
                     <div class="mini-stat">
-                        <strong>Trust</strong>
-                        <span>Employee Experience</span>
+
+                        <strong>
+                            AI
+                        </strong>
+
+                        <span>
+                            Technology & HRM
+                        </span>
+
                     </div>
 
+
                     <div class="mini-stat">
-                        <strong>Justice</strong>
-                        <span>Fairness & Accountability</span>
+
+                        <strong>
+                            Trust
+                        </strong>
+
+                        <span>
+                            Employee Experience
+                        </span>
+
                     </div>
+
+
+                    <div class="mini-stat">
+
+                        <strong>
+                            Justice
+                        </strong>
+
+                        <span>
+                            Fairness & Accountability
+                        </span>
+
+                    </div>
+
 
                 </div>
+
 
             </div>
 
@@ -1211,27 +1575,40 @@
 </section>
 
 
-<!-- EDUCATION -->
+<!-- =========================
+     EDUCATION
+========================= -->
+
 <section id="education">
 
     <div class="container">
 
+
         <div class="section-heading reveal">
 
-            <div class="eyebrow">Education</div>
+            <div class="eyebrow">
+                Education
+            </div>
 
-            <h2>Academic journey.</h2>
+            <h2>
+                Academic journey.
+            </h2>
 
         </div>
 
 
         <div class="timeline">
 
+
             <div class="timeline-item reveal">
 
-                <span>2024 – 2026</span>
+                <span>
+                    2024 – 2026
+                </span>
 
-                <h3>MBA – Human Resource Management</h3>
+                <h3>
+                    MBA – Human Resource Management
+                </h3>
 
                 <p>
                     University of Delhi – School of Open Learning
@@ -1246,9 +1623,13 @@
 
             <div class="timeline-item reveal">
 
-                <span>Completed</span>
+                <span>
+                    Completed
+                </span>
 
-                <h3>M.Com – Human Resource Management</h3>
+                <h3>
+                    M.Com – Human Resource Management
+                </h3>
 
                 <p>
                     Amity University
@@ -1263,19 +1644,24 @@
 
             <div class="timeline-item reveal">
 
-                <span>Dissertation</span>
+                <span>
+                    Dissertation
+                </span>
 
                 <h3>
                     Employee Acceptance of AI-enabled Recruitment Systems
                 </h3>
 
                 <p>
+
                     A TAM-based empirical investigation of employee
                     acceptance of AI-enabled recruitment systems in the
                     Indian IT sector.
+
                 </p>
 
             </div>
+
 
         </div>
 
@@ -1284,16 +1670,24 @@
 </section>
 
 
-<!-- PUBLICATIONS -->
+<!-- =========================
+     PUBLICATIONS
+========================= -->
+
 <section id="publications">
 
     <div class="container">
 
+
         <div class="section-heading reveal">
 
-            <div class="eyebrow">Publications</div>
+            <div class="eyebrow">
+                Publications
+            </div>
 
-            <h2>Selected research output.</h2>
+            <h2>
+                Selected research output.
+            </h2>
 
             <p>
                 Selected publications and ongoing research manuscripts.
@@ -1304,12 +1698,15 @@
 
         <div class="card reveal">
 
+
             <div class="publication">
 
                 <h3>
+
                     Trust as the Dominant Driver of Employee Acceptance of
                     AI-Enabled Recruitment Systems: An Extended Technology
                     Acceptance Model
+
                 </h3>
 
                 <p>
@@ -1322,8 +1719,10 @@
             <div class="publication">
 
                 <h3>
+
                     A TAM-Based Empirical Investigation of Employee
                     Acceptance of AI-Enabled Recruitment
+
                 </h3>
 
                 <p>
@@ -1349,8 +1748,10 @@
             <div class="publication">
 
                 <h3>
+
                     The Future of Human Resource Management: The Role of
                     Artificial Intelligence in Shaping HR Practices
+
                 </h3>
 
                 <p>
@@ -1359,6 +1760,7 @@
 
             </div>
 
+
         </div>
 
     </div>
@@ -1366,22 +1768,31 @@
 </section>
 
 
-<!-- MANUSCRIPTS -->
+<!-- =========================
+     MANUSCRIPTS
+========================= -->
+
 <section id="manuscripts">
 
     <div class="container">
 
+
         <div class="section-heading reveal">
 
-            <div class="eyebrow">Ongoing Research</div>
+            <div class="eyebrow">
+                Ongoing Research
+            </div>
 
-            <h2>Manuscripts under review.</h2>
+            <h2>
+                Manuscripts under review.
+            </h2>
 
         </div>
 
 
         <div class="research-grid">
 
+
             <div class="research-card reveal">
 
                 <div class="number">
@@ -1389,13 +1800,17 @@
                 </div>
 
                 <h3>
+
                     Algorithmic Management and the Evolution of the
                     Psychological Contract
+
                 </h3>
 
                 <p>
+
                     A multilevel investigation of how algorithmic management
                     may influence employee–organisation relationships.
+
                 </p>
 
             </div>
@@ -1408,15 +1823,20 @@
                 </div>
 
                 <h3>
+
                     Integrating Strategic and Human-Centred HR Practices
+
                 </h3>
 
                 <p>
+
                     Development and validation of a hierarchical HR
                     architecture.
+
                 </p>
 
             </div>
+
 
         </div>
 
@@ -1425,20 +1845,30 @@
 </section>
 
 
-<!-- METHODS -->
+<!-- =========================
+     METHODS
+========================= -->
+
 <section id="methods">
 
     <div class="container">
 
+
         <div class="section-heading reveal">
 
-            <div class="eyebrow">Methods & Tools</div>
+            <div class="eyebrow">
+                Methods & Tools
+            </div>
 
-            <h2>Research capabilities.</h2>
+            <h2>
+                Research capabilities.
+            </h2>
 
             <p>
+
                 Quantitative, qualitative and mixed-method approaches
                 supported by a range of analytical tools.
+
             </p>
 
         </div>
@@ -1446,20 +1876,56 @@
 
         <div class="card reveal">
 
+
             <div class="tools-grid">
 
-                <span class="tool">Quantitative Research</span>
-                <span class="tool">Mixed Methods</span>
-                <span class="tool">SEM</span>
-                <span class="tool">Psychometrics</span>
-                <span class="tool">Scale Development</span>
-                <span class="tool">Qualitative Research</span>
-                <span class="tool">SmartPLS</span>
-                <span class="tool">SPSS</span>
-                <span class="tool">R</span>
-                <span class="tool">Power BI</span>
-                <span class="tool">Microsoft Excel</span>
-                <span class="tool">VOSviewer</span>
+                <span class="tool">
+                    Quantitative Research
+                </span>
+
+                <span class="tool">
+                    Mixed Methods
+                </span>
+
+                <span class="tool">
+                    SEM
+                </span>
+
+                <span class="tool">
+                    Psychometrics
+                </span>
+
+                <span class="tool">
+                    Scale Development
+                </span>
+
+                <span class="tool">
+                    Qualitative Research
+                </span>
+
+                <span class="tool">
+                    SmartPLS
+                </span>
+
+                <span class="tool">
+                    SPSS
+                </span>
+
+                <span class="tool">
+                    R
+                </span>
+
+                <span class="tool">
+                    Power BI
+                </span>
+
+                <span class="tool">
+                    Microsoft Excel
+                </span>
+
+                <span class="tool">
+                    VOSviewer
+                </span>
 
             </div>
 
@@ -1470,21 +1936,30 @@
 </section>
 
 
-<!-- EXPERIENCE -->
+<!-- =========================
+     EXPERIENCE
+========================= -->
+
 <section id="experience">
 
     <div class="container">
 
+
         <div class="section-heading reveal">
 
-            <div class="eyebrow">Experience</div>
+            <div class="eyebrow">
+                Experience
+            </div>
 
-            <h2>Academic & professional experience.</h2>
+            <h2>
+                Academic & professional experience.
+            </h2>
 
         </div>
 
 
         <div class="experience-grid">
+
 
             <div class="experience-card reveal">
 
@@ -1492,11 +1967,15 @@
                     CO-TEACHER
                 </div>
 
-                <h3>GLECTA</h3>
+                <h3>
+                    GLECTA
+                </h3>
 
                 <p>
+
                     Supporting UK Business Studies teaching, classroom
                     activities and student learning.
+
                 </p>
 
             </div>
@@ -1508,11 +1987,15 @@
                     HR ASSOCIATE INTERN
                 </div>
 
-                <h3>TEN Brain</h3>
+                <h3>
+                    TEN Brain
+                </h3>
 
                 <p>
+
                     Worked on HR activities and AI-assisted recruitment
                     workflows.
+
                 </p>
 
             </div>
@@ -1524,10 +2007,14 @@
                     HR OPERATIONS
                 </div>
 
-                <h3>Cook N Klean & Kinds Being</h3>
+                <h3>
+                    Cook N Klean & Kinds Being
+                </h3>
 
                 <p>
+
                     Supported HR operations and organisational activities.
+
                 </p>
 
             </div>
@@ -1539,14 +2026,19 @@
                     TEACHING ASSISTANT
                 </div>
 
-                <h3>Vidya Bal Bhawan</h3>
+                <h3>
+                    Vidya Bal Bhawan
+                </h3>
 
                 <p>
+
                     Supported teaching, learning and student-focused
                     activities.
+
                 </p>
 
             </div>
+
 
         </div>
 
@@ -1555,27 +2047,40 @@
 </section>
 
 
-<!-- LEADERSHIP -->
+<!-- =========================
+     LEADERSHIP
+========================= -->
+
 <section id="leadership">
 
     <div class="container">
 
+
         <div class="section-heading reveal">
 
-            <div class="eyebrow">Leadership</div>
+            <div class="eyebrow">
+                Leadership
+            </div>
 
-            <h2>Academic & leadership activities.</h2>
+            <h2>
+                Academic & leadership activities.
+            </h2>
 
         </div>
 
 
         <div class="research-grid">
 
+
             <div class="research-card reveal">
 
-                <div class="number">01</div>
+                <div class="number">
+                    01
+                </div>
 
-                <h3>President</h3>
+                <h3>
+                    President
+                </h3>
 
                 <p>
                     Aparajit Sports Club
@@ -1586,9 +2091,13 @@
 
             <div class="research-card reveal">
 
-                <div class="number">02</div>
+                <div class="number">
+                    02
+                </div>
 
-                <h3>Vice President</h3>
+                <h3>
+                    Vice President
+                </h3>
 
                 <p>
                     Innovation & Entrepreneurship Cell
@@ -1599,9 +2108,13 @@
 
             <div class="research-card reveal">
 
-                <div class="number">03</div>
+                <div class="number">
+                    03
+                </div>
 
-                <h3>Organising Head</h3>
+                <h3>
+                    Organising Head
+                </h3>
 
                 <p>
                     Sanagathan Conference 2024/2025
@@ -1609,6 +2122,7 @@
 
             </div>
 
+
         </div>
 
     </div>
@@ -1616,27 +2130,38 @@
 </section>
 
 
-<!-- CTA -->
+<!-- =========================
+     COLLABORATION CTA
+========================= -->
+
 <section>
 
     <div class="container">
 
+
         <div class="cta reveal">
 
-            <h2>Interested in research collaboration?</h2>
+            <h2>
+                Interested in research collaboration?
+            </h2>
 
             <p>
+
                 I am interested in connecting with PhD supervisors,
                 researchers and academic collaborators working on AI,
                 HRM, organisational behaviour and the future of work.
+
             </p>
 
-            <a href="https://www.linkedin.com/in/nitin-sharma-449bb824/"
-               target="_blank"
-               rel="noopener noreferrer"
-               class="btn">
-                <i class="fa-brands fa-linkedin"></i>
-                Connect on LinkedIn
+
+            <a
+                href="mailto:nitin.au02@gmail.com?subject=Research%20Collaboration%20Enquiry"
+                class="btn">
+
+                <i class="fa-regular fa-envelope"></i>
+
+                Contact for Collaboration
+
             </a>
 
         </div>
@@ -1646,20 +2171,30 @@
 </section>
 
 
-<!-- CONTACT -->
+<!-- =========================
+     CONTACT
+========================= -->
+
 <section id="contact">
 
     <div class="container">
 
+
         <div class="section-heading reveal">
 
-            <div class="eyebrow">Contact</div>
+            <div class="eyebrow">
+                Contact
+            </div>
 
-            <h2>Let's connect.</h2>
+            <h2>
+                Let's connect.
+            </h2>
 
             <p>
+
                 For PhD opportunities, research collaboration, academic
                 discussion or professional enquiries.
+
             </p>
 
         </div>
@@ -1667,36 +2202,62 @@
 
         <div class="contact-grid">
 
-            <a href="https://www.linkedin.com/in/nitin-sharma-449bb824b/"
-               target="_blank"
-               rel="noopener noreferrer"
-               class="contact-item reveal">
+
+            <!-- EMAIL -->
+
+            <a
+                href="mailto:nitin.au02@gmail.com"
+                class="contact-item reveal">
 
                 <div class="contact-icon">
-                    <i class="fa-brands fa-linkedin"></i>
-                </div>
 
-                <div>
-                    <small>LinkedIn</small>
-                    <strong>Connect with me</strong>
-                </div>
-
-            </a>
-
-
-            <a href="mailto:your-email@example.com"
-               class="contact-item reveal">
-
-                <div class="contact-icon">
                     <i class="fa-regular fa-envelope"></i>
+
                 </div>
 
                 <div>
-                    <small>Email</small>
-                    <strong>your-email@example.com</strong>
+
+                    <small>
+                        Email
+                    </small>
+
+                    <strong>
+                        nitin.au02@gmail.com
+                    </strong>
+
                 </div>
 
             </a>
+
+
+            <!-- LINKEDIN -->
+
+            <a
+                href="https://www.linkedin.com/in/nitin-sharma-449bb824/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="contact-item reveal">
+
+                <div class="contact-icon">
+
+                    <i class="fa-brands fa-linkedin"></i>
+
+                </div>
+
+                <div>
+
+                    <small>
+                        LinkedIn
+                    </small>
+
+                    <strong>
+                        Connect with me
+                    </strong>
+
+                </div>
+
+            </a>
+
 
         </div>
 
@@ -1705,27 +2266,54 @@
 </section>
 
 
-<!-- FOOTER -->
+<!-- =========================
+     FOOTER
+========================= -->
+
 <footer>
 
     <div class="container footer-inner">
 
+
         <div>
-            © <span id="year"></span> Nitin Sharma. All rights reserved.
+
+            © <span id="year"></span>
+            Nitin Sharma. All rights reserved.
+
         </div>
+
 
         <div class="socials">
 
-            <a href="https://www.linkedin.com/in/nitin-sharma-449bb824/"
-               target="_blank"
-               rel="noopener noreferrer"
-               aria-label="LinkedIn">
+
+            <a
+                href="https://www.linkedin.com/in/nitin-sharma-449bb824/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn">
+
                 <i class="fa-brands fa-linkedin-in"></i>
+
             </a>
 
-            <a href="#home" aria-label="Back to top">
-                <i class="fa-solid fa-arrow-up"></i>
+
+            <a
+                href="mailto:nitin.au02@gmail.com"
+                aria-label="Email">
+
+                <i class="fa-regular fa-envelope"></i>
+
             </a>
+
+
+            <a
+                href="#home"
+                aria-label="Back to top">
+
+                <i class="fa-solid fa-arrow-up"></i>
+
+            </a>
+
 
         </div>
 
@@ -1735,8 +2323,13 @@
 
 
 <!-- BACK TO TOP -->
-<button id="topBtn" aria-label="Back to top">
+
+<button
+    id="topBtn"
+    aria-label="Back to top">
+
     <i class="fa-solid fa-arrow-up"></i>
+
 </button>
 
 
@@ -1746,42 +2339,61 @@
        DARK / LIGHT MODE
     ========================= */
 
-    const themeBtn = document.getElementById("themeBtn");
-    const themeIcon = themeBtn.querySelector("i");
+    const themeBtn =
+        document.getElementById("themeBtn");
 
-    const savedTheme = localStorage.getItem("theme");
+    const themeIcon =
+        themeBtn.querySelector("i");
+
+    const savedTheme =
+        localStorage.getItem("theme");
+
 
     if (savedTheme) {
-        document.documentElement.setAttribute("data-theme", savedTheme);
+
+        document.documentElement
+            .setAttribute("data-theme", savedTheme);
 
         if (savedTheme === "dark") {
+
             themeIcon.classList.remove("fa-moon");
+
             themeIcon.classList.add("fa-sun");
+
         }
+
     }
+
 
     themeBtn.addEventListener("click", () => {
 
         const currentTheme =
-            document.documentElement.getAttribute("data-theme");
+            document.documentElement
+                .getAttribute("data-theme");
+
 
         if (currentTheme === "dark") {
 
-            document.documentElement.removeAttribute("data-theme");
+            document.documentElement
+                .removeAttribute("data-theme");
 
             localStorage.setItem("theme", "light");
 
             themeIcon.classList.remove("fa-sun");
+
             themeIcon.classList.add("fa-moon");
 
         } else {
 
-            document.documentElement.setAttribute("data-theme", "dark");
+            document.documentElement
+                .setAttribute("data-theme", "dark");
 
             localStorage.setItem("theme", "dark");
 
             themeIcon.classList.remove("fa-moon");
+
             themeIcon.classList.add("fa-sun");
+
         }
 
     });
@@ -1791,23 +2403,31 @@
        MOBILE MENU
     ========================= */
 
-    const menuBtn = document.getElementById("menuBtn");
-    const navLinks = document.getElementById("navLinks");
+    const menuBtn =
+        document.getElementById("menuBtn");
+
+    const navLinks =
+        document.getElementById("navLinks");
+
 
     menuBtn.addEventListener("click", () => {
 
         navLinks.classList.toggle("active");
 
-        const icon = menuBtn.querySelector("i");
+        const icon =
+            menuBtn.querySelector("i");
+
 
         if (navLinks.classList.contains("active")) {
 
             icon.classList.remove("fa-bars");
+
             icon.classList.add("fa-xmark");
 
         } else {
 
             icon.classList.remove("fa-xmark");
+
             icon.classList.add("fa-bars");
 
         }
@@ -1815,32 +2435,40 @@
     });
 
 
-    /* Close menu after clicking */
-    document.querySelectorAll(".nav-links a").forEach(link => {
+    /* CLOSE MOBILE MENU */
 
-        link.addEventListener("click", () => {
+    document
+        .querySelectorAll(".nav-links a")
+        .forEach(link => {
 
-            navLinks.classList.remove("active");
+            link.addEventListener("click", () => {
 
-            const icon = menuBtn.querySelector("i");
+                navLinks.classList.remove("active");
 
-            icon.classList.remove("fa-xmark");
-            icon.classList.add("fa-bars");
+                const icon =
+                    menuBtn.querySelector("i");
+
+                icon.classList.remove("fa-xmark");
+
+                icon.classList.add("fa-bars");
+
+            });
 
         });
-
-    });
 
 
     /* =========================
        SCROLL PROGRESS
     ========================= */
 
-    const progress = document.getElementById("progress");
+    const progress =
+        document.getElementById("progress");
+
 
     window.addEventListener("scroll", () => {
 
-        const scrollTop = window.scrollY;
+        const scrollTop =
+            window.scrollY;
 
         const height =
             document.documentElement.scrollHeight -
@@ -1849,7 +2477,8 @@
         const percentage =
             (scrollTop / height) * 100;
 
-        progress.style.width = percentage + "%";
+        progress.style.width =
+            percentage + "%";
 
     });
 
@@ -1858,23 +2487,33 @@
        BACK TO TOP
     ========================= */
 
-    const topBtn = document.getElementById("topBtn");
+    const topBtn =
+        document.getElementById("topBtn");
+
 
     window.addEventListener("scroll", () => {
 
         if (window.scrollY > 500) {
+
             topBtn.classList.add("show");
+
         } else {
+
             topBtn.classList.remove("show");
+
         }
 
     });
 
+
     topBtn.addEventListener("click", () => {
 
         window.scrollTo({
+
             top: 0,
+
             behavior: "smooth"
+
         });
 
     });
@@ -1887,28 +2526,40 @@
     const revealElements =
         document.querySelectorAll(".reveal");
 
+
     const observer =
-        new IntersectionObserver((entries) => {
+        new IntersectionObserver(
 
-            entries.forEach(entry => {
+            (entries) => {
 
-                if (entry.isIntersecting) {
+                entries.forEach(entry => {
 
-                    entry.target.classList.add("visible");
+                    if (entry.isIntersecting) {
 
-                    observer.unobserve(entry.target);
+                        entry.target
+                            .classList
+                            .add("visible");
 
-                }
+                        observer
+                            .unobserve(entry.target);
 
-            });
+                    }
 
-        }, {
-            threshold: 0.12
-        });
+                });
+
+            },
+
+            {
+                threshold: 0.12
+            }
+
+        );
 
 
     revealElements.forEach(element => {
+
         observer.observe(element);
+
     });
 
 
@@ -1916,10 +2567,12 @@
        CURRENT YEAR
     ========================= */
 
-    document.getElementById("year").textContent =
+    document.getElementById("year")
+        .textContent =
         new Date().getFullYear();
 
 </script>
+
 
 </body>
 </html>
