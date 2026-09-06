@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Nitin Sharma | Research & Ideas</title>
+<title>Nitin Sharma — Researcher</title>
 
-<meta name="description" content="Nitin Sharma — researcher exploring artificial intelligence, human resource management, organisational behaviour and the future of work.">
+<meta name="description" content="Nitin Sharma — Researcher exploring artificial intelligence, human resource management, organisational behaviour, algorithmic management and the future of work.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,10 +14,6 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
 
 <style>
-
-/* =========================================================
-   RESET
-========================================================= */
 
 *{
     margin:0;
@@ -30,200 +26,192 @@ html{
 }
 
 body{
-    background:#f5f2ec;
-    color:#181818;
+    background:#f5f1ea;
+    color:#171717;
     font-family:"DM Sans",sans-serif;
     line-height:1.6;
 }
 
 a{
-    color:inherit;
     text-decoration:none;
+    color:inherit;
 }
 
 img{
     display:block;
-    max-width:100%;
+    width:100%;
 }
 
 .container{
     width:90%;
-    max-width:1250px;
+    max-width:1240px;
     margin:auto;
 }
 
 
-/* =========================================================
-   TOP BAR
-========================================================= */
+/* =========================
+   NAVIGATION
+========================= */
 
-.topbar{
+header{
     position:fixed;
     top:0;
     left:0;
-    right:0;
+    width:100%;
+    height:72px;
     z-index:1000;
 
+    background:rgba(245,241,234,.9);
+    backdrop-filter:blur(15px);
+
+    border-bottom:1px solid rgba(0,0,0,.08);
+}
+
+.nav{
     height:72px;
 
     display:flex;
     align-items:center;
-
-    background:rgba(245,242,236,.88);
-    backdrop-filter:blur(15px);
-
-    border-bottom:1px solid rgba(24,24,24,.08);
-}
-
-.topbar-inner{
-    width:90%;
-    max-width:1250px;
-    margin:auto;
-
-    display:flex;
     justify-content:space-between;
-    align-items:center;
 }
 
-.brand{
+.logo{
     font-family:"DM Serif Display",serif;
     font-size:25px;
 }
 
-.brand span{
-    color:#7a58d6;
+.logo span{
+    color:#7956d8;
 }
 
-.menu{
+.links{
     display:flex;
-    gap:28px;
+    gap:30px;
     align-items:center;
 }
 
-.menu a{
+.links a{
     font-size:13px;
     color:#555;
 }
 
-.menu a:hover{
-    color:#7a58d6;
+.links a:hover{
+    color:#7956d8;
 }
 
-.menu .contact-link{
-    color:#181818;
-    border-bottom:1px solid #181818;
-    padding-bottom:2px;
+.links .talk{
+    color:#111;
+    border-bottom:1px solid #111;
 }
 
-.mobile-menu{
+.mobile{
     display:none;
-    border:0;
     background:none;
+    border:0;
     font-size:24px;
 }
 
 
-/* =========================================================
+/* =========================
    HERO
-========================================================= */
+========================= */
 
 .hero{
     padding-top:72px;
     min-height:100vh;
-
-    display:flex;
-    align-items:center;
 }
 
 .hero-grid{
-    display:grid;
-    grid-template-columns:1.05fr .95fr;
     min-height:calc(100vh - 72px);
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+
     align-items:center;
 }
 
-.hero-left{
-    padding:90px 60px 90px 0;
+.hero-text{
+    padding:80px 60px 80px 0;
 }
 
-.hero-small{
+.kicker{
+    font-size:11px;
     text-transform:uppercase;
     letter-spacing:3px;
-    font-size:11px;
     font-weight:700;
-    color:#7a58d6;
-    margin-bottom:25px;
+    color:#7956d8;
+    margin-bottom:28px;
 }
 
 .hero h1{
     font-family:"DM Serif Display",serif;
-
-    font-size:clamp(70px,9vw,135px);
-
-    line-height:.88;
-
-    letter-spacing:-5px;
-
     font-weight:400;
+
+    font-size:clamp(75px,9vw,135px);
+
+    line-height:.86;
+    letter-spacing:-5px;
 }
 
-.hero h1 .second{
-    margin-left:80px;
+.hero h1 span{
+    display:block;
 }
 
-.hero-intro{
+.hero h1 .offset{
+    margin-left:75px;
+}
+
+.hero-description{
+    max-width:590px;
+
     margin-top:42px;
 
-    max-width:570px;
+    color:#626262;
 
-    font-size:20px;
-    color:#5e5e5e;
-
+    font-size:19px;
     line-height:1.7;
 }
 
-.hero-bottom{
-    margin-top:40px;
-
+.hero-nav{
     display:flex;
     align-items:center;
     gap:25px;
+    margin-top:38px;
 }
 
-.circle-link{
+.round-arrow{
     width:58px;
     height:58px;
 
     border:1px solid #222;
-
     border-radius:50%;
 
     display:flex;
     align-items:center;
     justify-content:center;
 
-    font-size:20px;
+    font-size:21px;
 
     transition:.3s;
 }
 
-.circle-link:hover{
-    background:#181818;
+.round-arrow:hover{
+    background:#171717;
     color:white;
 }
 
-.hero-note{
+.hero-nav span{
     font-size:12px;
     color:#777;
 }
 
 
-/* =========================================================
-   HERO PHOTO
-========================================================= */
+/* =========================
+   HERO IMAGE
+========================= */
 
-.hero-right{
-    height:calc(100vh - 72px);
+.hero-image{
+    height:100%;
 
     display:flex;
     align-items:center;
@@ -232,50 +220,59 @@ img{
     padding:55px 0 55px 30px;
 }
 
-.photo-area{
-    width:100%;
-    max-width:530px;
-
+.photo{
     position:relative;
+    width:min(510px,100%);
 }
 
-.photo-area img{
+.photo img{
+    position:relative;
+    z-index:2;
+
     width:100%;
 
-    height:min(650px,72vh);
+    aspect-ratio:4/5;
 
     object-fit:cover;
-
-    /*
-       IMPORTANT:
-       No filter.
-       No tint.
-       No opacity.
-       No overlay.
-    */
 
     filter:none !important;
     opacity:1 !important;
 
-    position:relative;
-    z-index:2;
+    border-radius:0;
 }
 
-.photo-number{
+.photo::after{
+    content:"";
+
     position:absolute;
 
-    right:-22px;
-    bottom:35px;
+    left:18px;
+    top:18px;
+
+    width:100%;
+    height:100%;
+
+    border:1px solid #7956d8;
+
+    z-index:1;
+}
+
+.photo-label{
+    position:absolute;
 
     z-index:3;
 
-    background:#7a58d6;
-    color:white;
+    right:-25px;
+    bottom:30px;
 
     width:105px;
     height:105px;
 
     border-radius:50%;
+
+    background:#7956d8;
+
+    color:white;
 
     display:flex;
     align-items:center;
@@ -283,219 +280,177 @@ img{
 
     text-align:center;
 
-    font-size:11px;
-    line-height:1.4;
+    font-size:10px;
 
     text-transform:uppercase;
     letter-spacing:1px;
 }
 
-.photo-line{
-    position:absolute;
 
-    width:130px;
-    height:1px;
+/* =========================
+   STATEMENT
+========================= */
 
-    background:#181818;
-
-    left:-65px;
-    top:35px;
-
-    z-index:3;
-}
-
-
-/* =========================================================
-   INTRO
-========================================================= */
-
-.intro{
-    background:#181818;
+.statement{
+    background:#171717;
     color:white;
 
     padding:150px 0;
 }
 
-.intro-layout{
+.statement-grid{
     display:grid;
-
-    grid-template-columns:.65fr 1.35fr;
-
+    grid-template-columns:.6fr 1.4fr;
     gap:90px;
 }
 
-.intro-label{
-    color:#a895ef;
-
-    text-transform:uppercase;
-    letter-spacing:3px;
+.label{
+    color:#a895ed;
 
     font-size:11px;
     font-weight:700;
+
+    text-transform:uppercase;
+    letter-spacing:3px;
 }
 
-.intro-heading{
+.statement h2{
     font-family:"DM Serif Display",serif;
 
-    font-size:clamp(42px,5vw,72px);
+    font-size:clamp(43px,5vw,72px);
 
     font-weight:400;
 
-    line-height:1.08;
+    line-height:1.05;
 
     letter-spacing:-2px;
 }
 
-.intro-text{
-    max-width:720px;
+.statement-copy{
+    max-width:760px;
 }
 
-.intro-text p{
+.statement-copy p{
+    color:#b8b8b8;
+
     font-size:19px;
 
-    color:#bdbdbd;
-
-    margin-bottom:27px;
+    margin-bottom:25px;
 }
 
-.intro-text p:last-child{
+.statement-copy p:last-child{
     margin-bottom:0;
 }
 
 
-/* =========================================================
+/* =========================
    RESEARCH
-========================================================= */
+========================= */
 
 .research{
     padding:150px 0;
 }
 
-.section-kicker{
-    color:#7a58d6;
-
-    text-transform:uppercase;
-    letter-spacing:3px;
-
-    font-size:11px;
-    font-weight:700;
-
-    margin-bottom:18px;
+.research-title{
+    max-width:900px;
 }
 
-.big-title{
+.research-title h2{
     font-family:"DM Serif Display",serif;
 
-    font-size:clamp(48px,7vw,95px);
+    font-size:clamp(55px,7vw,95px);
+
+    font-weight:400;
 
     line-height:.95;
 
     letter-spacing:-3px;
-
-    font-weight:400;
 }
 
-.research-header{
-    max-width:900px;
-}
-
-.research-header p{
-    margin-top:30px;
-
+.research-title p{
     max-width:650px;
 
-    color:#696969;
+    margin-top:30px;
+
+    color:#666;
 
     font-size:17px;
 }
 
-
-/* FEATURED RESEARCH */
-
-.featured-research{
-    margin-top:90px;
+.research-project{
+    margin-top:85px;
 
     display:grid;
 
-    grid-template-columns:1.3fr .7fr;
-
-    gap:0;
+    grid-template-columns:1.25fr .75fr;
 }
 
-.feature-main{
+.project-main{
     background:#ded7fa;
 
-    min-height:570px;
-
     padding:65px;
+
+    min-height:570px;
 
     display:flex;
     flex-direction:column;
     justify-content:space-between;
 }
 
-.feature-tag{
-    font-size:11px;
+.project-main small{
+    color:#6047a9;
 
     text-transform:uppercase;
-
     letter-spacing:2px;
 
-    color:#5c43a9;
-
+    font-size:10px;
     font-weight:700;
 }
 
-.feature-main h3{
+.project-main h3{
     font-family:"DM Serif Display",serif;
 
-    font-weight:400;
-
-    font-size:clamp(38px,4vw,58px);
+    font-size:clamp(38px,4vw,60px);
 
     line-height:1.08;
+
+    font-weight:400;
 
     letter-spacing:-1.5px;
 
     max-width:650px;
 }
 
-.feature-main p{
+.project-main p{
     max-width:600px;
 
-    color:#514d5c;
+    color:#514d5b;
 
     font-size:15px;
 }
 
-.feature-side{
-    background:#222;
+.project-questions{
+    background:#242424;
 
     color:white;
 
     padding:55px;
-
-    display:flex;
-
-    flex-direction:column;
-
-    justify-content:center;
 }
 
-.feature-side-title{
-    font-size:12px;
+.project-questions h4{
+    color:#a895ed;
+
+    font-size:11px;
 
     text-transform:uppercase;
 
     letter-spacing:2px;
 
-    color:#a895ef;
-
     margin-bottom:35px;
 }
 
 .question{
-    padding:22px 0;
+    padding:23px 0;
 
     border-top:1px solid #444;
 }
@@ -505,159 +460,231 @@ img{
 }
 
 .question span{
-    color:#999;
-
-    font-size:11px;
+    color:#888;
+    font-size:10px;
 }
 
-.question h4{
+.question h5{
     font-family:"DM Serif Display",serif;
-
-    font-size:25px;
 
     font-weight:400;
 
-    margin-top:4px;
+    font-size:24px;
+
+    line-height:1.25;
+
+    margin-top:5px;
 }
 
 
-/* =========================================================
-   INTERESTS
-========================================================= */
+/* =========================
+   RESEARCH AREAS
+========================= */
 
-.interests{
-    padding:20px 0 150px;
+.areas{
+    padding:0 0 150px;
 }
 
-.interest-row{
+.area{
     display:grid;
 
     grid-template-columns:70px 1fr 1fr;
 
     gap:40px;
 
-    padding:35px 0;
+    padding:34px 0;
 
-    border-top:1px solid #d7d3cb;
+    border-top:1px solid #d8d3ca;
 
     align-items:center;
 }
 
-.interest-row:last-child{
-    border-bottom:1px solid #d7d3cb;
+.area:last-child{
+    border-bottom:1px solid #d8d3ca;
 }
 
-.interest-num{
+.area-number{
+    color:#7956d8;
     font-size:12px;
+    font-weight:700;
+}
 
-    color:#7a58d6;
+.area h3{
+    font-family:"DM Serif Display",serif;
+
+    font-weight:400;
+
+    font-size:30px;
+}
+
+.area p{
+    color:#696969;
+    font-size:14px;
+}
+
+
+/* =========================
+   WRITING
+========================= */
+
+.writing{
+    background:#e7e2d9;
+
+    padding:150px 0;
+}
+
+.writing-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:end;
+
+    gap:40px;
+}
+
+.writing-head h2{
+    font-family:"DM Serif Display",serif;
+
+    font-size:clamp(55px,7vw,90px);
+
+    font-weight:400;
+
+    line-height:.95;
+
+    letter-spacing:-3px;
+}
+
+.writing-head p{
+    max-width:380px;
+
+    color:#696969;
+
+    font-size:14px;
+}
+
+.articles{
+    margin-top:75px;
+}
+
+.article{
+    display:grid;
+
+    grid-template-columns:100px 1fr 50px;
+
+    gap:35px;
+
+    padding:35px 0;
+
+    border-top:1px solid #cbc6bc;
+
+    align-items:start;
+}
+
+.article:last-child{
+    border-bottom:1px solid #cbc6bc;
+}
+
+.article-year{
+    color:#7956d8;
+
+    font-size:12px;
 
     font-weight:700;
 }
 
-.interest-row h3{
+.article h3{
     font-family:"DM Serif Display",serif;
 
-    font-size:30px;
+    font-size:28px;
+
+    line-height:1.3;
 
     font-weight:400;
 }
 
-.interest-row p{
+.article p{
+    color:#6c6a67;
+
+    font-size:13px;
+
+    margin-top:8px;
+}
+
+.article-arrow{
+    font-size:21px;
+    text-align:right;
+}
+
+
+/* =========================
+   WORK IN PROGRESS
+========================= */
+
+.ongoing{
+    padding:150px 0;
+}
+
+.ongoing-title{
+    max-width:850px;
+}
+
+.ongoing-title h2{
+    font-family:"DM Serif Display",serif;
+
+    font-size:clamp(45px,6vw,80px);
+
+    font-weight:400;
+
+    line-height:1;
+
+    letter-spacing:-2px;
+}
+
+.ongoing-list{
+    margin-top:65px;
+}
+
+.ongoing-item{
+    display:grid;
+
+    grid-template-columns:70px 1fr 1fr;
+
+    gap:40px;
+
+    padding:32px 0;
+
+    border-top:1px solid #d8d3ca;
+}
+
+.ongoing-item:last-child{
+    border-bottom:1px solid #d8d3ca;
+}
+
+.ongoing-number{
+    color:#7956d8;
+
+    font-size:12px;
+
+    font-weight:700;
+}
+
+.ongoing-item h3{
+    font-family:"DM Serif Display",serif;
+
+    font-weight:400;
+
+    font-size:28px;
+}
+
+.ongoing-item p{
     color:#696969;
 
     font-size:14px;
 }
 
 
-/* =========================================================
-   PUBLICATIONS
-========================================================= */
-
-.writing{
-    background:#e9e5dd;
-
-    padding:150px 0;
-}
-
-.writing-intro{
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:end;
-
-    gap:40px;
-}
-
-.writing-intro p{
-    max-width:390px;
-
-    color:#686868;
-
-    font-size:14px;
-}
-
-.writing-list{
-    margin-top:75px;
-}
-
-.writing-item{
-    display:grid;
-
-    grid-template-columns:110px 1fr 100px;
-
-    gap:35px;
-
-    padding:35px 0;
-
-    border-top:1px solid #cbc7bf;
-
-    align-items:start;
-}
-
-.writing-item:last-child{
-    border-bottom:1px solid #cbc7bf;
-}
-
-.writing-year{
-    color:#7a58d6;
-
-    font-size:12px;
-
-    font-weight:700;
-}
-
-.writing-item h3{
-    font-family:"DM Serif Display",serif;
-
-    font-size:29px;
-
-    font-weight:400;
-
-    line-height:1.3;
-}
-
-.writing-item p{
-    color:#6c6a67;
-
-    font-size:13px;
-
-    margin-top:8px;
-
-    max-width:650px;
-}
-
-.writing-arrow{
-    text-align:right;
-
-    font-size:22px;
-}
-
-
-/* =========================================================
-   ACADEMIC BACKGROUND
-========================================================= */
+/* =========================
+   BACKGROUND
+========================= */
 
 .background{
     padding:150px 0;
@@ -671,38 +698,48 @@ img{
     gap:90px;
 }
 
-.background-copy{
-    max-width:400px;
+.background-copy h2{
+    font-family:"DM Serif Display",serif;
+
+    font-weight:400;
+
+    font-size:clamp(50px,6vw,82px);
+
+    line-height:.95;
+
+    letter-spacing:-3px;
 }
 
 .background-copy p{
     color:#696969;
 
-    margin-top:25px;
+    margin-top:28px;
 
-    font-size:15px;
+    max-width:400px;
+
+    font-size:14px;
 }
 
-.academic-list{
-    border-top:1px solid #d7d3cb;
+.academics{
+    border-top:1px solid #d8d3ca;
 }
 
 .academic{
-    padding:28px 0;
-
-    border-bottom:1px solid #d7d3cb;
-
     display:grid;
 
-    grid-template-columns:120px 1fr;
+    grid-template-columns:120px 1fr auto;
 
     gap:30px;
+
+    padding:30px 0;
+
+    border-bottom:1px solid #d8d3ca;
 }
 
-.academic-date{
-    color:#7a58d6;
+.academic-year{
+    color:#7956d8;
 
-    font-size:12px;
+    font-size:11px;
 
     font-weight:700;
 }
@@ -710,30 +747,36 @@ img{
 .academic h3{
     font-family:"DM Serif Display",serif;
 
-    font-weight:400;
+    font-size:26px;
 
-    font-size:27px;
+    font-weight:400;
 }
 
 .academic p{
     color:#707070;
 
     font-size:13px;
+}
 
-    margin-top:3px;
+.grade{
+    color:#707070;
+
+    font-size:12px;
+
+    white-space:nowrap;
 }
 
 
-/* =========================================================
+/* =========================
    EXPERIENCE
-========================================================= */
+========================= */
 
 .experience{
-    padding:150px 0;
-
-    background:#181818;
+    background:#171717;
 
     color:white;
+
+    padding:150px 0;
 }
 
 .experience-grid{
@@ -744,34 +787,46 @@ img{
     gap:90px;
 }
 
+.experience h2{
+    font-family:"DM Serif Display",serif;
+
+    font-weight:400;
+
+    font-size:clamp(50px,6vw,82px);
+
+    line-height:.95;
+
+    letter-spacing:-3px;
+}
+
 .experience-description{
     color:#aaa;
 
-    font-size:15px;
+    font-size:14px;
 
-    max-width:400px;
+    max-width:390px;
 
     margin-top:25px;
 }
 
 .experience-list{
-    border-top:1px solid #3b3b3b;
+    border-top:1px solid #3c3c3c;
 }
 
 .experience-item{
-    padding:30px 0;
-
-    border-bottom:1px solid #3b3b3b;
-
     display:grid;
 
-    grid-template-columns:120px 1fr;
+    grid-template-columns:70px 1fr;
 
     gap:25px;
+
+    padding:28px 0;
+
+    border-bottom:1px solid #3c3c3c;
 }
 
-.experience-item span{
-    color:#a895ef;
+.experience-number{
+    color:#a895ed;
 
     font-size:11px;
 
@@ -781,145 +836,150 @@ img{
 .experience-item h3{
     font-family:"DM Serif Display",serif;
 
-    font-weight:400;
-
     font-size:27px;
+
+    font-weight:400;
 }
 
 .experience-item p{
     color:#999;
 
     font-size:13px;
-
-    margin-top:4px;
 }
 
 
-/* =========================================================
-   METHODS
-========================================================= */
+/* =========================
+   RESEARCH PRACTICE
+========================= */
 
-.methods{
+.practice{
     padding:150px 0;
 }
 
-.methods-grid{
+.practice h2{
+    font-family:"DM Serif Display",serif;
+
+    font-size:clamp(50px,6vw,82px);
+
+    font-weight:400;
+
+    line-height:.95;
+
+    letter-spacing:-3px;
+}
+
+.practice-grid{
     display:grid;
 
     grid-template-columns:repeat(3,1fr);
 
     margin-top:70px;
 
-    border-top:1px solid #d7d3cb;
+    border-top:1px solid #d8d3ca;
 }
 
-.method{
+.practice-item{
     padding:35px 35px 35px 0;
 
-    border-right:1px solid #d7d3cb;
+    border-right:1px solid #d8d3ca;
 
     margin-right:35px;
 }
 
-.method:last-child{
+.practice-item:last-child{
     border-right:0;
-
     margin-right:0;
 }
 
-.method-number{
-    color:#7a58d6;
+.practice-item span{
+    color:#7956d8;
 
     font-size:11px;
 
     font-weight:700;
 }
 
-.method h3{
+.practice-item h3{
     font-family:"DM Serif Display",serif;
 
-    font-size:30px;
+    font-size:29px;
 
     font-weight:400;
 
     margin:15px 0 8px;
 }
 
-.method p{
+.practice-item p{
     color:#696969;
 
     font-size:14px;
 }
 
 
-/* =========================================================
-   COLLABORATION
-========================================================= */
+/* =========================
+   CONTACT
+========================= */
 
-.collaboration{
-    padding:160px 0;
-
-    background:#7a58d6;
+.contact{
+    background:#7956d8;
 
     color:white;
+
+    padding:160px 0;
 }
 
-.collaboration-inner{
-    max-width:1000px;
+.contact-inner{
+    max-width:1050px;
 }
 
-.collaboration .section-kicker{
-    color:#ded6ff;
-}
-
-.collaboration h2{
+.contact h2{
     font-family:"DM Serif Display",serif;
-
-    font-size:clamp(55px,8vw,110px);
 
     font-weight:400;
 
-    line-height:.92;
+    font-size:clamp(58px,8vw,110px);
+
+    line-height:.9;
 
     letter-spacing:-4px;
 
-    max-width:950px;
+    margin-top:20px;
 }
 
-.collaboration p{
-    margin-top:35px;
-
+.contact p{
     max-width:650px;
+
+    margin-top:35px;
 
     font-size:18px;
 
     color:#eee9ff;
 }
 
-.collaboration-links{
+.contact-links{
     display:flex;
 
-    gap:28px;
-
     flex-wrap:wrap;
+
+    gap:27px;
 
     margin-top:40px;
 }
 
-.collaboration-links a{
-    border-bottom:1px solid rgba(255,255,255,.8);
-
-    padding-bottom:4px;
-
+.contact-links a{
     font-size:14px;
 
     font-weight:600;
+
+    border-bottom:1px solid rgba(255,255,255,.8);
+
+    padding-bottom:4px;
 }
 
 
-/* =========================================================
+/* =========================
    FOOTER
-========================================================= */
+========================= */
 
 footer{
     background:#111;
@@ -929,7 +989,7 @@ footer{
     padding:35px 0;
 }
 
-.footer-inner{
+.footer{
     display:flex;
 
     justify-content:space-between;
@@ -960,55 +1020,45 @@ footer{
 }
 
 
-/* =========================================================
+/* =========================
    ANIMATION
-========================================================= */
+========================= */
 
 .fade{
     opacity:0;
 
-    transform:translateY(28px);
+    transform:translateY(25px);
 
     transition:
         opacity .8s ease,
         transform .8s ease;
 }
 
-.fade.show{
+.fade.visible{
     opacity:1;
 
-    transform:translateY(0);
+    transform:none;
 }
 
 
-/* =========================================================
+/* =========================
    MOBILE
-========================================================= */
+========================= */
 
 @media(max-width:900px){
 
-    .menu{
-        display:none;
-    }
-
-    .mobile-menu{
-        display:block;
-    }
-
-    .navigation{
+    .links{
         display:none;
 
         position:absolute;
 
         top:72px;
-
         left:0;
-
         right:0;
 
-        background:#f5f2ec;
+        background:#f5f1ea;
 
-        padding:25px 5%;
+        padding:25px 6%;
 
         flex-direction:column;
 
@@ -1017,80 +1067,96 @@ footer{
         border-bottom:1px solid #ddd;
     }
 
-    .navigation.open{
+    .links.open{
         display:flex;
+    }
+
+    .mobile{
+        display:block;
     }
 
     .hero-grid{
         grid-template-columns:1fr;
     }
 
-    .hero-left{
-        padding:75px 0 50px;
+    .hero-text{
+        padding:75px 0 45px;
     }
 
-    .hero-right{
+    .hero-image{
+        padding:20px 0 90px;
         height:auto;
-
-        padding:20px 0 80px;
     }
 
-    .photo-area{
-        max-width:480px;
+    .photo{
+        max-width:500px;
     }
 
-    .photo-area img{
-        height:auto;
-        max-height:none;
-    }
-
-    .intro-layout,
+    .statement-grid,
     .background-grid,
     .experience-grid{
         grid-template-columns:1fr;
 
-        gap:45px;
+        gap:50px;
     }
 
-    .featured-research{
+    .research-project{
         grid-template-columns:1fr;
     }
 
-    .interest-row{
+    .area{
         grid-template-columns:45px 1fr;
+        gap:18px;
     }
 
-    .interest-row p{
+    .area p{
         grid-column:2;
     }
 
-    .writing-intro{
+    .writing-head{
         display:block;
     }
 
-    .writing-intro p{
+    .writing-head p{
         margin-top:25px;
     }
 
-    .writing-item{
+    .article{
         grid-template-columns:70px 1fr 30px;
-
         gap:20px;
     }
 
-    .methods-grid{
+    .ongoing-item{
+        grid-template-columns:45px 1fr;
+        gap:18px;
+    }
+
+    .ongoing-item p{
+        grid-column:2;
+    }
+
+    .academic{
+        grid-template-columns:1fr;
+        gap:6px;
+    }
+
+    .grade{
+        white-space:normal;
+    }
+
+    .practice-grid{
         grid-template-columns:1fr;
     }
 
-    .method{
+    .practice-item{
         border-right:0;
 
-        border-bottom:1px solid #d7d3cb;
+        border-bottom:1px solid #d8d3ca;
 
         margin-right:0;
     }
 
-    .footer-inner{
+    .footer{
         flex-direction:column;
 
         align-items:flex-start;
@@ -1101,7 +1167,7 @@ footer{
 }
 
 
-@media(max-width:600px){
+@media(max-width:550px){
 
     .container{
         width:88%;
@@ -1113,61 +1179,43 @@ footer{
         letter-spacing:-3px;
     }
 
-    .hero h1 .second{
+    .hero h1 .offset{
         margin-left:40px;
     }
 
-    .hero-intro{
+    .hero-description{
         font-size:17px;
     }
 
-    .intro,
+    .statement,
     .research,
-    .interests,
     .writing,
+    .ongoing,
     .background,
     .experience,
-    .methods{
+    .practice,
+    .contact{
         padding:100px 0;
     }
 
-    .feature-main{
+    .project-main{
         padding:35px;
-
         min-height:470px;
     }
 
-    .feature-side{
+    .project-questions{
         padding:35px;
     }
 
-    .writing-item{
+    .article{
         grid-template-columns:1fr;
-
-        gap:8px;
     }
 
-    .writing-arrow{
+    .article-arrow{
         text-align:left;
     }
 
-    .academic{
-        grid-template-columns:1fr;
-
-        gap:5px;
-    }
-
-    .experience-item{
-        grid-template-columns:1fr;
-
-        gap:6px;
-    }
-
-    .collaboration{
-        padding:110px 0;
-    }
-
-    .collaboration h2{
+    .contact h2{
         letter-spacing:-2px;
     }
 
@@ -1184,20 +1232,17 @@ footer{
 <body>
 
 
-<!-- =====================================================
-     HEADER
-===================================================== -->
+<!-- NAVIGATION -->
 
-<header class="topbar">
+<header>
 
-<div class="topbar-inner">
+<div class="container nav">
 
-<a href="#home" class="brand">
+<a href="#home" class="logo">
 Nitin<span>.</span>
 </a>
 
-
-<nav class="navigation" id="navigation">
+<nav class="links" id="links">
 
 <a href="#about">About</a>
 
@@ -1207,14 +1252,13 @@ Nitin<span>.</span>
 
 <a href="#background">Background</a>
 
-<a href="#contact" class="contact-link">
-Collaborate
+<a href="#contact" class="talk">
+Let's talk
 </a>
 
 </nav>
 
-
-<button class="mobile-menu" id="mobileMenu">
+<button class="mobile" id="mobile">
 ☰
 </button>
 
@@ -1224,31 +1268,27 @@ Collaborate
 
 
 
-<!-- =====================================================
-     HERO
-===================================================== -->
+<!-- HERO -->
 
 <section class="hero" id="home">
 
 <div class="container hero-grid">
 
 
-<div class="hero-left fade">
+<div class="hero-text fade">
 
-<div class="hero-small">
-Researcher · Human Resources · Artificial Intelligence
+<div class="kicker">
+Researcher · People · Technology
 </div>
-
 
 <h1>
 Nitin
-<span class="second">
+<span class="offset">
 Sharma
 </span>
 </h1>
 
-
-<p class="hero-intro">
+<p class="hero-description">
 
 I explore how artificial intelligence is changing
 organisations, work and the relationship between
@@ -1256,15 +1296,14 @@ people and the systems that manage them.
 
 </p>
 
+<div class="hero-nav">
 
-<div class="hero-bottom">
-
-<a href="#research" class="circle-link">
+<a href="#research" class="round-arrow">
 ↓
 </a>
 
-<span class="hero-note">
-Scroll to explore my research
+<span>
+Explore the research
 </span>
 
 </div>
@@ -1272,12 +1311,9 @@ Scroll to explore my research
 </div>
 
 
+<div class="hero-image fade">
 
-<div class="hero-right fade">
-
-<div class="photo-area">
-
-<div class="photo-line"></div>
+<div class="photo">
 
 <img
 src="https://nitinau02-afk.github.io/My%20Photo.jpeg"
@@ -1285,10 +1321,10 @@ alt="Nitin Sharma"
 onerror="this.onerror=null;this.src='./My%20Photo.jpeg';"
 >
 
-<div class="photo-number">
-Research<br>
+<div class="photo-label">
 People<br>
-Technology
+Technology<br>
+Research
 </div>
 
 </div>
@@ -1302,49 +1338,40 @@ Technology
 
 
 
-<!-- =====================================================
-     ABOUT
-===================================================== -->
+<!-- ABOUT -->
 
-<section class="intro" id="about">
+<section class="statement" id="about">
 
-<div class="container intro-layout">
+<div class="container statement-grid">
 
-
-<div class="intro-label fade">
+<div class="label fade">
 About
 </div>
 
+<div class="statement-copy fade">
 
-<div class="intro-text fade">
-
-<h2 class="intro-heading">
-Technology may change the
-way work is organised —
-but people remain at the centre.
+<h2>
+Technology changes work.
+People give it meaning.
 </h2>
 
-
 <br>
-
 
 <p>
 My work sits at the intersection of Human Resource Management,
 Organisational Behaviour and emerging technologies.
 </p>
 
-
 <p>
-I am particularly interested in what happens when artificial
-intelligence moves beyond being a tool and becomes part of
-organisational decision-making.
+I am interested in what happens when artificial intelligence
+moves beyond being a tool and becomes part of organisational
+decision-making.
 </p>
 
-
 <p>
-This leads me to questions about trust, fairness, accountability,
-employee voice, psychological contracts and the changing
-relationship between employees and organisations.
+This leads me to questions about employee trust, fairness,
+accountability, employee voice, psychological contracts and
+the changing relationship between employees and organisations.
 </p>
 
 </div>
@@ -1355,77 +1382,69 @@ relationship between employees and organisations.
 
 
 
-<!-- =====================================================
-     RESEARCH
-===================================================== -->
+<!-- RESEARCH -->
 
 <section class="research" id="research">
 
 <div class="container">
 
+<div class="research-title fade">
 
-<div class="research-header fade">
-
-<div class="section-kicker">
+<div class="kicker">
 Research
 </div>
 
-<h2 class="big-title">
+<h2>
 The questions<br>
 behind my work.
 </h2>
 
 <p>
-My current research explores the human consequences of
+My current research examines the human consequences of
 algorithmic management and AI-enabled HRM.
 </p>
 
 </div>
 
 
+<div class="research-project">
 
-<div class="featured-research">
 
+<div class="project-main fade">
 
-<div class="feature-main fade">
-
-<div class="feature-tag">
+<small>
 Current research direction
-</div>
-
+</small>
 
 <h3>
 Algorithmic Management
 and the Employment Relationship
 </h3>
 
-
 <p>
 Employee trust and psychological contract reconfiguration
-in AI-enabled HRM. The project examines how employees
-interpret organisational authority, responsibility and
-fairness when decisions are increasingly mediated by
-algorithmic systems.
+in AI-enabled HRM. I examine how employees understand
+authority, responsibility and fairness when organisational
+decisions increasingly involve algorithmic systems.
 </p>
 
 </div>
 
 
+<div class="project-questions fade">
 
-<div class="feature-side fade">
-
-<div class="feature-side-title">
+<h4>
 Questions I am exploring
-</div>
+</h4>
 
 
 <div class="question">
 
 <span>01</span>
 
-<h4>
+<h5>
 Can employees trust decisions made by algorithms?
-</h4>
+</h5>
 
 </div>
 
@@ -1434,9 +1453,9 @@ Can employees trust decisions made by algorithms?
 
 <span>02</span>
 
-<h4>
+<h5>
 How does AI change the psychological contract?
-</h4>
+</h5>
 
 </div>
 
@@ -1445,9 +1464,9 @@ How does AI change the psychological contract?
 
 <span>03</span>
 
-<h4>
+<h5>
 Who is responsible when an algorithm makes a decision?
-</h4>
+</h5>
 
 </div>
 
@@ -1456,9 +1475,9 @@ Who is responsible when an algorithm makes a decision?
 
 <span>04</span>
 
-<h4>
+<h5>
 What does fairness mean in an AI-mediated workplace?
-</h4>
+</h5>
 
 </div>
 
@@ -1472,23 +1491,21 @@ What does fairness mean in an AI-mediated workplace?
 
 
 
-<!-- =====================================================
-     RESEARCH INTERESTS
-===================================================== -->
+<!-- RESEARCH AREAS -->
 
-<section class="interests">
+<section class="areas">
 
 <div class="container">
 
 
-<div class="section-kicker fade">
+<div class="kicker fade">
 Research interests
 </div>
 
 
-<div class="interest-row fade">
+<div class="area fade">
 
-<div class="interest-num">
+<div class="area-number">
 01
 </div>
 
@@ -1497,16 +1514,16 @@ AI-enabled HRM
 </h3>
 
 <p>
-Understanding how artificial intelligence is transforming
-HR practices and organisational decision-making.
+How artificial intelligence is transforming HR practices
+and organisational decision-making.
 </p>
 
 </div>
 
 
-<div class="interest-row fade">
+<div class="area fade">
 
-<div class="interest-num">
+<div class="area-number">
 02
 </div>
 
@@ -1515,16 +1532,16 @@ Algorithmic Management
 </h3>
 
 <p>
-Exploring how algorithmic systems influence managerial
-authority, employee experiences and workplace relationships.
+How algorithms influence managerial authority, employee
+experiences and workplace relationships.
 </p>
 
 </div>
 
 
-<div class="interest-row fade">
+<div class="area fade">
 
-<div class="interest-num">
+<div class="area-number">
 03
 </div>
 
@@ -1533,16 +1550,16 @@ Trust & Psychological Contracts
 </h3>
 
 <p>
-Examining changing employee expectations, trust and perceived
-mutual obligations in technology-enabled organisations.
+How technology changes employee expectations, trust and
+perceived mutual obligations.
 </p>
 
 </div>
 
 
-<div class="interest-row fade">
+<div class="area fade">
 
-<div class="interest-num">
+<div class="area-number">
 04
 </div>
 
@@ -1551,16 +1568,16 @@ Organisational Justice
 </h3>
 
 <p>
-Investigating fairness, transparency and accountability in
-AI-mediated organisational decisions.
+Fairness, transparency and accountability in
+AI-mediated decisions.
 </p>
 
 </div>
 
 
-<div class="interest-row fade">
+<div class="area fade">
 
-<div class="interest-num">
+<div class="area-number">
 05
 </div>
 
@@ -1569,16 +1586,16 @@ Employee Voice
 </h3>
 
 <p>
-Understanding how employees respond to organisational and
-technological change and how their voices are heard.
+How employees respond to technological and organisational
+change and how their voices are heard.
 </p>
 
 </div>
 
 
-<div class="interest-row fade">
+<div class="area fade">
 
-<div class="interest-num">
+<div class="area-number">
 06
 </div>
 
@@ -1587,8 +1604,8 @@ Future of Work
 </h3>
 
 <p>
-Exploring the broader human and organisational consequences
-of increasingly AI-mediated workplaces.
+The broader human and organisational consequences of
+increasingly AI-mediated workplaces.
 </p>
 
 </div>
@@ -1600,56 +1617,51 @@ of increasingly AI-mediated workplaces.
 
 
 
-<!-- =====================================================
-     WRITING
-===================================================== -->
+<!-- WRITING -->
 
 <section class="writing" id="writing">
 
 <div class="container">
 
-
-<div class="writing-intro fade">
+<div class="writing-head fade">
 
 <div>
 
-<div class="section-kicker">
+<div class="kicker">
 Selected writing
 </div>
 
-<h2 class="big-title">
+<h2>
 Research,<br>
 published.
 </h2>
 
 </div>
 
-
 <p>
-Selected work examining artificial intelligence,
-technology acceptance, human resources and organisational
-change.
+Selected work across artificial intelligence,
+technology acceptance, human resources and
+organisational change.
 </p>
 
 </div>
 
 
+<div class="articles">
 
-<div class="writing-list">
 
+<div class="article fade">
 
-<div class="writing-item fade">
-
-<div class="writing-year">
+<div class="article-year">
 2026
 </div>
 
 <div>
 
 <h3>
-Trust as the Dominant Driver of Employee Acceptance of
-AI-Enabled Recruitment Systems: An Extended Technology
-Acceptance Model
+Trust as the Dominant Driver of Employee Acceptance
+of AI-Enabled Recruitment Systems: An Extended
+Technology Acceptance Model
 </h3>
 
 <p>
@@ -1660,17 +1672,16 @@ Acceptance Model.
 
 </div>
 
-<div class="writing-arrow">
+<div class="article-arrow">
 ↗
 </div>
 
 </div>
 
 
+<div class="article fade">
 
-<div class="writing-item fade">
-
-<div class="writing-year">
+<div class="article-year">
 2026
 </div>
 
@@ -1681,23 +1692,22 @@ TAM-Based AI-Enabled Recruitment Research
 </h3>
 
 <p>
-Conference research examining technology acceptance and
-employee responses to AI-enabled recruitment systems.
+Conference research examining technology acceptance
+and employee responses to AI-enabled recruitment systems.
 </p>
 
 </div>
 
-<div class="writing-arrow">
+<div class="article-arrow">
 ↗
 </div>
 
 </div>
 
 
+<div class="article fade">
 
-<div class="writing-item fade">
-
-<div class="writing-year">
+<div class="article-year">
 2025
 </div>
 
@@ -1714,17 +1724,16 @@ of artificial intelligence within banking.
 
 </div>
 
-<div class="writing-arrow">
+<div class="article-arrow">
 ↗
 </div>
 
 </div>
 
 
+<div class="article fade">
 
-<div class="writing-item fade">
-
-<div class="writing-year">
+<div class="article-year">
 2025
 </div>
 
@@ -1736,13 +1745,13 @@ Artificial Intelligence in Shaping HR Practices
 </h3>
 
 <p>
-Research examining the transformation of HR practices
-through artificial intelligence.
+Research examining how artificial intelligence is
+transforming contemporary HR practices.
 </p>
 
 </div>
 
-<div class="writing-arrow">
+<div class="article-arrow">
 ↗
 </div>
 
@@ -1757,23 +1766,32 @@ through artificial intelligence.
 
 
 
-<!-- =====================================================
-     WORK IN PROGRESS
-===================================================== -->
+<!-- ONGOING -->
 
-<section class="interests">
+<section class="ongoing">
 
 <div class="container">
 
+<div class="ongoing-title fade">
 
-<div class="section-kicker fade">
+<div class="kicker">
 Work in progress
 </div>
 
+<h2>
+Questions I am still
+working on.
+</h2>
 
-<div class="interest-row fade">
+</div>
 
-<div class="interest-num">
+
+<div class="ongoing-list">
+
+
+<div class="ongoing-item fade">
+
+<div class="ongoing-number">
 01
 </div>
 
@@ -1791,9 +1809,9 @@ employee–organisation relationship.
 </div>
 
 
-<div class="interest-row fade">
+<div class="ongoing-item fade">
 
-<div class="interest-num">
+<div class="ongoing-number">
 02
 </div>
 
@@ -1811,13 +1829,13 @@ integrating strategic and human-centred approaches to HR practice.
 
 </div>
 
+</div>
+
 </section>
 
 
 
-<!-- =====================================================
-     BACKGROUND
-===================================================== -->
+<!-- BACKGROUND -->
 
 <section class="background" id="background">
 
@@ -1826,31 +1844,31 @@ integrating strategic and human-centred approaches to HR practice.
 
 <div class="background-copy fade">
 
-<div class="section-kicker">
+<div class="kicker">
 Background
 </div>
 
-<h2 class="big-title">
-A foundation<br>
-in HR & business.
+<h2>
+A foundation
+in business
+and HR.
 </h2>
 
 <p>
 My academic background combines commerce, human resource
-management and business education, alongside practical
-experience in HR, teaching and research.
+management and business education with practical experience
+in HR, teaching and research.
 </p>
 
 </div>
 
 
-
-<div class="academic-list">
+<div class="academics">
 
 
 <div class="academic fade">
 
-<div class="academic-date">
+<div class="academic-year">
 2021–2024
 </div>
 
@@ -1861,18 +1879,21 @@ B.Com (Hons.)
 </h3>
 
 <p>
-Amity University · Grade 8.76 / 10
+Amity University
 </p>
 
 </div>
 
+<div class="grade">
+8.76 / 10
 </div>
 
+</div>
 
 
 <div class="academic fade">
 
-<div class="academic-date">
+<div class="academic-year">
 COMPLETED
 </div>
 
@@ -1883,10 +1904,10 @@ M.Com — Human Resource Management
 </h3>
 
 <p>
-Amity University · CGPA 9.04 / 10
+Amity University
 </p>
 
-<p>
+<p style="margin-top:7px;">
 Dissertation: A TAM-Based Empirical Investigation of
 Employee Acceptance of AI-Enabled Recruitment Systems
 in the Indian IT Sector.
@@ -1894,13 +1915,16 @@ in the Indian IT Sector.
 
 </div>
 
+<div class="grade">
+9.04 / 10
 </div>
 
+</div>
 
 
 <div class="academic fade">
 
-<div class="academic-date">
+<div class="academic-year">
 2026
 </div>
 
@@ -1912,9 +1936,12 @@ MBA — Human Resource Management
 
 <p>
 University of Delhi — School of Open Learning
-· CGPA 7.56 / 10
 </p>
 
+</div>
+
+<div class="grade">
+7.56 / 10
 </div>
 
 </div>
@@ -1928,9 +1955,7 @@ University of Delhi — School of Open Learning
 
 
 
-<!-- =====================================================
-     EXPERIENCE
-===================================================== -->
+<!-- EXPERIENCE -->
 
 <section class="experience">
 
@@ -1939,23 +1964,21 @@ University of Delhi — School of Open Learning
 
 <div class="fade">
 
-<div class="section-kicker">
+<div class="kicker">
 Experience
 </div>
 
-<h2 class="big-title">
-Beyond<br>
+<h2>
+Beyond
 research.
 </h2>
 
 <p class="experience-description">
 My work outside formal research has given me experience
-across teaching, HR operations, recruitment and student
-leadership.
+across teaching, HR, recruitment and student leadership.
 </p>
 
 </div>
-
 
 
 <div class="experience-list">
@@ -1963,9 +1986,9 @@ leadership.
 
 <div class="experience-item fade">
 
-<span>
+<div class="experience-number">
 01
-</span>
+</div>
 
 <div>
 
@@ -1984,9 +2007,9 @@ GLECTA
 
 <div class="experience-item fade">
 
-<span>
+<div class="experience-number">
 02
-</span>
+</div>
 
 <div>
 
@@ -2005,9 +2028,9 @@ TEN Brain Research · AI-assisted recruitment workflows
 
 <div class="experience-item fade">
 
-<span>
+<div class="experience-number">
 03
-</span>
+</div>
 
 <div>
 
@@ -2026,9 +2049,9 @@ Cook N Klean & Kinds Being
 
 <div class="experience-item fade">
 
-<span>
+<div class="experience-number">
 04
-</span>
+</div>
 
 <div>
 
@@ -2047,9 +2070,9 @@ Vidya Bal Bhawan
 
 <div class="experience-item fade">
 
-<span>
+<div class="experience-number">
 05
-</span>
+</div>
 
 <div>
 
@@ -2075,34 +2098,30 @@ Aparajit Sports Club · Innovation & Entrepreneurship Cell
 
 
 
-<!-- =====================================================
-     METHODS
-===================================================== -->
+<!-- PRACTICE -->
 
-<section class="methods">
+<section class="practice">
 
 <div class="container">
 
-
-<div class="section-kicker fade">
+<div class="kicker fade">
 Research practice
 </div>
 
-<h2 class="big-title fade">
+<h2 class="fade">
 How I approach<br>
 research.
 </h2>
 
 
+<div class="practice-grid">
 
-<div class="methods-grid">
 
+<div class="practice-item fade">
 
-<div class="method fade">
-
-<div class="method-number">
+<span>
 01
-</div>
+</span>
 
 <h3>
 Quantitative
@@ -2116,12 +2135,11 @@ development, survey research and statistical analysis.
 </div>
 
 
+<div class="practice-item fade">
 
-<div class="method fade">
-
-<div class="method-number">
+<span>
 02
-</div>
+</span>
 
 <h3>
 Mixed Methods
@@ -2135,15 +2153,14 @@ analysis and integration of quantitative and qualitative evidence.
 </div>
 
 
+<div class="practice-item fade">
 
-<div class="method fade">
-
-<div class="method-number">
+<span>
 03
-</div>
+</span>
 
 <h3>
-Research Tools
+Tools
 </h3>
 
 <p>
@@ -2161,35 +2178,30 @@ SmartPLS · SPSS · R · Power BI · Microsoft Excel · VOSviewer
 
 
 
-<!-- =====================================================
-     COLLABORATION
-===================================================== -->
+<!-- CONTACT -->
 
-<section class="collaboration" id="contact">
+<section class="contact" id="contact">
 
-<div class="container collaboration-inner">
+<div class="container contact-inner">
 
-
-<div class="section-kicker fade">
+<div class="kicker fade">
 Collaboration
 </div>
 
-
 <h2 class="fade">
-Good research begins with a good conversation.
+Good research
+begins with a
+conversation.
 </h2>
 
-
 <p class="fade">
-
-I am interested in research collaborations, academic
-discussions, interdisciplinary projects and conversations
-around AI, HRM, organisational behaviour and the future of work.
-
+I am interested in research collaborations, academic discussions,
+interdisciplinary projects and conversations around AI, HRM,
+organisational behaviour and the future of work.
 </p>
 
 
-<div class="collaboration-links fade">
+<div class="contact-links fade">
 
 <a href="mailto:nitin.au02@gmail.com">
 nitin.au02@gmail.com
@@ -2227,13 +2239,11 @@ ResearchGate ↗
 
 
 
-<!-- =====================================================
-     FOOTER
-===================================================== -->
+<!-- FOOTER -->
 
 <footer>
 
-<div class="container footer-inner">
+<div class="container footer">
 
 <div>
 
@@ -2251,13 +2261,9 @@ Research · People · Technology
 <div class="footer-links">
 
 <a href="#home">Home</a>
-
 <a href="#about">About</a>
-
 <a href="#research">Research</a>
-
 <a href="#writing">Writing</a>
-
 <a href="#contact">Contact</a>
 
 </div>
@@ -2270,62 +2276,51 @@ Research · People · Technology
 
 <script>
 
-/* =========================================================
-   MOBILE NAVIGATION
-========================================================= */
+/* MOBILE MENU */
 
-const mobileMenu =
-document.getElementById("mobileMenu");
+const mobile =
+document.getElementById("mobile");
 
-const navigation =
-document.getElementById("navigation");
+const links =
+document.getElementById("links");
 
+mobile.addEventListener("click",function(){
 
-mobileMenu.addEventListener("click",function(){
+    links.classList.toggle("open");
 
-    navigation.classList.toggle("open");
-
-    if(navigation.classList.contains("open")){
-
-        mobileMenu.textContent="✕";
-
-    }else{
-
-        mobileMenu.textContent="☰";
-
-    }
+    mobile.textContent =
+        links.classList.contains("open")
+        ? "✕"
+        : "☰";
 
 });
 
 
-document.querySelectorAll(".navigation a")
+document.querySelectorAll(".links a")
 .forEach(function(link){
 
     link.addEventListener("click",function(){
 
-        navigation.classList.remove("open");
+        links.classList.remove("open");
 
-        mobileMenu.textContent="☰";
+        mobile.textContent="☰";
 
     });
 
 });
 
 
-/* =========================================================
-   SCROLL ANIMATION
-========================================================= */
+/* SCROLL ANIMATION */
 
 const observer =
 new IntersectionObserver(
-
 function(entries){
 
     entries.forEach(function(entry){
 
         if(entry.isIntersecting){
 
-            entry.target.classList.add("show");
+            entry.target.classList.add("visible");
 
             observer.unobserve(entry.target);
 
@@ -2335,7 +2330,7 @@ function(entries){
 
 },
 {
-    threshold:.10
+    threshold:.1
 });
 
 
@@ -2347,24 +2342,21 @@ document.querySelectorAll(".fade")
 });
 
 
-/* =========================================================
-   ESCAPE
-========================================================= */
+/* ESCAPE */
 
 document.addEventListener("keydown",function(event){
 
     if(event.key==="Escape"){
 
-        navigation.classList.remove("open");
+        links.classList.remove("open");
 
-        mobileMenu.textContent="☰";
+        mobile.textContent="☰";
 
     }
 
 });
 
 </script>
-
 
 </body>
 </html>
