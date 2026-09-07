@@ -4,27 +4,26 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Nitin Sharma — Researcher in HRM, Organisational Behaviour & Algorithmic Management</title>
+<title>Nitin Sharma | Researcher in HRM & Organisational Behaviour</title>
 
-<meta name="description" content="Nitin Sharma — researcher working across Human Resource Management, Organisational Behaviour, AI-enabled HRM and Algorithmic Management.">
-<meta name="author" content="Nitin Sharma">
+<meta name="description" content="Nitin Sharma — Early-Career Researcher in Human Resource Management, Organisational Behaviour and Algorithmic Management.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
 
 <style>
 :root {
-    --bg: #f4f2ed;
-    --paper: #fbfaf7;
-    --ink: #151515;
-    --muted: #68655f;
-    --line: #d8d4cb;
-    --soft: #e9e6df;
-    --accent: #8a4b32;
-    --accent-dark: #633322;
-    --white: #ffffff;
+    --bg: #f7f8fa;
+    --surface: #ffffff;
+    --surface-soft: #f0f2f5;
+    --text: #17191d;
+    --muted: #626873;
+    --line: #dfe2e7;
+    --accent: #334e68;
+    --accent-soft: #e7edf3;
+    --shadow: 0 18px 45px rgba(20, 30, 40, .07);
 }
 
 * {
@@ -39,10 +38,9 @@ html {
 
 body {
     background: var(--bg);
-    color: var(--ink);
-    font-family: "DM Sans", Arial, sans-serif;
-    line-height: 1.6;
-    overflow-x: hidden;
+    color: var(--text);
+    font-family: "Inter", Arial, sans-serif;
+    line-height: 1.7;
 }
 
 a {
@@ -50,77 +48,30 @@ a {
     text-decoration: none;
 }
 
-::selection {
-    background: var(--ink);
-    color: var(--paper);
+img {
+    max-width: 100%;
 }
 
-/* --------------------------------------------------
-   GLOBAL
--------------------------------------------------- */
-
-.page {
-    width: min(1380px, calc(100% - 48px));
+.container {
+    width: min(1180px, calc(100% - 40px));
     margin: auto;
 }
 
-.mono {
-    font-family: "DM Mono", monospace;
-    font-size: 11px;
-    letter-spacing: .12em;
-    text-transform: uppercase;
-}
-
-.eyebrow {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    color: var(--accent);
-    font-family: "DM Mono", monospace;
-    font-size: 11px;
-    letter-spacing: .14em;
-    text-transform: uppercase;
-}
-
-.eyebrow::before {
-    content: "";
-    width: 24px;
-    height: 1px;
-    background: var(--accent);
-}
-
-.section {
-    padding: 150px 0;
-    border-top: 1px solid var(--line);
-}
-
-.section-title {
-    font-family: "Playfair Display", Georgia, serif;
-    font-size: clamp(48px, 6vw, 82px);
-    line-height: .98;
-    font-weight: 500;
-    letter-spacing: -.04em;
-}
-
-.section-intro {
-    max-width: 620px;
-    margin-top: 28px;
-    color: var(--muted);
-    font-size: 18px;
-}
-
-/* --------------------------------------------------
+/* =========================
    NAVIGATION
--------------------------------------------------- */
+========================= */
 
-.nav {
-    position: relative;
-    z-index: 20;
-    border-bottom: 1px solid var(--line);
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(247,248,250,.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(223,226,231,.8);
 }
 
-.nav-inner {
-    min-height: 78px;
+.navbar {
+    height: 76px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -128,8 +79,8 @@ a {
 
 .logo {
     font-family: "Playfair Display", Georgia, serif;
-    font-size: 24px;
-    letter-spacing: -.03em;
+    font-size: 25px;
+    font-weight: 600;
 }
 
 .logo span {
@@ -138,608 +89,631 @@ a {
 
 .nav-links {
     display: flex;
+    gap: 28px;
     align-items: center;
-    gap: 34px;
 }
 
 .nav-links a {
-    font-family: "DM Mono", monospace;
-    font-size: 10px;
-    text-transform: uppercase;
-    letter-spacing: .11em;
+    font-size: 13px;
+    font-weight: 500;
     color: var(--muted);
-    transition: color .25s ease;
+    transition: .2s;
 }
 
 .nav-links a:hover {
-    color: var(--ink);
+    color: var(--accent);
 }
 
-.menu-button {
+.menu {
     display: none;
-    background: none;
-    border: 0;
-    font-family: "DM Mono", monospace;
-    font-size: 11px;
-    letter-spacing: .1em;
-    text-transform: uppercase;
+    border: none;
+    background: transparent;
+    font-size: 14px;
     cursor: pointer;
 }
 
-/* --------------------------------------------------
+/* =========================
    HERO
--------------------------------------------------- */
+========================= */
 
 .hero {
-    min-height: calc(100vh - 79px);
+    min-height: 650px;
     display: grid;
-    grid-template-columns: 1.1fr .9fr;
+    grid-template-columns: 1.15fr .85fr;
     align-items: center;
-    gap: 70px;
-    padding: 80px 0 110px;
+    gap: 80px;
+    padding: 90px 0 100px;
 }
 
-.hero-copy {
-    position: relative;
-}
-
-.hero-index {
-    margin-bottom: 40px;
-    color: var(--muted);
-}
-
-.hero-index span {
+.hero-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    margin-bottom: 25px;
     color: var(--accent);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .09em;
+    text-transform: uppercase;
+}
+
+.hero-label::before {
+    content: "";
+    width: 28px;
+    height: 2px;
+    background: var(--accent);
 }
 
 .hero h1 {
-    max-width: 900px;
     font-family: "Playfair Display", Georgia, serif;
-    font-weight: 500;
-    font-size: clamp(68px, 9vw, 142px);
-    line-height: .82;
-    letter-spacing: -.065em;
+    font-size: clamp(55px, 7vw, 92px);
+    line-height: 1;
+    font-weight: 600;
+    letter-spacing: -.045em;
 }
 
-.hero h1 em {
+.hero h1 span {
     color: var(--accent);
-    font-weight: 500;
 }
 
-.hero-statement {
+.hero-role {
+    margin-top: 28px;
+    font-size: 18px;
+    line-height: 1.6;
     max-width: 680px;
-    margin-top: 46px;
-    font-family: "Playfair Display", Georgia, serif;
-    font-size: clamp(24px, 2.4vw, 35px);
-    line-height: 1.25;
-    letter-spacing: -.02em;
-}
-
-.hero-meta {
-    margin-top: 40px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 9px;
-}
-
-.hero-meta span {
-    padding: 8px 12px;
-    border: 1px solid var(--line);
-    font-family: "DM Mono", monospace;
-    font-size: 10px;
-    letter-spacing: .05em;
     color: var(--muted);
 }
 
-.hero-photo-area {
-    position: relative;
+.hero-role strong {
+    color: var(--text);
+    font-weight: 600;
+}
+
+.hero-links {
     display: flex;
-    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 34px;
 }
 
-.hero-photo-frame {
-    position: relative;
-    width: min(470px, 100%);
+.button {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    padding: 11px 17px;
+    border-radius: 7px;
+    font-size: 12px;
+    font-weight: 600;
+    transition: .2s;
 }
 
-.hero-photo-frame::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border: 1px solid var(--accent);
-    top: 22px;
-    left: 22px;
-    z-index: 0;
+.button-primary {
+    background: var(--accent);
+    color: white;
+}
+
+.button-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(51,78,104,.18);
+}
+
+.button-secondary {
+    border: 1px solid var(--line);
+    background: var(--surface);
+}
+
+.button-secondary:hover {
+    border-color: var(--accent);
+    color: var(--accent);
 }
 
 .hero-photo {
     position: relative;
-    z-index: 1;
+    max-width: 390px;
+    margin-left: auto;
+}
+
+.hero-photo::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    right: -15px;
+    bottom: -15px;
+    border: 1px solid var(--accent);
+    border-radius: 12px;
+    z-index: -1;
+}
+
+.hero-photo img {
     display: block;
     width: 100%;
     aspect-ratio: 4 / 5;
     object-fit: cover;
+    border-radius: 12px;
 }
 
-.photo-caption {
-    position: absolute;
-    z-index: 3;
-    bottom: -35px;
-    left: -28px;
-    background: var(--ink);
-    color: var(--paper);
-    padding: 12px 16px;
-    font-family: "DM Mono", monospace;
-    font-size: 9px;
-    letter-spacing: .1em;
-    text-transform: uppercase;
+/* =========================
+   SECTION
+========================= */
+
+section {
+    padding: 90px 0;
 }
 
-.hero-side-note {
-    position: absolute;
-    right: -35px;
-    top: 30px;
-    writing-mode: vertical-rl;
-    font-family: "DM Mono", monospace;
-    font-size: 9px;
-    color: var(--muted);
+.section-heading {
+    margin-bottom: 45px;
+}
+
+.section-label {
+    color: var(--accent);
+    font-size: 11px;
+    font-weight: 700;
     letter-spacing: .12em;
     text-transform: uppercase;
+    margin-bottom: 12px;
 }
 
-/* --------------------------------------------------
+.section-title {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(38px, 5vw, 58px);
+    line-height: 1.08;
+    font-weight: 600;
+    letter-spacing: -.035em;
+}
+
+.section-description {
+    max-width: 680px;
+    margin-top: 15px;
+    color: var(--muted);
+    font-size: 15px;
+}
+
+/* =========================
    RESEARCH
--------------------------------------------------- */
+========================= */
 
-.research-layout {
+.research-section {
+    border-top: 1px solid var(--line);
+}
+
+.research-intro {
     display: grid;
-    grid-template-columns: .72fr 1.28fr;
-    gap: 110px;
-    margin-top: 95px;
+    grid-template-columns: .8fr 1.2fr;
+    gap: 70px;
+    align-items: start;
 }
 
-.research-lead {
+.research-main {
     font-family: "Playfair Display", Georgia, serif;
-    font-size: clamp(30px, 3.3vw, 48px);
-    line-height: 1.15;
-    letter-spacing: -.03em;
+    font-size: 30px;
+    line-height: 1.35;
 }
 
-.research-lead em {
+.research-main span {
     color: var(--accent);
 }
 
-.research-body {
-    max-width: 670px;
+.research-text {
     color: var(--muted);
-    font-size: 17px;
+    font-size: 15px;
 }
 
-.research-body p + p {
-    margin-top: 22px;
+.research-text p + p {
+    margin-top: 18px;
 }
 
-.research-question {
-    margin-top: 65px;
-    padding-top: 25px;
-    border-top: 1px solid var(--line);
-    color: var(--ink);
-    font-family: "DM Mono", monospace;
-    font-size: 11px;
-    letter-spacing: .05em;
-    text-transform: uppercase;
-}
-
-.research-map {
-    margin-top: 100px;
-    border-top: 1px solid var(--line);
-    border-bottom: 1px solid var(--line);
-}
-
-.research-step {
-    min-height: 125px;
+.research-themes {
+    margin-top: 55px;
     display: grid;
-    grid-template-columns: 80px 1fr auto;
-    align-items: center;
-    gap: 30px;
-    border-bottom: 1px solid var(--line);
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
 }
 
-.research-step:last-child {
-    border-bottom: 0;
+.theme {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 23px;
+    transition: .25s;
 }
 
-.step-number {
-    font-family: "DM Mono", monospace;
-    font-size: 10px;
-    color: var(--accent);
+.theme:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow);
 }
 
-.step-name {
-    font-family: "Playfair Display", Georgia, serif;
-    font-size: 28px;
-}
-
-.step-arrow {
-    font-size: 25px;
-    color: var(--muted);
-}
-
-/* --------------------------------------------------
-   ICONS
--------------------------------------------------- */
-
-.paper-icon {
-    width: 38px;
-    height: 38px;
-    display: inline-flex;
+.theme-icon {
+    width: 34px;
+    height: 34px;
+    display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid var(--line);
-    flex-shrink: 0;
+    border-radius: 8px;
+    background: var(--accent-soft);
+    margin-bottom: 17px;
 }
 
-.paper-icon svg {
-    width: 17px;
-    height: 17px;
+.theme-icon svg {
+    width: 18px;
+    height: 18px;
     stroke: var(--accent);
     fill: none;
-    stroke-width: 1.5;
+    stroke-width: 1.7;
 }
 
-/* --------------------------------------------------
+.theme h3 {
+    font-size: 14px;
+    margin-bottom: 7px;
+}
+
+.theme p {
+    font-size: 12px;
+    color: var(--muted);
+}
+
+/* =========================
    PUBLICATIONS
--------------------------------------------------- */
+========================= */
+
+.publications {
+    background: var(--surface);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+}
 
 .publication-list {
-    margin-top: 85px;
-    border-top: 1px solid var(--line);
+    display: grid;
+    gap: 16px;
 }
 
 .publication {
     display: grid;
-    grid-template-columns: 62px 1fr 130px;
-    gap: 35px;
-    padding: 42px 0;
-    border-bottom: 1px solid var(--line);
+    grid-template-columns: 52px 1fr auto;
+    gap: 20px;
     align-items: start;
-    transition: padding-left .25s ease;
+    background: var(--bg);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 25px;
+    transition: .2s;
 }
 
 .publication:hover {
-    padding-left: 12px;
+    border-color: #c9ced5;
+    box-shadow: var(--shadow);
+}
+
+.paper-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+}
+
+.paper-icon svg {
+    width: 19px;
+    height: 19px;
+    stroke: var(--accent);
+    fill: none;
+    stroke-width: 1.6;
 }
 
 .publication h3 {
-    max-width: 850px;
     font-family: "Playfair Display", Georgia, serif;
-    font-size: clamp(25px, 2.4vw, 36px);
-    line-height: 1.16;
+    font-size: 20px;
+    line-height: 1.35;
     font-weight: 500;
-    letter-spacing: -.025em;
 }
 
 .publication h3 a:hover {
     color: var(--accent);
 }
 
-.publication-meta {
-    padding-top: 5px;
+.publication-info {
+    text-align: right;
+    min-width: 100px;
     color: var(--muted);
-    font-family: "DM Mono", monospace;
-    font-size: 10px;
-    line-height: 1.7;
-    text-transform: uppercase;
-    letter-spacing: .08em;
+    font-size: 11px;
+    line-height: 1.5;
 }
 
-/* --------------------------------------------------
-   MANUSCRIPTS
--------------------------------------------------- */
+/* =========================
+   ONGOING RESEARCH
+========================= */
 
-.manuscripts {
-    background: var(--ink);
-    color: var(--paper);
-    border-top: 0;
-}
-
-.manuscripts .eyebrow {
-    color: #d2a38f;
-}
-
-.manuscripts .eyebrow::before {
-    background: #d2a38f;
+.ongoing {
+    border-bottom: 1px solid var(--line);
 }
 
 .manuscript-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 1px;
-    background: #454545;
-    margin-top: 85px;
+    gap: 18px;
 }
 
 .manuscript {
-    min-height: 360px;
-    padding: 42px;
-    background: var(--ink);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 11px;
+    padding: 30px;
+    transition: .2s;
 }
 
-.manuscript-status {
-    font-family: "DM Mono", monospace;
-    font-size: 10px;
-    letter-spacing: .12em;
-    color: #b9b4ac;
+.manuscript:hover {
+    box-shadow: var(--shadow);
+    transform: translateY(-3px);
+}
+
+.status {
+    display: inline-block;
+    padding: 5px 9px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    border-radius: 5px;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: .08em;
 }
 
 .manuscript h3 {
-    margin-top: 70px;
-    max-width: 620px;
+    margin-top: 22px;
     font-family: "Playfair Display", Georgia, serif;
-    font-size: clamp(29px, 3vw, 45px);
-    line-height: 1.08;
-    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.3;
 }
 
 .manuscript p {
-    max-width: 540px;
-    margin-top: 24px;
-    color: #aaa59d;
+    margin-top: 12px;
+    color: var(--muted);
+    font-size: 13px;
 }
 
-/* --------------------------------------------------
+/* =========================
    EDUCATION
--------------------------------------------------- */
+========================= */
 
-.education-wrap {
-    margin-top: 90px;
+.education {
+    background: var(--surface);
+    border-bottom: 1px solid var(--line);
 }
 
-.education-row {
+.education-list {
     display: grid;
-    grid-template-columns: 170px 1fr 170px;
-    gap: 35px;
-    padding: 45px 0;
+    gap: 0;
+}
+
+.education-item {
+    display: grid;
+    grid-template-columns: 140px 1fr auto;
+    gap: 30px;
+    padding: 30px 0;
     border-top: 1px solid var(--line);
 }
 
-.education-row:last-child {
+.education-item:last-child {
     border-bottom: 1px solid var(--line);
 }
 
 .education-year {
-    font-family: "DM Mono", monospace;
-    font-size: 10px;
     color: var(--accent);
-    text-transform: uppercase;
-    letter-spacing: .08em;
+    font-size: 11px;
+    font-weight: 600;
 }
 
-.education-degree {
+.education-item h3 {
     font-family: "Playfair Display", Georgia, serif;
-    font-size: 32px;
-    line-height: 1.1;
+    font-size: 23px;
+    line-height: 1.3;
+    font-weight: 500;
 }
 
-.education-institution {
-    margin-top: 9px;
+.institution {
     color: var(--muted);
+    font-size: 13px;
+    margin-top: 5px;
 }
 
 .education-result {
-    text-align: right;
-    font-family: "DM Mono", monospace;
-    font-size: 10px;
     color: var(--muted);
-    text-transform: uppercase;
+    font-size: 11px;
+    text-align: right;
 }
 
-/* --------------------------------------------------
+/* =========================
    METHODS
--------------------------------------------------- */
+========================= */
 
-.methods-layout {
+.methods-content {
     display: grid;
-    grid-template-columns: .75fr 1.25fr;
-    gap: 100px;
-    margin-top: 90px;
+    grid-template-columns: .7fr 1.3fr;
+    gap: 70px;
 }
 
-.methods-intro {
+.methods-lead {
     font-family: "Playfair Display", Georgia, serif;
-    font-size: 31px;
-    line-height: 1.2;
+    font-size: 28px;
+    line-height: 1.35;
 }
 
-.tools {
+.methods-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 0;
+    gap: 9px;
+    align-content: flex-start;
+}
+
+.method {
+    padding: 9px 13px;
+    border: 1px solid var(--line);
+    background: var(--surface);
+    border-radius: 6px;
+    color: var(--muted);
+    font-size: 11px;
+}
+
+/* =========================
+   EXPERIENCE
+========================= */
+
+.experience {
+    background: var(--surface);
     border-top: 1px solid var(--line);
 }
-
-.tool {
-    padding: 18px 22px;
-    border-right: 1px solid var(--line);
-    border-bottom: 1px solid var(--line);
-    font-family: "DM Mono", monospace;
-    font-size: 10px;
-    color: var(--muted);
-    text-transform: uppercase;
-    letter-spacing: .05em;
-}
-
-/* --------------------------------------------------
-   EXPERIENCE
--------------------------------------------------- */
 
 .experience-list {
-    margin-top: 90px;
+    display: grid;
+    gap: 0;
 }
 
-.experience-row {
+.experience-item {
     display: grid;
-    grid-template-columns: 160px 1fr;
-    gap: 50px;
-    padding: 40px 0;
+    grid-template-columns: 150px 1fr;
+    gap: 30px;
+    padding: 27px 0;
     border-top: 1px solid var(--line);
 }
 
-.experience-row:last-child {
+.experience-item:last-child {
     border-bottom: 1px solid var(--line);
 }
 
 .experience-type {
     color: var(--accent);
-    font-family: "DM Mono", monospace;
     font-size: 10px;
+    font-weight: 700;
     letter-spacing: .08em;
     text-transform: uppercase;
 }
 
-.experience-role {
+.experience-item h3 {
     font-family: "Playfair Display", Georgia, serif;
-    font-size: 31px;
-    line-height: 1.1;
+    font-size: 23px;
+    font-weight: 500;
 }
 
 .experience-company {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.experience-item p {
+    max-width: 680px;
+    color: var(--muted);
+    font-size: 13px;
     margin-top: 7px;
-    color: var(--muted);
 }
 
-.experience-description {
-    margin-top: 14px;
-    max-width: 700px;
-    color: var(--muted);
-}
-
-/* --------------------------------------------------
+/* =========================
    COLLABORATION
--------------------------------------------------- */
+========================= */
 
 .collaboration {
-    background: #e6e1d8;
+    background: var(--accent);
+    color: white;
 }
 
 .collaboration-inner {
     display: grid;
-    grid-template-columns: .85fr 1.15fr;
-    gap: 100px;
-    align-items: end;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.collaboration .section-label {
+    color: #cbd8e4;
 }
 
 .collaboration h2 {
-    max-width: 700px;
-    margin-top: 30px;
     font-family: "Playfair Display", Georgia, serif;
-    font-size: clamp(52px, 6vw, 88px);
-    line-height: .95;
-    letter-spacing: -.05em;
+    font-size: clamp(42px, 5vw, 65px);
+    line-height: 1.05;
     font-weight: 500;
 }
 
-.collaboration-text {
-    max-width: 620px;
-    font-size: 18px;
-    color: var(--muted);
+.collaboration p {
+    color: #dce4eb;
+    font-size: 15px;
 }
 
-.collaboration-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 18px;
-    margin-top: 35px;
-    padding-bottom: 8px;
-    border-bottom: 1px solid var(--ink);
-    font-family: "DM Mono", monospace;
-    font-size: 11px;
-    letter-spacing: .08em;
-    text-transform: uppercase;
+.collaboration .button {
+    margin-top: 25px;
+    background: white;
+    color: var(--accent);
 }
 
-.collaboration-link span {
-    font-size: 18px;
-    transition: transform .2s ease;
-}
-
-.collaboration-link:hover span {
-    transform: translateX(6px);
-}
-
-/* --------------------------------------------------
+/* =========================
    CONTACT
--------------------------------------------------- */
+========================= */
 
 .contact {
-    padding-bottom: 80px;
+    background: var(--bg);
 }
 
-.contact-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    gap: 40px;
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: end;
 }
 
 .contact h2 {
-    margin-top: 28px;
     font-family: "Playfair Display", Georgia, serif;
-    font-size: clamp(55px, 7vw, 100px);
-    line-height: .9;
-    letter-spacing: -.055em;
-    font-weight: 500;
+    font-size: clamp(45px, 6vw, 72px);
+    line-height: 1;
+}
+
+.contact-description {
+    color: var(--muted);
+    font-size: 15px;
+    margin-top: 18px;
+    max-width: 500px;
 }
 
 .contact-links {
-    margin-top: 90px;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    border-top: 1px solid var(--line);
+    gap: 12px;
 }
 
 .contact-link {
-    min-height: 110px;
-    padding: 25px 18px 20px 0;
-    border-bottom: 1px solid var(--line);
-    border-right: 1px solid var(--line);
-    transition: background .2s ease, padding-left .2s ease;
-}
-
-.contact-link:last-child {
-    border-right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 17px 19px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    font-size: 13px;
+    transition: .2s;
 }
 
 .contact-link:hover {
-    background: var(--soft);
-    padding-left: 12px;
-}
-
-.contact-link-label {
+    border-color: var(--accent);
     color: var(--accent);
-    font-family: "DM Mono", monospace;
-    font-size: 9px;
-    letter-spacing: .1em;
-    text-transform: uppercase;
+    transform: translateX(4px);
 }
 
-.contact-link-name {
-    display: block;
-    margin-top: 12px;
-    font-size: 14px;
+.contact-left {
+    font-weight: 500;
 }
 
-/* --------------------------------------------------
+.contact-right {
+    color: var(--muted);
+    font-size: 11px;
+}
+
+/* =========================
    FOOTER
--------------------------------------------------- */
+========================= */
 
-.footer {
-    padding: 28px 0;
+footer {
+    padding: 25px 0;
     border-top: 1px solid var(--line);
+    background: var(--surface);
 }
 
 .footer-inner {
@@ -747,232 +721,125 @@ a {
     justify-content: space-between;
     gap: 20px;
     color: var(--muted);
-    font-family: "DM Mono", monospace;
-    font-size: 9px;
-    letter-spacing: .08em;
-    text-transform: uppercase;
+    font-size: 11px;
 }
 
-/* --------------------------------------------------
-   RESPONSIVE
--------------------------------------------------- */
+/* =========================
+   MOBILE
+========================= */
 
-@media (max-width: 1000px) {
+@media (max-width: 850px) {
 
     .hero {
         grid-template-columns: 1fr;
+        gap: 55px;
         padding-top: 65px;
     }
 
-    .hero-photo-area {
-        max-width: 500px;
-        margin-left: auto;
-        margin-right: auto;
+    .hero-photo {
+        margin: auto;
+        max-width: 350px;
     }
 
-    .research-layout,
-    .methods-layout,
-    .collaboration-inner {
+    .research-intro,
+    .methods-content,
+    .collaboration-inner,
+    .contact-grid {
         grid-template-columns: 1fr;
-        gap: 55px;
+        gap: 45px;
+    }
+
+    .research-themes {
+        grid-template-columns: 1fr 1fr;
     }
 
     .publication {
-        grid-template-columns: 52px 1fr;
+        grid-template-columns: 45px 1fr;
     }
 
-    .publication-meta {
+    .publication-info {
         grid-column: 2;
+        text-align: left;
     }
 
-    .contact-links {
-        grid-template-columns: repeat(2, 1fr);
+    .manuscript-grid {
+        grid-template-columns: 1fr;
     }
 
-    .contact-link:nth-child(2),
-    .contact-link:nth-child(4) {
-        border-right: 0;
+    .education-item {
+        grid-template-columns: 110px 1fr;
     }
 
-    .contact-link:nth-child(5) {
-        grid-column: 1 / -1;
-        border-right: 0;
+    .education-result {
+        grid-column: 2;
+        text-align: left;
+    }
+
+    .experience-item {
+        grid-template-columns: 120px 1fr;
     }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 650px) {
 
-    .page {
-        width: min(100% - 30px, 1380px);
-    }
-
-    .nav-inner {
-        min-height: 68px;
+    .container {
+        width: min(100% - 28px, 1180px);
     }
 
     .nav-links {
-        position: absolute;
         display: none;
-        top: 68px;
+        position: absolute;
+        top: 76px;
         left: 0;
-        width: 100%;
-        padding: 20px 15px 25px;
+        right: 0;
         background: var(--bg);
+        padding: 20px 14px;
         border-bottom: 1px solid var(--line);
         flex-direction: column;
         align-items: flex-start;
-        gap: 18px;
+        gap: 17px;
     }
 
     .nav-links.open {
         display: flex;
     }
 
-    .menu-button {
+    .menu {
         display: block;
+    }
+
+    section {
+        padding: 70px 0;
     }
 
     .hero {
-        min-height: auto;
-        padding: 65px 0 100px;
-        gap: 70px;
+        padding: 55px 0 75px;
     }
 
     .hero h1 {
-        font-size: clamp(60px, 18vw, 100px);
+        font-size: 57px;
     }
 
-    .hero-statement {
-        font-size: 24px;
-        margin-top: 34px;
+    .hero-role {
+        font-size: 16px;
     }
 
-    .hero-meta {
-        margin-top: 30px;
-    }
-
-    .hero-side-note {
-        display: none;
-    }
-
-    .hero-photo-frame::before {
-        top: 12px;
-        left: 12px;
-    }
-
-    .photo-caption {
-        left: -8px;
-        bottom: -25px;
-    }
-
-    .section {
-        padding: 100px 0;
-    }
-
-    .section-title {
-        font-size: 52px;
-    }
-
-    .research-layout {
-        margin-top: 60px;
-    }
-
-    .research-map {
-        margin-top: 65px;
-    }
-
-    .research-step {
-        min-height: 100px;
-        grid-template-columns: 40px 1fr 20px;
-        gap: 15px;
-    }
-
-    .step-name {
-        font-size: 22px;
-    }
-
-    .publication-list {
-        margin-top: 60px;
+    .research-themes {
+        grid-template-columns: 1fr;
     }
 
     .publication {
-        grid-template-columns: 42px 1fr;
-        gap: 18px;
-        padding: 32px 0;
+        padding: 20px;
     }
 
-    .publication h3 {
-        font-size: 25px;
-    }
-
-    .publication-meta {
-        grid-column: 2;
-    }
-
-    .manuscript-grid {
+    .education-item,
+    .experience-item {
         grid-template-columns: 1fr;
-        margin-top: 60px;
-    }
-
-    .manuscript {
-        min-height: 310px;
-        padding: 30px;
-    }
-
-    .manuscript h3 {
-        margin-top: 50px;
-    }
-
-    .education-wrap {
-        margin-top: 60px;
-    }
-
-    .education-row {
-        grid-template-columns: 1fr;
-        gap: 12px;
-        padding: 30px 0;
+        gap: 8px;
     }
 
     .education-result {
-        text-align: left;
-    }
-
-    .education-degree {
-        font-size: 28px;
-    }
-
-    .methods-layout {
-        margin-top: 60px;
-    }
-
-    .experience-list {
-        margin-top: 60px;
-    }
-
-    .experience-row {
-        grid-template-columns: 1fr;
-        gap: 14px;
-        padding: 30px 0;
-    }
-
-    .experience-role {
-        font-size: 27px;
-    }
-
-    .collaboration h2 {
-        font-size: 58px;
-    }
-
-    .contact-top {
-        display: block;
-    }
-
-    .contact-links {
-        margin-top: 60px;
-    }
-
-    .contact-link {
-        min-height: 100px;
+        grid-column: auto;
     }
 
     .footer-inner {
@@ -984,181 +851,212 @@ a {
 
 <body>
 
-<!-- NAVIGATION -->
-<nav class="nav">
-    <div class="page nav-inner">
+<header>
+    <div class="container navbar">
 
-        <a href="#" class="logo">N<span>.</span> Sharma</a>
+        <a href="#" class="logo">
+            Nitin <span>Sharma</span>
+        </a>
 
-        <div class="nav-links" id="navLinks">
+        <nav class="nav-links" id="navLinks">
             <a href="#research">Research</a>
             <a href="#publications">Publications</a>
             <a href="#education">Education</a>
             <a href="#experience">Experience</a>
             <a href="#collaboration">Collaboration</a>
             <a href="#contact">Contact</a>
-        </div>
+        </nav>
 
-        <button class="menu-button" id="menuButton" aria-label="Open navigation">
+        <button class="menu" id="menuButton">
             Menu
         </button>
 
     </div>
-</nav>
+</header>
 
 
 <main>
 
 <!-- HERO -->
-<section class="page hero">
+<section>
+    <div class="container hero">
 
-    <div class="hero-copy">
+        <div>
 
-        <div class="hero-index mono">
-            Researcher · HRM · Organisational Behaviour
-            <span>—</span> 2026
+            <div class="hero-label">
+                Early-Career Researcher
+            </div>
+
+            <h1>
+                Nitin<br>
+                <span>Sharma.</span>
+            </h1>
+
+            <p class="hero-role">
+                <strong>Human Resource Management · Organisational Behaviour · Algorithmic Management</strong>
+                <br><br>
+                My research focuses on AI-enabled HRM, employee trust,
+                psychological contracts, organisational justice and the
+                changing nature of work.
+            </p>
+
+            <div class="hero-links">
+                <a class="button button-primary"
+                   href="#research">
+                    Explore research →
+                </a>
+
+                <a class="button button-secondary"
+                   href="https://www.linkedin.com/in/nitin-sharma-449bb824/"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    LinkedIn ↗
+                </a>
+            </div>
+
         </div>
 
-        <h1>
-            Nitin<br>
-            <em>Sharma.</em>
-        </h1>
 
-        <p class="hero-statement">
-            Exploring trust, fairness and the employment relationship
-            as artificial intelligence moves deeper into organisational
-            decision-making.
-        </p>
-
-        <div class="hero-meta">
-            <span>AI-enabled HRM</span>
-            <span>Algorithmic Management</span>
-            <span>Employee Trust</span>
-            <span>Psychological Contracts</span>
-            <span>Organisational Justice</span>
-        </div>
-
-    </div>
-
-
-    <div class="hero-photo-area">
-
-        <div class="hero-photo-frame">
+        <div class="hero-photo">
 
             <img
-                class="hero-photo"
                 src="https://nitinau02-afk.github.io/My%20Photo.jpeg"
                 alt="Nitin Sharma"
             >
 
-            <div class="photo-caption">
-                Human Resource Management · Research
-            </div>
-
-            <div class="hero-side-note">
-                Research / People / Technology
-            </div>
-
         </div>
 
     </div>
-
 </section>
 
 
 <!-- RESEARCH -->
-<section class="page section" id="research">
+<section class="research-section" id="research">
 
-    <div class="eyebrow">
-        Research
-    </div>
+    <div class="container">
 
-    <div style="margin-top:28px;">
-        <h2 class="section-title">
-            Where technology<br>
-            meets the <em style="color:var(--accent);">employment</em><br>
-            relationship.
-        </h2>
-    </div>
-
-
-    <div class="research-layout">
-
-        <div>
-            <p class="research-lead">
-                My work focuses on what happens to
-                <em>trust, responsibility and fairness</em>
-                when organisational decisions become increasingly
-                mediated by artificial intelligence.
-            </p>
-
-            <div class="research-question">
-                Central question
-                <br><br>
-                How does algorithmic decision-making reshape
-                what employees expect from organisations —
-                and what organisations expect from employees?
+        <div class="section-heading">
+            <div class="section-label">
+                Research
             </div>
-        </div>
 
+            <h2 class="section-title">
+                Understanding work<br>
+                in an AI-enabled world.
+            </h2>
 
-        <div class="research-body">
-
-            <p>
-                My emerging doctoral research agenda examines
-                AI-mediated organisational decision-making and
-                its implications for the employment relationship.
+            <p class="section-description">
+                Research interests at the intersection of people,
+                organisations and emerging technologies.
             </p>
+        </div>
 
-            <p>
-                I am particularly interested in how employees
-                understand authority, responsibility, fairness,
-                accountability and mutual obligations when
-                technology becomes part of organisational
-                decision-making.
-            </p>
 
-            <p>
-                This brings together Human Resource Management,
-                Organisational Behaviour, employment relations and
-                responsible AI.
-            </p>
+        <div class="research-intro">
+
+            <div class="research-main">
+                I am interested in how AI and algorithmic systems
+                influence the way employees understand
+                <span>trust, fairness, responsibility and their relationship with organisations.</span>
+            </div>
+
+            <div class="research-text">
+
+                <p>
+                    My emerging research agenda examines AI-mediated
+                    organisational decision-making and its implications
+                    for the employment relationship.
+                </p>
+
+                <p>
+                    I am particularly interested in authority,
+                    accountability, transparency, employee voice,
+                    organisational justice and the reconfiguration
+                    of psychological contracts in AI-mediated work.
+                </p>
+
+            </div>
 
         </div>
 
-    </div>
+
+        <div class="research-themes">
+
+            <div class="theme">
+
+                <div class="theme-icon">
+                    <svg viewBox="0 0 24 24">
+                        <circle cx="12" cy="8" r="3"></circle>
+                        <path d="M5 21c.7-4 3-6 7-6s6.3 2 7 6"></path>
+                    </svg>
+                </div>
+
+                <h3>Employee Trust</h3>
+
+                <p>
+                    Trust, transparency and employee responses
+                    to AI-mediated decisions.
+                </p>
+
+            </div>
 
 
-    <div class="research-map">
+            <div class="theme">
 
-        <div class="research-step">
-            <div class="step-number">01</div>
-            <div class="step-name">AI-enabled decision-making</div>
-            <div class="step-arrow">→</div>
-        </div>
+                <div class="theme-icon">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M4 5h16v14H4z"></path>
+                        <path d="M8 9h8M8 13h5"></path>
+                    </svg>
+                </div>
 
-        <div class="research-step">
-            <div class="step-number">02</div>
-            <div class="step-name">Algorithmic authority</div>
-            <div class="step-arrow">→</div>
-        </div>
+                <h3>Psychological Contracts</h3>
 
-        <div class="research-step">
-            <div class="step-number">03</div>
-            <div class="step-name">Employee perceptions</div>
-            <div class="step-arrow">→</div>
-        </div>
+                <p>
+                    Changing expectations and mutual obligations
+                    within the employment relationship.
+                </p>
 
-        <div class="research-step">
-            <div class="step-number">04</div>
-            <div class="step-name">Trust & organisational justice</div>
-            <div class="step-arrow">→</div>
-        </div>
+            </div>
 
-        <div class="research-step">
-            <div class="step-number">05</div>
-            <div class="step-name">Employment relationship</div>
-            <div class="step-arrow">↗</div>
+
+            <div class="theme">
+
+                <div class="theme-icon">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 3v18M3 12h18"></path>
+                        <circle cx="12" cy="12" r="8"></circle>
+                    </svg>
+                </div>
+
+                <h3>Organisational Justice</h3>
+
+                <p>
+                    Fairness, accountability and perceptions
+                    surrounding algorithmic decisions.
+                </p>
+
+            </div>
+
+
+            <div class="theme">
+
+                <div class="theme-icon">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M5 4h14v16H5z"></path>
+                        <path d="M8 8h8M8 12h8M8 16h5"></path>
+                    </svg>
+                </div>
+
+                <h3>Responsible AI</h3>
+
+                <p>
+                    Human oversight, employee voice and
+                    responsible AI governance.
+                </p>
+
+            </div>
+
         </div>
 
     </div>
@@ -1167,184 +1065,187 @@ a {
 
 
 <!-- PUBLICATIONS -->
-<section class="page section" id="publications">
+<section class="publications" id="publications">
 
-    <div class="eyebrow">
-        Research output
-    </div>
+    <div class="container">
 
-    <h2 class="section-title" style="margin-top:28px;">
-        Papers,<br>
-        <em style="color:var(--accent);">ideas & evidence.</em>
-    </h2>
+        <div class="section-heading">
 
-    <p class="section-intro">
-        Selected research publications and conference work.
-    </p>
-
-
-    <div class="publication-list">
-
-        <article class="publication">
-
-            <div class="paper-icon">
-                <svg viewBox="0 0 24 24">
-                    <path d="M6 3h9l3 3v15H6z"/>
-                    <path d="M15 3v4h4"/>
-                    <path d="M9 12h6"/>
-                    <path d="M9 16h6"/>
-                </svg>
+            <div class="section-label">
+                Publications
             </div>
 
-            <h3>
-                <a href="https://www.researchgate.net/publication/409530596_Trust_as_the_Dominant_Driver_of_Employee_Acceptance_of_AI-Enabled_Recruitment_Systems_An_Extended_Technology_Acceptance_Model"
-                   target="_blank"
-                   rel="noopener noreferrer">
-                    Trust as the Dominant Driver of Employee Acceptance
-                    of AI-Enabled Recruitment Systems:
-                    An Extended Technology Acceptance Model
-                </a>
-            </h3>
+            <h2 class="section-title">
+                Selected research.
+            </h2>
 
-            <div class="publication-meta">
-                2026<br>
-                Research article
-            </div>
+            <p class="section-description">
+                Research publications and conference work.
+            </p>
 
-        </article>
+        </div>
 
 
-        <article class="publication">
-
-            <div class="paper-icon">
-                <svg viewBox="0 0 24 24">
-                    <path d="M6 3h9l3 3v15H6z"/>
-                    <path d="M15 3v4h4"/>
-                    <path d="M9 12h6"/>
-                    <path d="M9 16h6"/>
-                </svg>
-            </div>
-
-            <h3>
-                A TAM-Based Empirical Investigation of Employee
-                Acceptance of AI-Enabled Recruitment Systems
-            </h3>
-
-            <div class="publication-meta">
-                2026<br>
-                Conference paper
-            </div>
-
-        </article>
+        <div class="publication-list">
 
 
-        <article class="publication">
+            <article class="publication">
 
-            <div class="paper-icon">
-                <svg viewBox="0 0 24 24">
-                    <path d="M6 3h9l3 3v15H6z"/>
-                    <path d="M15 3v4h4"/>
-                    <path d="M9 12h6"/>
-                    <path d="M9 16h6"/>
-                </svg>
-            </div>
+                <div class="paper-icon">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M6 3h9l3 3v15H6z"></path>
+                        <path d="M15 3v4h4"></path>
+                        <path d="M9 12h6M9 16h6"></path>
+                    </svg>
+                </div>
 
-            <h3>
-                Role of Artificial Intelligence in the Banking Sector
-            </h3>
+                <h3>
+                    <a href="https://www.researchgate.net/publication/409530596_Trust_as_the_Dominant_Driver_of_Employee_Acceptance_of_AI-Enabled_Recruitment_Systems_An_Extended_Technology_Acceptance_Model"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Trust as the Dominant Driver of Employee Acceptance
+                        of AI-Enabled Recruitment Systems:
+                        An Extended Technology Acceptance Model
+                    </a>
+                </h3>
 
-            <div class="publication-meta">
-                2025<br>
-                Research publication
-            </div>
+                <div class="publication-info">
+                    2026<br>
+                    Research Article
+                </div>
 
-        </article>
+            </article>
 
 
-        <article class="publication">
+            <article class="publication">
 
-            <div class="paper-icon">
-                <svg viewBox="0 0 24 24">
-                    <path d="M6 3h9l3 3v15H6z"/>
-                    <path d="M15 3v4h4"/>
-                    <path d="M9 12h6"/>
-                    <path d="M9 16h6"/>
-                </svg>
-            </div>
+                <div class="paper-icon">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M6 3h9l3 3v15H6z"></path>
+                        <path d="M15 3v4h4"></path>
+                        <path d="M9 12h6M9 16h6"></path>
+                    </svg>
+                </div>
 
-            <h3>
-                The Future of Human Resource Management:
-                The Role of Artificial Intelligence in Shaping HR Practices
-            </h3>
+                <h3>
+                    A TAM-Based Empirical Investigation of Employee
+                    Acceptance of AI-Enabled Recruitment Systems
+                </h3>
 
-            <div class="publication-meta">
-                2025<br>
-                Research publication
-            </div>
+                <div class="publication-info">
+                    2026<br>
+                    Conference Paper
+                </div>
 
-        </article>
+            </article>
+
+
+            <article class="publication">
+
+                <div class="paper-icon">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M6 3h9l3 3v15H6z"></path>
+                        <path d="M15 3v4h4"></path>
+                        <path d="M9 12h6M9 16h6"></path>
+                    </svg>
+                </div>
+
+                <h3>
+                    Role of Artificial Intelligence in the Banking Sector
+                </h3>
+
+                <div class="publication-info">
+                    2025<br>
+                    Research Publication
+                </div>
+
+            </article>
+
+
+            <article class="publication">
+
+                <div class="paper-icon">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M6 3h9l3 3v15H6z"></path>
+                        <path d="M15 3v4h4"></path>
+                        <path d="M9 12h6M9 16h6"></path>
+                    </svg>
+                </div>
+
+                <h3>
+                    The Future of Human Resource Management:
+                    The Role of Artificial Intelligence in Shaping HR Practices
+                </h3>
+
+                <div class="publication-info">
+                    2025<br>
+                    Research Publication
+                </div>
+
+            </article>
+
+        </div>
 
     </div>
 
 </section>
 
 
-<!-- MANUSCRIPTS -->
-<section class="section manuscripts" id="manuscripts">
+<!-- ONGOING RESEARCH -->
+<section class="ongoing" id="manuscripts">
 
-    <div class="page">
+    <div class="container">
 
-        <div class="eyebrow">
-            Ongoing research
+        <div class="section-heading">
+
+            <div class="section-label">
+                Ongoing Research
+            </div>
+
+            <h2 class="section-title">
+                Current manuscripts.
+            </h2>
+
         </div>
-
-        <h2 class="section-title" style="margin-top:28px;">
-            Work in<br>
-            progress.
-        </h2>
 
 
         <div class="manuscript-grid">
 
             <article class="manuscript">
 
-                <div class="manuscript-status">
-                    Under review
-                </div>
+                <span class="status">
+                    UNDER REVIEW
+                </span>
 
-                <div>
-                    <h3>
-                        Algorithmic Management and the
-                        Evolution of the Psychological Contract
-                    </h3>
+                <h3>
+                    Algorithmic Management and the Evolution
+                    of the Psychological Contract
+                </h3>
 
-                    <p>
-                        A multilevel investigation of how algorithmic
-                        management may influence employee–organisation
-                        relationships.
-                    </p>
-                </div>
+                <p>
+                    A multilevel investigation of how algorithmic
+                    management may influence employee–organisation
+                    relationships.
+                </p>
 
             </article>
 
 
             <article class="manuscript">
 
-                <div class="manuscript-status">
-                    Under review
-                </div>
+                <span class="status">
+                    UNDER REVIEW
+                </span>
 
-                <div>
-                    <h3>
-                        Integrating Strategic and Human-Centred
-                        HR Practices
-                    </h3>
+                <h3>
+                    Integrating Strategic and Human-Centred
+                    HR Practices
+                </h3>
 
-                    <p>
-                        Development and validation of a hierarchical
-                        HR architecture.
-                    </p>
-                </div>
+                <p>
+                    Development and validation of a hierarchical
+                    HR architecture.
+                </p>
 
             </article>
 
@@ -1356,96 +1257,107 @@ a {
 
 
 <!-- EDUCATION -->
-<section class="page section" id="education">
+<section class="education" id="education">
 
-    <div class="eyebrow">
-        Academic background
-    </div>
+    <div class="container">
 
-    <h2 class="section-title" style="margin-top:28px;">
-        Education.
-    </h2>
+        <div class="section-heading">
 
-
-    <div class="education-wrap">
-
-        <article class="education-row">
-
-            <div class="education-year">
-                2024–2026
+            <div class="section-label">
+                Education
             </div>
 
-            <div>
-                <div class="education-degree">
-                    MBA — Human Resource Management
+            <h2 class="section-title">
+                Academic background.
+            </h2>
+
+        </div>
+
+
+        <div class="education-list">
+
+            <article class="education-item">
+
+                <div class="education-year">
+                    2024–2026
                 </div>
 
-                <div class="education-institution">
-                    University of Delhi — School of Open Learning
-                </div>
-            </div>
+                <div>
 
-            <div class="education-result">
-                Expected 2026<br>
-                CGPA 7.56 / 10
-            </div>
+                    <h3>
+                        MBA — Human Resource Management
+                    </h3>
 
-        </article>
+                    <div class="institution">
+                        University of Delhi — School of Open Learning
+                    </div>
 
-
-        <article class="education-row">
-
-            <div class="education-year">
-                Completed
-            </div>
-
-            <div>
-                <div class="education-degree">
-                    M.Com — Human Resource Management
                 </div>
 
-                <div class="education-institution">
-                    Amity University
+                <div class="education-result">
+                    Expected 2026<br>
+                    CGPA 7.56 / 10
                 </div>
 
-                <div class="education-institution">
-                    Dissertation:
-                    <em>
-                        A TAM-Based Empirical Investigation of
-                        Employee Acceptance of AI-Enabled
-                        Recruitment Systems in the Indian IT Sector
-                    </em>
-                </div>
-            </div>
-
-            <div class="education-result">
-                CGPA 9.04 / 10
-            </div>
-
-        </article>
+            </article>
 
 
-        <article class="education-row">
+            <article class="education-item">
 
-            <div class="education-year">
-                2021–2024
-            </div>
-
-            <div>
-                <div class="education-degree">
-                    B.Com (Hons.)
+                <div class="education-year">
+                    Completed
                 </div>
 
-                <div class="education-institution">
-                    Amity University
+                <div>
+
+                    <h3>
+                        M.Com — Human Resource Management
+                    </h3>
+
+                    <div class="institution">
+                        Amity University
+                    </div>
+
+                    <div class="institution">
+                        Dissertation: A TAM-Based Empirical Investigation
+                        of Employee Acceptance of AI-Enabled Recruitment
+                        Systems in the Indian IT Sector
+                    </div>
+
                 </div>
-            </div>
 
-            <div class="education-result">
-                Grade 8.76 / 10
-            </div>
+                <div class="education-result">
+                    CGPA 9.04 / 10
+                </div>
 
-        </article>
+            </article>
+
+
+            <article class="education-item">
+
+                <div class="education-year">
+                    2021–2024
+                </div>
+
+                <div>
+
+                    <h3>
+                        B.Com (Hons.)
+                    </h3>
+
+                    <div class="institution">
+                        Amity University
+                    </div>
+
+                </div>
+
+                <div class="education-result">
+                    Grade 8.76 / 10
+                </div>
+
+            </article>
+
+        </div>
 
     </div>
 
@@ -1453,40 +1365,46 @@ a {
 
 
 <!-- METHODS -->
-<section class="page section" id="methods">
+<section id="methods">
 
-    <div class="eyebrow">
-        Research practice
-    </div>
+    <div class="container">
 
-    <h2 class="section-title" style="margin-top:28px;">
-        Methods &<br>
-        <em style="color:var(--accent);">tools.</em>
-    </h2>
+        <div class="section-heading">
 
+            <div class="section-label">
+                Methods & Tools
+            </div>
 
-    <div class="methods-layout">
+            <h2 class="section-title">
+                How I work.
+            </h2>
 
-        <div class="methods-intro">
-            Combining empirical research with
-            quantitative, qualitative and mixed-method
-            approaches.
         </div>
 
-        <div class="tools">
 
-            <span class="tool">Quantitative Research</span>
-            <span class="tool">Mixed Methods</span>
-            <span class="tool">SEM</span>
-            <span class="tool">Psychometrics</span>
-            <span class="tool">Scale Development</span>
-            <span class="tool">Qualitative Research</span>
-            <span class="tool">SmartPLS</span>
-            <span class="tool">SPSS</span>
-            <span class="tool">R</span>
-            <span class="tool">Power BI</span>
-            <span class="tool">Microsoft Excel</span>
-            <span class="tool">VOSviewer</span>
+        <div class="methods-content">
+
+            <div class="methods-lead">
+                Combining empirical research with quantitative,
+                qualitative and mixed-method approaches.
+            </div>
+
+            <div class="methods-list">
+
+                <span class="method">Quantitative Research</span>
+                <span class="method">Mixed Methods</span>
+                <span class="method">SEM</span>
+                <span class="method">Psychometrics</span>
+                <span class="method">Scale Development</span>
+                <span class="method">Qualitative Research</span>
+                <span class="method">SmartPLS</span>
+                <span class="method">SPSS</span>
+                <span class="method">R</span>
+                <span class="method">Power BI</span>
+                <span class="method">Microsoft Excel</span>
+                <span class="method">VOSviewer</span>
+
+            </div>
 
         </div>
 
@@ -1496,104 +1414,121 @@ a {
 
 
 <!-- EXPERIENCE -->
-<section class="page section" id="experience">
+<section class="experience" id="experience">
 
-    <div class="eyebrow">
-        Experience
-    </div>
+    <div class="container">
 
-    <h2 class="section-title" style="margin-top:28px;">
-        Beyond<br>
-        <em style="color:var(--accent);">research.</em>
-    </h2>
+        <div class="section-heading">
 
-
-    <div class="experience-list">
-
-        <article class="experience-row">
-
-            <div class="experience-type">
-                Teaching
+            <div class="section-label">
+                Experience
             </div>
 
-            <div>
-                <div class="experience-role">
-                    Co-Teacher — UK Business Studies
+            <h2 class="section-title">
+                Academic & professional experience.
+            </h2>
+
+        </div>
+
+
+        <div class="experience-list">
+
+
+            <article class="experience-item">
+
+                <div class="experience-type">
+                    Teaching
                 </div>
 
-                <div class="experience-company">
-                    GLECTA
+                <div>
+
+                    <h3>
+                        Co-Teacher — UK Business Studies
+                    </h3>
+
+                    <div class="experience-company">
+                        GLECTA
+                    </div>
+
+                    <p>
+                        Supporting UK Business Studies teaching,
+                        classroom activities and student learning.
+                    </p>
+
                 </div>
 
-                <div class="experience-description">
-                    Supporting Business Studies teaching,
-                    classroom activities and student learning.
-                </div>
-            </div>
-
-        </article>
+            </article>
 
 
-        <article class="experience-row">
+            <article class="experience-item">
 
-            <div class="experience-type">
-                Research / HR
-            </div>
-
-            <div>
-                <div class="experience-role">
-                    HR Associate Intern
+                <div class="experience-type">
+                    HR / Research
                 </div>
 
-                <div class="experience-company">
-                    TEN Brain Research
+                <div>
+
+                    <h3>
+                        HR Associate Intern
+                    </h3>
+
+                    <div class="experience-company">
+                        TEN Brain Research
+                    </div>
+
+                    <p>
+                        Experience with AI-assisted recruitment
+                        workflows and human resource processes.
+                    </p>
+
                 </div>
 
-                <div class="experience-description">
-                    Experience with AI-assisted recruitment
-                    workflows and human resource processes.
-                </div>
-            </div>
-
-        </article>
+            </article>
 
 
-        <article class="experience-row">
+            <article class="experience-item">
 
-            <div class="experience-type">
-                HR Operations
-            </div>
-
-            <div>
-                <div class="experience-role">
-                    HR Operations Experience
+                <div class="experience-type">
+                    HR Operations
                 </div>
 
-                <div class="experience-company">
-                    Cook N Klean & Kinds Being
-                </div>
-            </div>
+                <div>
 
-        </article>
+                    <h3>
+                        HR Operations Experience
+                    </h3>
 
+                    <div class="experience-company">
+                        Cook N Klean & Kinds Being
+                    </div>
 
-        <article class="experience-row">
-
-            <div class="experience-type">
-                Leadership
-            </div>
-
-            <div>
-                <div class="experience-role">
-                    Student Leadership & Academic Activities
                 </div>
 
-                <div class="experience-company">
-                    Aparajit Sports Club · Innovation & Entrepreneurship Cell · Sanagathan Conference
-                </div>
-            </div>
+            </article>
 
-        </article>
+
+            <article class="experience-item">
+
+                <div class="experience-type">
+                    Leadership
+                </div>
+
+                <div>
+
+                    <h3>
+                        Student Leadership & Academic Activities
+                    </h3>
+
+                    <div class="experience-company">
+                        Aparajit Sports Club · Innovation &
+                        Entrepreneurship Cell · Sanagathan Conference
+                    </div>
+
+                </div>
+
+            </article>
+
+        </div>
 
     </div>
 
@@ -1601,36 +1536,36 @@ a {
 
 
 <!-- COLLABORATION -->
-<section class="section collaboration" id="collaboration">
+<section class="collaboration" id="collaboration">
 
-    <div class="page collaboration-inner">
+    <div class="container collaboration-inner">
 
         <div>
-            <div class="eyebrow">
+
+            <div class="section-label">
                 Collaboration
             </div>
 
             <h2>
-                Let's explore
-                an idea.
+                Research is better
+                when ideas are shared.
             </h2>
+
         </div>
 
-
-        <div class="collaboration-text">
+        <div>
 
             <p>
-                I am interested in conversations and research
-                collaborations around AI-enabled HRM,
-                algorithmic management, employee trust,
-                psychological contracts, organisational justice,
-                employee voice and responsible AI.
+                I welcome conversations and research collaborations
+                around AI-enabled HRM, algorithmic management,
+                employee trust, psychological contracts,
+                organisational justice, employee voice and
+                responsible AI.
             </p>
 
-            <a href="mailto:nitin.au02@gmail.com"
-               class="collaboration-link">
-                Start a research conversation
-                <span>→</span>
+            <a class="button"
+               href="mailto:nitin.au02@gmail.com">
+                Discuss a research idea →
             </a>
 
         </div>
@@ -1641,106 +1576,108 @@ a {
 
 
 <!-- CONTACT -->
-<section class="page section contact" id="contact">
+<section class="contact" id="contact">
 
-    <div class="contact-top">
+    <div class="container contact-grid">
 
         <div>
-            <div class="eyebrow">
+
+            <div class="section-label">
                 Contact
             </div>
 
             <h2>
-                Get in<br>
-                touch.
+                Get in touch.
             </h2>
+
+            <p class="contact-description">
+                For academic enquiries, research discussions,
+                collaborations and professional opportunities.
+            </p>
+
         </div>
 
-        <div class="mono" style="color:var(--muted);">
-            Academic · Research · Professional
+
+        <div class="contact-links">
+
+            <a class="contact-link"
+               href="mailto:nitin.au02@gmail.com">
+
+                <span class="contact-left">
+                    Email
+                </span>
+
+                <span class="contact-right">
+                    nitin.au02@gmail.com
+                </span>
+
+            </a>
+
+
+            <a class="contact-link"
+               href="https://www.linkedin.com/in/nitin-sharma-449bb824/"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                <span class="contact-left">
+                    LinkedIn
+                </span>
+
+                <span class="contact-right">
+                    View profile ↗
+                </span>
+
+            </a>
+
+
+            <a class="contact-link"
+               href="https://scholar.google.com/citations?user=nA5j7yUAAAAJ&hl=en"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                <span class="contact-left">
+                    Google Scholar
+                </span>
+
+                <span class="contact-right">
+                    Research profile ↗
+                </span>
+
+            </a>
+
+
+            <a class="contact-link"
+               href="https://orcid.org/0009-0008-3451-1729"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                <span class="contact-left">
+                    ORCID
+                </span>
+
+                <span class="contact-right">
+                    Research identifier ↗
+                </span>
+
+            </a>
+
+
+            <a class="contact-link"
+               href="https://www.researchgate.net/profile/Nitin-Sharma-94"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                <span class="contact-left">
+                    ResearchGate
+                </span>
+
+                <span class="contact-right">
+                    Publications ↗
+                </span>
+
+            </a>
+
         </div>
-
-    </div>
-
-
-    <div class="contact-links">
-
-        <a class="contact-link"
-           href="mailto:nitin.au02@gmail.com">
-
-            <span class="contact-link-label">
-                Email
-            </span>
-
-            <span class="contact-link-name">
-                nitin.au02@gmail.com
-            </span>
-
-        </a>
-
-
-        <a class="contact-link"
-           href="https://www.linkedin.com/in/nitin-sharma-449bb824/"
-           target="_blank"
-           rel="noopener noreferrer">
-
-            <span class="contact-link-label">
-                Professional
-            </span>
-
-            <span class="contact-link-name">
-                LinkedIn ↗
-            </span>
-
-        </a>
-
-
-        <a class="contact-link"
-           href="https://scholar.google.com/citations?user=nA5j7yUAAAAJ&hl=en"
-           target="_blank"
-           rel="noopener noreferrer">
-
-            <span class="contact-link-label">
-                Research
-            </span>
-
-            <span class="contact-link-name">
-                Google Scholar ↗
-            </span>
-
-        </a>
-
-
-        <a class="contact-link"
-           href="https://orcid.org/0009-0008-3451-1729"
-           target="_blank"
-           rel="noopener noreferrer">
-
-            <span class="contact-link-label">
-                Research ID
-            </span>
-
-            <span class="contact-link-name">
-                ORCID ↗
-            </span>
-
-        </a>
-
-
-        <a class="contact-link"
-           href="https://www.researchgate.net/profile/Nitin-Sharma-94"
-           target="_blank"
-           rel="noopener noreferrer">
-
-            <span class="contact-link-label">
-                Publications
-            </span>
-
-            <span class="contact-link-name">
-                ResearchGate ↗
-            </span>
-
-        </a>
 
     </div>
 
@@ -1749,10 +1686,9 @@ a {
 </main>
 
 
-<!-- FOOTER -->
-<footer class="footer">
+<footer>
 
-    <div class="page footer-inner">
+    <div class="container footer-inner">
 
         <span>
             © 2026 Nitin Sharma
@@ -1771,14 +1707,10 @@ a {
 const menuButton = document.getElementById("menuButton");
 const navLinks = document.getElementById("navLinks");
 
-menuButton.addEventListener("click", function () {
+menuButton.addEventListener("click", () => {
     navLinks.classList.toggle("open");
-
-    if (navLinks.classList.contains("open")) {
-        menuButton.textContent = "Close";
-    } else {
-        menuButton.textContent = "Menu";
-    }
+    menuButton.textContent =
+        navLinks.classList.contains("open") ? "Close" : "Menu";
 });
 
 document.querySelectorAll(".nav-links a").forEach(link => {
